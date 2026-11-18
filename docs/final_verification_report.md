@@ -44,12 +44,12 @@
 ## D. 需作者确认的事项（见 README §7）
 
 作者信息已填入（Yuxiang Sun，广州软件学院，通讯作者；Nan Yin，Canada
-Advanced Institute of Science and Technology）。剩余：ORCID（可选）、
-CRediT 实际分工确认、生成式 AI 声明的实际用途描述、参考文献
-DOI/页码核对（尤其是 barnett2024seven）、 competing interest 工具输出、
-**公开仓库的实际创建**（论文 Code and data availability 节承诺在录用后以
-开放许可公开生成器/探针/基线/统计脚本与逐查询记录，投稿时补仓库 URL 与
-存档 DOI——本目录即为可直接发布的起点，承诺必须兑现）。
+Advanced Institute of Science and Technology，含双方 ORCID）。剩余：CRediT
+实际分工确认、生成式 AI 声明的实际用途描述、参考文献 DOI/页码核对
+（尤其是 barnett2024seven）、competing interest 工具输出。
+**公开仓库已创建并兑现**：https://github.com/CAIST-2026/ict-express-rdf-audit
+（MIT、80 文件、release commit 5faa972），论文 Code and data availability
+节已写入实际仓库 URL；按作者决定不申请 Zenodo/archival DOI。
 
 ## E. 合规检查
 
