@@ -1,0 +1,22 @@
+{
+  "triples": 50000,
+  "queries": 500,
+  "seed": 20260101,
+  "out": "results/baselines/smoke_dense",
+  "systems": [
+    "dense"
+  ],
+  "top_k": 5,
+  "model": "/Users/yuxiangsun/.cache/huggingface/hub/models--intfloat--multilingual-e5-small/snapshots/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "limit": 20,
+  "store_triples": 49781,
+  "entities": 3481,
+  "n_queries": 20,
+  "dense_model": "/Users/yuxiangsun/.cache/huggingface/hub/models--intfloat--multilingual-e5-small/snapshots/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dense_dim": 384,
+  "dense_docs": 8218,
+  "dense_model_load_s": 1.37,
+  "dense_encode_s": 13.11,
+  "dense_device": "mps",
+  "timestamp": "2026-11-09 22:54:52"
+}

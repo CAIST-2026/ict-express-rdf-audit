@@ -1,0 +1,28 @@
+{
+  "triples": 50000,
+  "queries": 500,
+  "seed": 20260101,
+  "out": "results/baselines/seed_20260101",
+  "systems": [
+    "sparql_real",
+    "translit",
+    "dense",
+    "dense_ne"
+  ],
+  "top_k": 5,
+  "model": "/Users/yuxiangsun/.cache/huggingface/hub/models--intfloat--multilingual-e5-small/snapshots/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "limit": 0,
+  "store_triples": 49781,
+  "entities": 3481,
+  "n_queries": 500,
+  "dense_model": "/Users/yuxiangsun/.cache/huggingface/hub/models--intfloat--multilingual-e5-small/snapshots/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dense_dim": 384,
+  "dense_docs": 8218,
+  "dense_model_load_s": 1.5,
+  "dense_encode_s": 12.68,
+  "dense_device": "mps",
+  "sparql_calls": 1500,
+  "sparql_2hop_queries": 150,
+  "sparql_resolve_hits": 795,
+  "timestamp": "2026-11-09 22:59:03"
+}

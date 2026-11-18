@@ -1,0 +1,14 @@
+{
+  "triples": 50000,
+  "queries": 500,
+  "seed": 20260101,
+  "n": 24,
+  "warmup": 4,
+  "workers": 4,
+  "coverage": 0.92,
+  "model": "/Users/yuxiangsun/.cache/huggingface/hub/models--intfloat--multilingual-e5-small/snapshots/614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "out": "results/latency",
+  "store_triples": 49781,
+  "n_subset": 24,
+  "timestamp": "2026-11-09 23:13:49"
+}

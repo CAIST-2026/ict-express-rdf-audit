@@ -1,0 +1,32 @@
+22:56:00 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+22:56:00 INFO    store=49781 triples / 3481 entities | 500 queries | build 1.0s
+22:56:00 INFO    Anchor index built: aliases=8150 labels=8218
+22:56:25 INFO    dense baselines built in 25.4s (8218 docs, dim=384, device=mps)
+22:56:25 INFO    running dense on 500 queries
+22:56:32 INFO      dense 100/500 (6s)
+22:56:33 INFO      dense 200/500 (8s)
+22:56:35 INFO      dense 300/500 (9s)
+22:56:36 INFO      dense 400/500 (11s)
+22:56:38 INFO      dense 500/500 (12s)
+22:56:38 INFO      dense done in 12.4s
+22:56:38 INFO    running dense_ne on 500 queries
+22:56:39 INFO      dense_ne 100/500 (1s)
+22:56:41 INFO      dense_ne 200/500 (3s)
+22:56:42 INFO      dense_ne 300/500 (4s)
+22:56:44 INFO      dense_ne 400/500 (6s)
+22:56:45 INFO      dense_ne 500/500 (7s)
+22:56:45 INFO      dense_ne done in 7.0s
+22:56:45 INFO    running sparql_real on 500 queries
+22:57:12 INFO      sparql_real 100/500 (27s)
+22:57:39 INFO      sparql_real 200/500 (54s)
+22:58:08 INFO      sparql_real 300/500 (83s)
+22:58:36 INFO      sparql_real 400/500 (111s)
+22:59:03 INFO      sparql_real 500/500 (138s)
+22:59:03 INFO      sparql_real done in 137.8s
+22:59:03 INFO    running translit on 500 queries
+22:59:03 INFO      translit 100/500 (0s)
+22:59:03 INFO      translit 200/500 (0s)
+22:59:03 INFO      translit 300/500 (0s)
+22:59:03 INFO      translit 400/500 (0s)
+22:59:03 INFO      translit 500/500 (0s)
+22:59:03 INFO      translit done in 0.0s

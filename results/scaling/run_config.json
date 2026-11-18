@@ -1,0 +1,16 @@
+{
+  "sizes": [
+    10000,
+    50000,
+    100000,
+    200000
+  ],
+  "seed": 20260101,
+  "llm_n": 8,
+  "fast_n": 100,
+  "extra_systems": [
+    "sparql_real"
+  ],
+  "out": "results/scaling",
+  "timestamp": "2026-11-09 23:28:45"
+}

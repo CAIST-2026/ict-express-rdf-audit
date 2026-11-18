@@ -1,0 +1,6 @@
+﻿category,group,n,hits1,mrr,ac1
+1-hop,gold_absent,16,0.6875,0.7188,0.6875
+1-hop,gold_in_prompt,184,1.0,1.0,0.9239
+2-hop,not_applicable,150,0.96,0.96,0.9333
+cross-lingual,gold_absent,20,0.0,0.0,0.0
+cross-lingual,gold_in_prompt,130,0.5,0.75,0.5

@@ -1,0 +1,16 @@
+# Python >= 3.11 (tested on Python 3.13, macOS arm64)
+# Core experiment stack
+rdflib>=7.0
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.7
+pypinyin>=0.50
+torch>=2.0
+transformers>=4.40
+
+# LLM serving: Ollama (https://ollama.com) with qwen2.5:7b
+#   ollama pull qwen2.5:7b
+#   ollama serve
+# Dense baseline model: intfloat/multilingual-e5-small
+#   auto-downloaded by transformers, or set E5_MODEL_PATH to a local snapshot

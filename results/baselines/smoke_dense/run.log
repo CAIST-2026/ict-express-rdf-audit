@@ -1,0 +1,6 @@
+22:54:33 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+22:54:33 INFO    store=49781 triples / 3481 entities | 20 queries | build 0.9s
+22:54:33 INFO    Anchor index built: aliases=8150 labels=8218
+22:54:48 INFO    dense baselines built in 15.0s (8218 docs, dim=384, device=mps)
+22:54:48 INFO    running dense on 20 queries
+22:54:52 INFO      dense done in 4.2s

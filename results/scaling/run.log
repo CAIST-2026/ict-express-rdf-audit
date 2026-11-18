@@ -1,0 +1,52 @@
+23:14:20 INFO    Dataset @ target=10000 -> A=4953 B=4967 total=9920 | entities=677
+23:14:20 INFO    Anchor index built: aliases=1712 labels=1725
+23:14:20 INFO    Anchor index built: aliases=1712 labels=1725
+23:14:20 INFO    Simulated LLM memory: 611/677 entities memorised (coverage=92%)
+23:14:20 INFO    size=10000 total=9920 build=0.67s peak=23.4MB index=0.01s
+23:15:11 INFO      full_system              n=6 mean=8384.14ms gsr=1.764e-03 hits1=0.500
+23:15:11 INFO      no_aligner_k6            n=99 mean=0.06ms gsr=1.062e-03 hits1=0.667
+23:16:01 INFO      no_predicate_constraint  n=6 mean=8324.28ms gsr=1.596e-03 hits1=0.333
+23:16:50 INFO      no_pruning               n=6 mean=8271.31ms gsr=1.000e+00 hits1=0.500
+23:16:50 INFO      vector_graphrag          n=99 mean=0.22ms gsr=4.188e-03 hits1=0.444
+23:16:50 INFO      sparql_baseline          n=99 mean=0.09ms gsr=1.550e-01 hits1=0.333
+23:16:50 INFO    Anchor index built: aliases=1712 labels=1725
+23:16:57 INFO      sparql_real              n=99 mean=63.07ms gsr=1.543e-01 hits1=0.657
+23:17:01 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+23:17:01 INFO    Anchor index built: aliases=8150 labels=8218
+23:17:01 INFO    Anchor index built: aliases=8150 labels=8218
+23:17:01 INFO    Simulated LLM memory: 3183/3481 entities memorised (coverage=92%)
+23:17:01 INFO    size=50000 total=49781 build=4.45s peak=116.7MB index=0.03s
+23:17:54 INFO      full_system              n=6 mean=8762.31ms gsr=3.683e-04 hits1=0.833
+23:17:54 INFO      no_aligner_k6            n=99 mean=0.06ms gsr=3.021e-04 hits1=0.667
+23:18:46 INFO      no_predicate_constraint  n=6 mean=8680.05ms gsr=3.013e-04 hits1=0.500
+23:19:39 INFO      no_pruning               n=6 mean=8766.54ms gsr=1.000e+00 hits1=0.833
+23:19:39 INFO      vector_graphrag          n=99 mean=1.58ms gsr=9.180e-04 hits1=0.535
+23:19:39 INFO      sparql_baseline          n=99 mean=0.07ms gsr=1.561e-01 hits1=0.333
+23:19:39 INFO    Anchor index built: aliases=8150 labels=8218
+23:20:06 INFO      sparql_real              n=99 mean=275.27ms gsr=1.560e-01 hits1=0.606
+23:20:16 INFO    Dataset @ target=100000 -> A=49098 B=50739 total=99837 | entities=7019
+23:20:16 INFO    Anchor index built: aliases=15945 labels=16082
+23:20:16 INFO    Anchor index built: aliases=15945 labels=16082
+23:20:16 INFO    Simulated LLM memory: 6442/7019 entities memorised (coverage=92%)
+23:20:17 INFO    size=100000 total=99837 build=9.93s peak=215.5MB index=0.06s
+23:21:09 INFO      full_system              n=6 mean=8598.09ms gsr=1.936e-04 hits1=0.667
+23:21:09 INFO      no_aligner_k6            n=99 mean=0.08ms gsr=1.702e-04 hits1=0.667
+23:21:55 INFO      no_predicate_constraint  n=6 mean=7754.88ms gsr=1.603e-04 hits1=0.333
+23:22:42 INFO      no_pruning               n=6 mean=7844.52ms gsr=1.000e+00 hits1=0.667
+23:22:42 INFO      vector_graphrag          n=99 mean=3.19ms gsr=4.629e-04 hits1=0.455
+23:22:42 INFO      sparql_baseline          n=99 mean=0.07ms gsr=1.566e-01 hits1=0.333
+23:22:43 INFO    Anchor index built: aliases=15945 labels=16082
+23:23:42 INFO      sparql_real              n=99 mean=595.97ms gsr=1.565e-01 hits1=0.646
+23:24:03 INFO    Dataset @ target=200000 -> A=98014 B=101863 total=199877 | entities=14090
+23:24:03 INFO    Anchor index built: aliases=31524 labels=31800
+23:24:03 INFO    Anchor index built: aliases=31524 labels=31800
+23:24:03 INFO    Simulated LLM memory: 12930/14090 entities memorised (coverage=92%)
+23:24:04 INFO    size=200000 total=199877 build=20.75s peak=429.9MB index=0.11s
+23:24:56 INFO      full_system              n=6 mean=8672.84ms gsr=8.922e-05 hits1=0.833
+23:24:56 INFO      no_aligner_k6            n=99 mean=0.22ms gsr=8.278e-05 hits1=0.667
+23:25:48 INFO      no_predicate_constraint  n=6 mean=8555.35ms gsr=7.254e-05 hits1=0.500
+23:26:40 INFO      no_pruning               n=6 mean=8735.69ms gsr=1.000e+00 hits1=0.833
+23:26:41 INFO      vector_graphrag          n=99 mean=6.34ms gsr=2.245e-04 hits1=0.525
+23:26:41 INFO      sparql_baseline          n=99 mean=0.08ms gsr=1.569e-01 hits1=0.333
+23:26:41 INFO    Anchor index built: aliases=31524 labels=31800
+23:28:45 INFO      sparql_real              n=99 mean=1249.88ms gsr=1.568e-01 hits1=0.657

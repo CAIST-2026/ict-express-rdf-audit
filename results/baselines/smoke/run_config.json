@@ -1,0 +1,20 @@
+{
+  "triples": 50000,
+  "queries": 500,
+  "seed": 20260101,
+  "out": "results/baselines/smoke",
+  "systems": [
+    "sparql_real",
+    "translit"
+  ],
+  "top_k": 5,
+  "model": "intfloat/multilingual-e5-small",
+  "limit": 12,
+  "store_triples": 49781,
+  "entities": 3481,
+  "n_queries": 12,
+  "sparql_calls": 36,
+  "sparql_2hop_queries": 0,
+  "sparql_resolve_hits": 14,
+  "timestamp": "2026-11-09 22:49:16"
+}

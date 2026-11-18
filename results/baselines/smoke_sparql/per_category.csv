@@ -1,0 +1,4 @@
+﻿system,category,hits1,mrr,ac1,vic,ctx_triples,wall_ms,n
+sparql_real,1-hop,1.0,1.0,1.0,1.0,1.333333,168.315356,18
+sparql_real,2-hop,0.875,0.916667,0.875,1.0,1.375,617.4004,8
+sparql_real,cross-lingual,0.0,0.0,0.0,0.0,0.0,161.714243,14

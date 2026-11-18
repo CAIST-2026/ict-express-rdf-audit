@@ -1,0 +1,7 @@
+22:49:14 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+22:49:14 INFO    store=49781 triples / 3481 entities | 12 queries | build 0.9s
+22:49:14 INFO    Anchor index built: aliases=8150 labels=8218
+22:49:14 INFO    running sparql_real on 12 queries
+22:49:16 INFO      sparql_real done in 2.0s
+22:49:16 INFO    running translit on 12 queries
+22:49:16 INFO      translit done in 0.0s

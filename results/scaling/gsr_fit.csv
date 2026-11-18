@@ -1,0 +1,8 @@
+﻿variant,gsr_exponent,r2,n_points,latency_growth
+full_system,-0.9847,0.999071,4,1.034
+no_aligner_k6,-0.8372,0.995905,4,3.797
+no_predicate_constraint,-1.0201,0.999138,4,1.028
+no_pruning,-0.0,,4,1.056
+sparql_baseline,0.0041,0.989151,4,0.941
+sparql_real,0.0056,0.975686,4,19.817
+vector_graphrag,-0.9701,0.999469,4,28.545

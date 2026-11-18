@@ -1,0 +1,7 @@
+{
+  "reference": "full_system",
+  "n_variants": 11,
+  "main": "/Users/yuxiangsun/Desktop/ICT/rdf_llm_ea/outputs_audit/experimental_results.csv",
+  "baselines": "results/baselines/seed_20260101/per_query.csv",
+  "n_queries": 500
+}

@@ -1,0 +1,17 @@
+{\setlength{\tabcolsep}{2.2pt}\scriptsize%
+\begin{tabular}{llrrrrrr}
+\toprule
+System & Protocol & $n$ & mean & median & P95 & SD & qps \\
+\midrule
+Localized (full) & serial & 24 & 6703 & 7920 & 9196 & 3166 & 0.1492 \\
+\quad $-$ predicate constraint & serial & 24 & 6623 & 7824 & 9023 & 3125 & 0.151 \\
+\quad $-$ localized pruning & serial & 24 & 6658 & 7862 & 8980 & 3124 & 0.1502 \\
+Localized (full) & 4-worker & 24 & 23216 & 27122 & 32165 & 11392 & 0.1615 \\
+\quad $-$ aligner ($k{=}6$) & serial & 198 & 0 & 0 & 0 & 0 & 14421.4 \\
+Vector-GraphRAG (legacy) & serial & 198 & 2 & 2 & 2 & 0 & 644.943 \\
+SPARQL (legacy, no engine) & serial & 198 & 0 & 0 & 0 & 0 & 14098.3 \\
+SPARQL 1.1 (rdflib) & serial & 198 & 271 & 147 & 612 & 177 & 3.6904 \\
+Transliteration linker & serial & 198 & 0 & 0 & 0 & 0 & 11479.1 \\
+Multilingual dense $+$ traversal & serial & 198 & 16 & 9 & 14 & 43 & 62.2114 \\
+\bottomrule
+\end{tabular}}

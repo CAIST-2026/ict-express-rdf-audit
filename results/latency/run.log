@@ -1,0 +1,18 @@
+23:00:03 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+23:00:03 INFO    Anchor index built: aliases=8150 labels=8218
+23:00:03 INFO    Simulated LLM memory: 3183/3481 entities memorised (coverage=92%)
+23:00:04 INFO    store=49781 | timed subset=24 {'1-hop': np.int64(8), '2-hop': np.int64(8), 'cross-lingual': np.int64(8)}
+23:00:04 INFO    [serial] full_system (cache cleared=True, warm-up=4)
+23:03:20 INFO    [serial] full_system mean=6702.9ms qps=0.15
+23:03:20 INFO    [serial] no_predicate_constraint (cache cleared=True, warm-up=4)
+23:06:28 INFO    [serial] no_predicate_constraint mean=6623.2ms qps=0.15
+23:06:28 INFO    [serial] no_pruning (cache cleared=True, warm-up=4)
+23:09:38 INFO    [serial] no_pruning mean=6658.2ms qps=0.15
+23:12:35 INFO    [conc]   full_system mean=23215.9ms qps=0.162
+23:12:35 INFO    [serial] no_aligner_k6 mean=0.066ms qps=14421.4
+23:12:36 INFO    [serial] vector_graphrag mean=1.543ms qps=644.9
+23:12:36 INFO    [serial] sparql_baseline mean=0.068ms qps=14098.3
+23:12:36 INFO    Anchor index built: aliases=8150 labels=8218
+23:13:44 INFO    [serial] sparql_real mean=270.962ms qps=3.7
+23:13:44 INFO    [serial] translit mean=0.084ms qps=11479.1
+23:13:49 INFO    [serial] dense mean=16.068ms qps=62.2

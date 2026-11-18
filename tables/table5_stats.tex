@@ -1,0 +1,24 @@
+\begin{tabular}{llrrrrr}
+\toprule
+Contrast (vs.\ full) & Metric & $n$ & Full & Contrast & $p_{\mathrm{Holm}}$ & OR \\
+\midrule
+Multilingual dense $+$ traversal & hits1 & 500 & 0.808 & 0.544 & $<$1e-4 & 14.2 \\
+Multilingual dense $+$ traversal & ac1 & 500 & 0.772 & 0.544 & $<$1e-4 & 5.38462 \\
+Multilingual dense (no traversal) & hits1 & 500 & 0.808 & 0.370 & $<$1e-4 & 44.8 \\
+Multilingual dense (no traversal) & ac1 & 500 & 0.772 & 0.370 & $<$1e-4 & 11.5789 \\
+$-$ aligner & hits1 & 500 & 0.808 & 0.700 & $<$1e-4 & 5.90909 \\
+$-$ aligner & ac1 & 500 & 0.772 & 0.700 & 0.00079 & 2.24138 \\
+$-$ predicate constraint & hits1 & 500 & 0.808 & 0.520 & $<$1e-4 & -- \\
+$-$ predicate constraint & ac1 & 500 & 0.772 & 0.520 & $<$1e-4 & 10 \\
+$-$ localized pruning & hits1 & 500 & 0.808 & 0.808 & 1 & -- \\
+$-$ localized pruning & ac1 & 500 & 0.772 & 0.772 & 1 & -- \\
+SPARQL (legacy, no engine) & hits1 & 500 & 0.808 & 0.400 & $<$1e-4 & 41.8 \\
+SPARQL (legacy, no engine) & ac1 & 500 & 0.772 & 0.400 & $<$1e-4 & 10.7895 \\
+SPARQL 1.1 (rdflib) & hits1 & 500 & 0.808 & 0.646 & $<$1e-4 & 8.36364 \\
+SPARQL 1.1 (rdflib) & ac1 & 500 & 0.772 & 0.646 & $<$1e-4 & 3.17241 \\
+Transliteration linker & hits1 & 500 & 0.808 & 0.532 & $<$1e-4 & 6.52 \\
+Transliteration linker & ac1 & 500 & 0.772 & 0.532 & $<$1e-4 & 4.52941 \\
+Vector-GraphRAG (legacy) & hits1 & 500 & 0.808 & 0.526 & $<$1e-4 & 13.8182 \\
+Vector-GraphRAG (legacy) & ac1 & 500 & 0.772 & 0.526 & $<$1e-4 & 5.39286 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,18 @@
+{\setlength{\tabcolsep}{2.2pt}\scriptsize%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+System & Hits@1 & $ac_1$ & $v_{ic}$ & GSR & $ac_1$(1h) & $ac_1$(2h) & $ac_1$(xl) \\
+\midrule
+Localized (full) & 0.808 & 0.772 & 0.894 & 3.7e-04 & 0.905 & 0.933 & 0.433 \\
+$-$ predicate constr. & 0.520 & 0.520 & 0.656 & 3.1e-04 & 0.975 & 0.000 & 0.433 \\
+$-$ localized pruning & 0.808 & 0.772 & 0.894 & 1.0e+00 & 0.905 & 0.933 & 0.433 \\
+$-$ aligner & 0.700 & 0.700 & 0.700 & 3.0e-04 & 1.000 & 1.000 & 0.000 \\
+$-$ aligner ($k{=}6$) & 0.700 & 0.700 & 0.700 & 3.0e-04 & 1.000 & 1.000 & 0.000 \\
+SPARQL 1.1 (rdflib) & 0.646 & 0.646 & 0.700 & 1.6e-01 & 0.940 & 0.900 & 0.000 \\
+SPARQL$^{\dagger}$ (no engine) & 0.400 & 0.400 & 0.400 & 1.6e-01 & 1.000 & 0.000 & 0.000 \\
+Dense e5 $+$ traversal & 0.544 & 0.544 & 0.672 & 9.0e-04 & 0.925 & 0.580 & 0.000 \\
+Dense e5 (no trav.) & 0.370 & 0.370 & 0.418 & 7.8e-04 & 0.925 & 0.000 & 0.000 \\
+Vector-GraphRAG$^{\dagger}$ & 0.526 & 0.526 & 0.626 & 9.0e-04 & 0.705 & 0.813 & 0.000 \\
+Transliteration & 0.532 & 0.532 & 0.792 & 4.4e-04 & 0.640 & 0.613 & 0.307 \\
+\bottomrule
+\end{tabular}}
