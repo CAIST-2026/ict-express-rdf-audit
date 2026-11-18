@@ -34,4 +34,4 @@ This revision executed a full audit chain rather than rewriting claims first:
 
 ## 4. Reproducibility
 
-All accepted result files, scripts, configs, logs, and hashes are in `ICT_EXPRESS_REVISION/`. The GitHub release is `v2.0` at commit `37cab3e`; the final paper commit is `4c30ec6`.
+All accepted result files, scripts, configs, logs, and hashes are in `ICT_EXPRESS_REVISION/`. The core release is `v2.0` at commit `37cab3e`; the final paper and review package are at `v2.1` / HEAD `0811152` or later.

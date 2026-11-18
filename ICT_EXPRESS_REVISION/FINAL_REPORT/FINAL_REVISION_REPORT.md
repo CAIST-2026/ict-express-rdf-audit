@@ -25,7 +25,7 @@
 
 - Release tag `v2.0` points to commit `37cab3e` containing the revision experiments and artefacts.
 - Final paper commit `4c30ec6` points the availability statement to that release.
-- Remote `origin/main` is synchronised at `4c30ec6`.
+- Remote `origin/main` is synchronised at the final review commit (`v2.1` or later).
 
 ## Remaining author-side actions
 
