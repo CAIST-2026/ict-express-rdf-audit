@@ -1,0 +1,13 @@
+system,metric,reported,recomputed,match
+full_system,hits1,0.808,0.808,True
+full_system,ac1,0.772,0.772,True
+full_system,vic,0.894,0.894,True
+sparql_real,hits1,0.646,0.646,True
+sparql_real,ac1,0.646,0.646,True
+sparql_real,vic,0.7,0.7,True
+dense,hits1,0.544,0.544,True
+dense,ac1,0.544,0.544,True
+dense,vic,0.672,0.672,True
+translit,hits1,0.532,0.532,True
+translit,ac1,0.532,0.532,True
+translit,vic,0.792,0.792,True

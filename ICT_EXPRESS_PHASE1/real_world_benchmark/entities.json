@@ -1,0 +1,422 @@
+[
+  {
+    "qid": "Q23",
+    "uri": "http://www.wikidata.org/entity/Q23",
+    "zh": "乔治·华盛顿",
+    "en": "George Washington"
+  },
+  {
+    "qid": "Q76",
+    "uri": "http://www.wikidata.org/entity/Q76",
+    "zh": "贝拉克·奥巴马",
+    "en": "Barack Obama"
+  },
+  {
+    "qid": "Q108",
+    "uri": "http://www.wikidata.org/entity/Q108",
+    "zh": "1月",
+    "en": "January"
+  },
+  {
+    "qid": "Q161",
+    "uri": "http://www.wikidata.org/entity/Q161",
+    "zh": "纤维",
+    "en": "fiber"
+  },
+  {
+    "qid": "Q165",
+    "uri": "http://www.wikidata.org/entity/Q165",
+    "zh": "海",
+    "en": "sea"
+  },
+  {
+    "qid": "Q225",
+    "uri": "http://www.wikidata.org/entity/Q225",
+    "zh": "波斯尼亚和黑塞哥维那",
+    "en": "Bosnia and Herzegovina"
+  },
+  {
+    "qid": "Q270",
+    "uri": "http://www.wikidata.org/entity/Q270",
+    "zh": "华沙",
+    "en": "Warsaw"
+  },
+  {
+    "qid": "Q254",
+    "uri": "http://www.wikidata.org/entity/Q254",
+    "zh": "沃尔夫冈·阿玛多伊斯·莫扎特",
+    "en": "Wolfgang Amadeus Mozart"
+  },
+  {
+    "qid": "Q298",
+    "uri": "http://www.wikidata.org/entity/Q298",
+    "zh": "智利",
+    "en": "Chile"
+  },
+  {
+    "qid": "Q309",
+    "uri": "http://www.wikidata.org/entity/Q309",
+    "zh": "歷史",
+    "en": "history"
+  },
+  {
+    "qid": "Q342",
+    "uri": "http://www.wikidata.org/entity/Q342",
+    "zh": "坎佩尔",
+    "en": "Quimper"
+  },
+  {
+    "qid": "Q359",
+    "uri": "http://www.wikidata.org/entity/Q359",
+    "zh": "維基解密",
+    "en": "WikiLeaks"
+  },
+  {
+    "qid": "Q416",
+    "uri": "http://www.wikidata.org/entity/Q416",
+    "zh": "磁盘杂志",
+    "en": "disk magazine"
+  },
+  {
+    "qid": "Q360",
+    "uri": "http://www.wikidata.org/entity/Q360",
+    "zh": "朱利安·阿桑奇",
+    "en": "Julian Assange"
+  },
+  {
+    "qid": "Q478",
+    "uri": "http://www.wikidata.org/entity/Q478",
+    "zh": "代尔瓦勒",
+    "en": "Derval"
+  },
+  {
+    "qid": "Q483",
+    "uri": "http://www.wikidata.org/entity/Q483",
+    "zh": "Megaupload",
+    "en": "Megaupload"
+  },
+  {
+    "qid": "Q491",
+    "uri": "http://www.wikidata.org/entity/Q491",
+    "zh": "友情",
+    "en": "friendship"
+  },
+  {
+    "qid": "Q510",
+    "uri": "http://www.wikidata.org/entity/Q510",
+    "zh": "马里亚纳海沟",
+    "en": "Mariana Trench"
+  },
+  {
+    "qid": "Q517",
+    "uri": "http://www.wikidata.org/entity/Q517",
+    "zh": "拿破崙",
+    "en": "Napoleon"
+  },
+  {
+    "qid": "Q544",
+    "uri": "http://www.wikidata.org/entity/Q544",
+    "zh": "太陽系",
+    "en": "Solar System"
+  },
+  {
+    "qid": "Q560",
+    "uri": "http://www.wikidata.org/entity/Q560",
+    "zh": "氦",
+    "en": "helium"
+  },
+  {
+    "qid": "Q571",
+    "uri": "http://www.wikidata.org/entity/Q571",
+    "zh": "图书",
+    "en": "book"
+  },
+  {
+    "qid": "Q539",
+    "uri": "http://www.wikidata.org/entity/Q539",
+    "zh": "朱塞佩·加里波底",
+    "en": "Giuseppe Garibaldi"
+  },
+  {
+    "qid": "Q775",
+    "uri": "http://www.wikidata.org/entity/Q775",
+    "zh": "海尔德兰省",
+    "en": "Gelderland"
+  },
+  {
+    "qid": "Q768",
+    "uri": "http://www.wikidata.org/entity/Q768",
+    "zh": "蘇佩塔爾",
+    "en": "Supetar"
+  },
+  {
+    "qid": "Q678",
+    "uri": "http://www.wikidata.org/entity/Q678",
+    "zh": "東加",
+    "en": "Tonga"
+  },
+  {
+    "qid": "Q802",
+    "uri": "http://www.wikidata.org/entity/Q802",
+    "zh": "新松奇",
+    "en": "Nowy Sącz"
+  },
+  {
+    "qid": "Q613",
+    "uri": "http://www.wikidata.org/entity/Q613",
+    "zh": "迪拜酋长国",
+    "en": "Emirate of Dubai"
+  },
+  {
+    "qid": "Q882",
+    "uri": "http://www.wikidata.org/entity/Q882",
+    "zh": "差利·卓別靈",
+    "en": "Charlie Chaplin"
+  },
+  {
+    "qid": "Q901",
+    "uri": "http://www.wikidata.org/entity/Q901",
+    "zh": "科學家",
+    "en": "scientist"
+  },
+  {
+    "qid": "Q663",
+    "uri": "http://www.wikidata.org/entity/Q663",
+    "zh": "鋁",
+    "en": "aluminium"
+  },
+  {
+    "qid": "Q589",
+    "uri": "http://www.wikidata.org/entity/Q589",
+    "zh": "黑洞",
+    "en": "black hole"
+  },
+  {
+    "qid": "Q831",
+    "uri": "http://www.wikidata.org/entity/Q831",
+    "zh": "hello",
+    "en": "ciao"
+  },
+  {
+    "qid": "Q866",
+    "uri": "http://www.wikidata.org/entity/Q866",
+    "zh": "YouTube",
+    "en": "YouTube"
+  },
+  {
+    "qid": "Q700",
+    "uri": "http://www.wikidata.org/entity/Q700",
+    "zh": "瑞典廚師",
+    "en": "Swedish Chef"
+  },
+  {
+    "qid": "Q721",
+    "uri": "http://www.wikidata.org/entity/Q721",
+    "zh": "生命、宇宙及萬事萬物",
+    "en": "Life, the Universe and Everything"
+  },
+  {
+    "qid": "Q733",
+    "uri": "http://www.wikidata.org/entity/Q733",
+    "zh": "巴拉圭",
+    "en": "Paraguay"
+  },
+  {
+    "qid": "Q1234",
+    "uri": "http://www.wikidata.org/entity/Q1234",
+    "zh": "𨭎",
+    "en": "seaborgium"
+  },
+  {
+    "qid": "Q1198",
+    "uri": "http://www.wikidata.org/entity/Q1198",
+    "zh": "北莱茵-威斯特法伦州",
+    "en": "North Rhine-Westphalia"
+  },
+  {
+    "qid": "Q1050",
+    "uri": "http://www.wikidata.org/entity/Q1050",
+    "zh": "斯威士兰",
+    "en": "Eswatini"
+  },
+  {
+    "qid": "Q924",
+    "uri": "http://www.wikidata.org/entity/Q924",
+    "zh": "坦桑尼亞",
+    "en": "Tanzania"
+  },
+  {
+    "qid": "Q951",
+    "uri": "http://www.wikidata.org/entity/Q951",
+    "zh": "捲筒式衛生紙的放置方向",
+    "en": "toilet paper orientation"
+  },
+  {
+    "qid": "Q937",
+    "uri": "http://www.wikidata.org/entity/Q937",
+    "zh": "阿尔伯特·爱因斯坦",
+    "en": "Albert Einstein"
+  },
+  {
+    "qid": "Q742",
+    "uri": "http://www.wikidata.org/entity/Q742",
+    "zh": "让·拉辛",
+    "en": "Jean Racine"
+  },
+  {
+    "qid": "Q1088",
+    "uri": "http://www.wikidata.org/entity/Q1088",
+    "zh": "藍色",
+    "en": "blue"
+  },
+  {
+    "qid": "Q1281",
+    "uri": "http://www.wikidata.org/entity/Q1281",
+    "zh": "Category:总览",
+    "en": "Category:Contents"
+  },
+  {
+    "qid": "Q978",
+    "uri": "http://www.wikidata.org/entity/Q978",
+    "zh": "模因",
+    "en": "meme"
+  },
+  {
+    "qid": "Q1319",
+    "uri": "http://www.wikidata.org/entity/Q1319",
+    "zh": "费德里科·埃拉苏里斯·埃乔伦",
+    "en": "Federico Errázuriz Echaurren"
+  },
+  {
+    "qid": "Q1664",
+    "uri": "http://www.wikidata.org/entity/Q1664",
+    "zh": "鲁尔河",
+    "en": "Ruhr"
+  },
+  {
+    "qid": "Q1116",
+    "uri": "http://www.wikidata.org/entity/Q1116",
+    "zh": "安特衛普省",
+    "en": "Antwerp"
+  },
+  {
+    "qid": "Q1904",
+    "uri": "http://www.wikidata.org/entity/Q1904",
+    "zh": "安大略省",
+    "en": "Ontario"
+  },
+  {
+    "qid": "Q1150",
+    "uri": "http://www.wikidata.org/entity/Q1150",
+    "zh": "墨丘利",
+    "en": "Mercury"
+  },
+  {
+    "qid": "Q1720",
+    "uri": "http://www.wikidata.org/entity/Q1720",
+    "zh": "美因茨",
+    "en": "Mainz"
+  },
+  {
+    "qid": "Q1001",
+    "uri": "http://www.wikidata.org/entity/Q1001",
+    "zh": "圣雄甘地",
+    "en": "Mahatma Gandhi"
+  },
+  {
+    "qid": "Q1402",
+    "uri": "http://www.wikidata.org/entity/Q1402",
+    "zh": "乔万尼·薄伽丘",
+    "en": "Giovanni Boccaccio"
+  },
+  {
+    "qid": "Q2040",
+    "uri": "http://www.wikidata.org/entity/Q2040",
+    "zh": "埃米利奥·朱塞佩·法里纳",
+    "en": "Giuseppe Farina"
+  },
+  {
+    "qid": "Q1024",
+    "uri": "http://www.wikidata.org/entity/Q1024",
+    "zh": "特里格拉夫峰",
+    "en": "Triglav"
+  },
+  {
+    "qid": "Q1970",
+    "uri": "http://www.wikidata.org/entity/Q1970",
+    "zh": "圣克莱芒-叙瓦尔索讷",
+    "en": "Saint-Clément-sur-Valsonne"
+  },
+  {
+    "qid": "Q1780",
+    "uri": "http://www.wikidata.org/entity/Q1780",
+    "zh": "布拉迪斯拉发",
+    "en": "Bratislava"
+  },
+  {
+    "qid": "Q1456",
+    "uri": "http://www.wikidata.org/entity/Q1456",
+    "zh": "南卡罗来纳州",
+    "en": "South Carolina"
+  },
+  {
+    "qid": "Q2110",
+    "uri": "http://www.wikidata.org/entity/Q2110",
+    "zh": "楠榜省",
+    "en": "Lampung"
+  },
+  {
+    "qid": "Q1840",
+    "uri": "http://www.wikidata.org/entity/Q1840",
+    "zh": "費嫩達爾",
+    "en": "Veenendaal"
+  },
+  {
+    "qid": "Q1860",
+    "uri": "http://www.wikidata.org/entity/Q1860",
+    "zh": "英語",
+    "en": "English"
+  },
+  {
+    "qid": "Q1551",
+    "uri": "http://www.wikidata.org/entity/Q1551",
+    "zh": "汉堡旧城",
+    "en": "Hamburg-Altstadt"
+  },
+  {
+    "qid": "Q1500",
+    "uri": "http://www.wikidata.org/entity/Q1500",
+    "zh": "黎剎",
+    "en": "José Rizal"
+  },
+  {
+    "qid": "Q2460",
+    "uri": "http://www.wikidata.org/entity/Q2460",
+    "zh": "3月30日",
+    "en": "March 30"
+  },
+  {
+    "qid": "Q2530",
+    "uri": "http://www.wikidata.org/entity/Q2530",
+    "zh": "格哈德·施羅德",
+    "en": "Gerhard Schröder"
+  },
+  {
+    "qid": "Q2180",
+    "uri": "http://www.wikidata.org/entity/Q2180",
+    "zh": "馬洛洛斯",
+    "en": "Malolos"
+  },
+  {
+    "qid": "Q2320",
+    "uri": "http://www.wikidata.org/entity/Q2320",
+    "zh": "2月6日",
+    "en": "February 6"
+  },
+  {
+    "qid": "Q2390",
+    "uri": "http://www.wikidata.org/entity/Q2390",
+    "zh": "3月2日",
+    "en": "March 2"
+  }
+]

@@ -11,12 +11,16 @@ Contribute?"* by Yuxiang Sun and Nan Yin.
 | `upstream/` | Six core modules from the original `rdf_llm_ea` codebase, bundled so the package is self-contained |
 | `results/` | Per-query result CSVs and run configs for every experiment (500 queries × multiple systems) |
 | `tables/`, `figures/` | Script-generated LaTeX tables and PDF figures |
-| `paper/main.tex`, `paper/main.pdf` | Manuscript source and compiled PDF (Elsevier `cas-dc`, 5 pages) |
+| `paper/main.tex`, `paper/main.pdf` | Manuscript source and compiled PDF (Elsevier `cas-dc`, 6 pages) |
+| `ICT_EXPRESS_PHASE1/` | Phase 1 audit: matched-supervision experiment, real Wikidata transfer check, exact statistics, reports, and publication-ready tables |
 | `docs/` | Positioning memo and final verification report |
 | `traceability.csv` | Maps every number in the paper to its source file, columns, and generating script |
 
-The benchmark is **fully synthetic** — no real operator, subscriber, or device
-data is included.
+The main benchmark is **fully synthetic** — no real operator, subscriber, or
+device data is included. `ICT_EXPRESS_PHASE1/real_world_benchmark/` contains a
+small transfer check built from authentic, CC0 Wikidata RDF labels; it does not
+contain operator, subscriber, or device data and does not validate cross-graph
+entity alignment.
 
 ## Quick start
 
@@ -56,6 +60,16 @@ python experiments/summarize.py \
     --stats results/stats --out .
 ```
 
+# 5. Phase 1 audit (matched supervision, stats, publication tables; no LLM server)
+python ICT_EXPRESS_PHASE1/audit/audit_recompute.py > ICT_EXPRESS_PHASE1/results/audit_recompute.json
+python ICT_EXPRESS_PHASE1/audit/verify_triples.py
+python ICT_EXPRESS_PHASE1/baseline_fairness/matched_supervision.py
+python ICT_EXPRESS_PHASE1/baseline_fairness/build_comparison.py
+python ICT_EXPRESS_PHASE1/statistical_verification/stats_verify.py
+python ICT_EXPRESS_PHASE1/reports/generate_tables.py
+# real-Wikidata offline check: python ICT_EXPRESS_PHASE1/real_world_benchmark/RUN_LOCAL_EXPERIMENT.py
+```
+
 **Note on `upstream_results/`:** the reused main run (500 queries × 7 variants)
 from the original study is included under `upstream_results/` so the probe,
 statistics, and summarisation steps work out of the box. Set the environment
@@ -76,9 +90,13 @@ deterministic given the same model and machine. Every script writes a
 | Transliteration | 0.532 | 0.640 | 0.613 | 0.307 |
 
 Central finding: on 86.7% of cross-lingual queries the gold URI is already in
-the LLM planner's prompt; Hits@1 is 0.500 when present and exactly 0.000 when
-absent. The cross-lingual capability is bounded by the supplied alignment
-table, not by model knowledge.
+the LLM planner's prompt; Hits@1 is 0.500 when present and 0/20 observed when
+absent (exact 95% CI [0, 0.168]). Under matched supervision a deterministic
+linker attains exactly the same cross-lingual ac1 as the 7B planner (0.433;
+0/150 discordant pairs), so the original cross-lingual advantage came from
+unequal supervision. The LLM's overall lead (0.772 vs.\ 0.498) is confined to
+planning and predicate selection. See `ICT_EXPRESS_PHASE1/` for the matched,
+real-RDF, and exact-CI evidence.
 
 ## Environment notes
 

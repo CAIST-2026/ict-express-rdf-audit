@@ -1,0 +1,8 @@
+system,group,ac1,vic
+LLM-guided localized,MATCHED_SUPERVISION,0.4333,0.8267
+LLM-guided localized,NO_SUPERVISION,0.0,0.0
+Non-LLM localized traversal,NO_SUPERVISION,0.0,0.0
+Non-LLM localized traversal,MATCHED_SUPERVISION,0.4333,0.8667
+Non-LLM localized traversal,ORACLE,1.0,1.0
+sparql_real (saved),NO_SUPERVISION,0.0,0.0
+dense (saved),NO_SUPERVISION,0.0,0.0067

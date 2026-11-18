@@ -1,0 +1,8 @@
+system,group,n,hits1,ac1,vic,gsr
+LLM-guided localized,MATCHED_SUPERVISION,500,0.808,0.772,0.894,0.000365
+LLM-guided localized,NO_SUPERVISION,500,0.7,0.7,0.7,0.000298
+Non-LLM localized traversal,NO_SUPERVISION,500,0.4,0.4,0.7,0.000298
+Non-LLM localized traversal,MATCHED_SUPERVISION,500,0.498,0.498,0.908,0.000542
+Non-LLM localized traversal,ORACLE,500,1.0,1.0,1.0,0.000236
+sparql_real (saved),NO_SUPERVISION,500,0.646,0.646,0.7,0.155984
+dense (saved),NO_SUPERVISION,500,0.544,0.544,0.672,0.0009

@@ -1,0 +1,284 @@
+{
+  "source_files": {
+    "ict_express_submission/upstream_results/experimental_results.csv": 984244,
+    "ict_express_submission/results/baselines/seed_20260101/per_query.csv": 302282,
+    "ict_express_submission/results/main/alignment_probe/probe_by_group.csv": 251,
+    "ict_express_submission/upstream_results/run_config.json": 1852
+  },
+  "store": {
+    "triples_reported": 49781,
+    "triples_config": 49781,
+    "entities_reported": 3481,
+    "entities_config": 3481,
+    "ga_triples": 24598,
+    "gb_triples": 25183,
+    "sum_ga_gb": 49781
+  },
+  "queries": {
+    "n_reported": 500,
+    "n_main_unique": 500,
+    "n_main_rows": 3500,
+    "variants": [
+      "full_system",
+      "no_aligner",
+      "no_aligner_k6",
+      "no_predicate_constraint",
+      "no_pruning",
+      "sparql_baseline",
+      "vector_graphrag"
+    ],
+    "per_variant_rows": {
+      "full_system": 500,
+      "no_aligner": 500,
+      "no_aligner_k6": 500,
+      "no_predicate_constraint": 500,
+      "no_pruning": 500,
+      "sparql_baseline": 500,
+      "vector_graphrag": 500
+    },
+    "categories": {
+      "1-hop": 200,
+      "cross-lingual": 150,
+      "2-hop": 150
+    },
+    "baseline_unique_qids": 500,
+    "baseline_systems": [
+      "dense",
+      "dense_ne",
+      "sparql_real",
+      "translit"
+    ],
+    "baseline_rows": 2000
+  },
+  "system_metrics_recomputed": {
+    "full_system": {
+      "hits1": 0.808,
+      "mrr": 0.874,
+      "ac1": 0.772,
+      "vic": 0.894,
+      "gsr": 0.000365
+    },
+    "no_aligner": {
+      "hits1": 0.7,
+      "mrr": 0.7,
+      "ac1": 0.7,
+      "vic": 0.7,
+      "gsr": 0.000298
+    },
+    "no_aligner_k6": {
+      "hits1": 0.7,
+      "mrr": 0.7,
+      "ac1": 0.7,
+      "vic": 0.7,
+      "gsr": 0.000298
+    },
+    "no_predicate_constraint": {
+      "hits1": 0.52,
+      "mrr": 0.586,
+      "ac1": 0.52,
+      "vic": 0.656,
+      "gsr": 0.000306
+    },
+    "no_pruning": {
+      "hits1": 0.808,
+      "mrr": 0.874,
+      "ac1": 0.772,
+      "vic": 0.894,
+      "gsr": 1.0
+    },
+    "sparql_baseline": {
+      "hits1": 0.4,
+      "mrr": 0.4,
+      "ac1": 0.4,
+      "vic": 0.4,
+      "gsr": 0.156118
+    },
+    "vector_graphrag": {
+      "hits1": 0.526,
+      "mrr": 0.5782,
+      "ac1": 0.526,
+      "vic": 0.626,
+      "gsr": 0.000905
+    },
+    "dense": {
+      "hits1": 0.544,
+      "mrr": 0.5885,
+      "ac1": 0.544,
+      "vic": 0.672,
+      "gsr": 0.0009
+    },
+    "dense_ne": {
+      "hits1": 0.37,
+      "mrr": 0.3823,
+      "ac1": 0.37,
+      "vic": 0.418,
+      "gsr": 0.00078
+    },
+    "sparql_real": {
+      "hits1": 0.646,
+      "mrr": 0.666,
+      "ac1": 0.646,
+      "vic": 0.7,
+      "gsr": 0.155984
+    },
+    "translit": {
+      "hits1": 0.532,
+      "mrr": 0.6557,
+      "ac1": 0.532,
+      "vic": 0.792,
+      "gsr": 0.000438
+    }
+  },
+  "reported_vs_recomputed": {
+    "full_system": {
+      "hits1": {
+        "reported": 0.808,
+        "recomputed": 0.808,
+        "match": true
+      },
+      "ac1": {
+        "reported": 0.772,
+        "recomputed": 0.772,
+        "match": true
+      },
+      "vic": {
+        "reported": 0.894,
+        "recomputed": 0.894,
+        "match": true
+      }
+    },
+    "sparql_real": {
+      "hits1": {
+        "reported": 0.646,
+        "recomputed": 0.646,
+        "match": true
+      },
+      "ac1": {
+        "reported": 0.646,
+        "recomputed": 0.646,
+        "match": true
+      },
+      "vic": {
+        "reported": 0.7,
+        "recomputed": 0.7,
+        "match": true
+      }
+    },
+    "dense": {
+      "hits1": {
+        "reported": 0.544,
+        "recomputed": 0.544,
+        "match": true
+      },
+      "ac1": {
+        "reported": 0.544,
+        "recomputed": 0.544,
+        "match": true
+      },
+      "vic": {
+        "reported": 0.672,
+        "recomputed": 0.672,
+        "match": true
+      }
+    },
+    "translit": {
+      "hits1": {
+        "reported": 0.532,
+        "recomputed": 0.532,
+        "match": true
+      },
+      "ac1": {
+        "reported": 0.532,
+        "recomputed": 0.532,
+        "match": true
+      },
+      "vic": {
+        "reported": 0.792,
+        "recomputed": 0.792,
+        "match": true
+      }
+    }
+  },
+  "ac1_by_category": {
+    "full_system": {
+      "1-hop": 0.905,
+      "2-hop": 0.9333,
+      "cross-lingual": 0.4333
+    },
+    "sparql_real": {
+      "1-hop": 0.94,
+      "2-hop": 0.9,
+      "cross-lingual": 0.0
+    },
+    "dense": {
+      "1-hop": 0.925,
+      "2-hop": 0.58,
+      "cross-lingual": 0.0
+    },
+    "translit": {
+      "1-hop": 0.64,
+      "2-hop": 0.6133,
+      "cross-lingual": 0.3067
+    }
+  },
+  "probe": {
+    "cross_rows": [
+      {
+        "category": "cross-lingual",
+        "group": "gold_absent",
+        "n": 20,
+        "hits1": 0.0,
+        "mrr": 0.0,
+        "ac1": 0.0
+      },
+      {
+        "category": "cross-lingual",
+        "group": "gold_in_prompt",
+        "n": 130,
+        "hits1": 0.5,
+        "mrr": 0.75,
+        "ac1": 0.5
+      }
+    ],
+    "n_exposed": 130,
+    "n_unexposed": 20,
+    "exposed_rate": 0.8667,
+    "hits1_exposed": 0.5,
+    "hits1_unexposed": 0.0
+  },
+  "alignment_field": {
+    "full_system_rows_with_aligned_uris": 500,
+    "example_aligned_uris": [
+      "http://example.org/kgA/entity/P01069A|http://example.org/kgB/entity/P01069B",
+      "http://example.org/kgA/entity/P01148A|http://example.org/kgB/entity/P01148B",
+      "http://example.org/kgA/entity/P00171A|http://example.org/kgB/entity/P00171B"
+    ],
+    "note": "aligned_uris is the planner OUTPUT, not the prompt input. Prompt input is reconstructed by alignment_probe.py from seeds."
+  },
+  "structural_checks": {
+    "full_system_gt_values_nonempty": 500,
+    "full_system_hits1_binary_valid": true,
+    "full_system_ac1_binary_valid": true,
+    "full_system_vic_binary_valid": true,
+    "ac1_implies_vic": true,
+    "gsr_in_unit_interval_full": true,
+    "gsr_in_unit_interval_baselines": true,
+    "triples_scanned_nonnegative": true,
+    "fallback_count": 0,
+    "backend_counts": {
+      "ollama": 500
+    }
+  },
+  "timing": {
+    "fields": [
+      "t_surface_ms",
+      "t_llm_ms",
+      "t_traversal_ms",
+      "t_total_ms"
+    ],
+    "full_system_mean_llm_ms": 27896.42,
+    "full_system_mean_total_ms": 27896.66,
+    "llm_share_of_total": 0.999991,
+    "mean_traversal_ms": 0.1226
+  }
+}

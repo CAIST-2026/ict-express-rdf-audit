@@ -1,0 +1,752 @@
+[
+  {
+    "qid": "RW-0000",
+    "family": "one-hop",
+    "text": "墨丘利的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1150",
+    "gold_values": [
+      "Q696819"
+    ],
+    "zh_label": "墨丘利",
+    "en_label": "Mercury",
+    "gold_entity": "Q1150",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0001",
+    "family": "one-hop",
+    "text": "美因茨的所属组织是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1720",
+    "gold_values": [
+      "Q747279",
+      "Q1750151",
+      "Q1768108"
+    ],
+    "zh_label": "美因茨",
+    "en_label": "Mainz",
+    "gold_entity": "Q1720",
+    "predicate": "P463"
+  },
+  {
+    "qid": "RW-0002",
+    "family": "one-hop",
+    "text": "圣雄甘地的国籍是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q668"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P27"
+  },
+  {
+    "qid": "RW-0003",
+    "family": "one-hop",
+    "text": "圣雄甘地的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q36180",
+      "Q40348",
+      "Q82955",
+      "Q185351",
+      "Q482980"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0004",
+    "family": "one-hop",
+    "text": "圣雄甘地的出生地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q6419912"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P19"
+  },
+  {
+    "qid": "RW-0005",
+    "family": "one-hop",
+    "text": "圣雄甘地的死亡地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q1381516"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P20"
+  },
+  {
+    "qid": "RW-0006",
+    "family": "one-hop",
+    "text": "圣雄甘地的母语是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q5137"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P1412"
+  },
+  {
+    "qid": "RW-0007",
+    "family": "one-hop",
+    "text": "圣雄甘地的母校是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q193196",
+      "Q1233784",
+      "Q4722851",
+      "Q100148173"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P69"
+  },
+  {
+    "qid": "RW-0008",
+    "family": "one-hop",
+    "text": "圣雄甘地的所属组织是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Q1233784",
+      "Q2154954"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "P463"
+  },
+  {
+    "qid": "RW-0009",
+    "family": "one-hop",
+    "text": "乔万尼·薄伽丘的国籍是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Q148540"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "P27"
+  },
+  {
+    "qid": "RW-0010",
+    "family": "one-hop",
+    "text": "乔万尼·薄伽丘的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Q36180",
+      "Q49757",
+      "Q193391",
+      "Q333634",
+      "Q864380"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0011",
+    "family": "one-hop",
+    "text": "乔万尼·薄伽丘的出生地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Q2044"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "P19"
+  },
+  {
+    "qid": "RW-0012",
+    "family": "one-hop",
+    "text": "乔万尼·薄伽丘的死亡地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Q82646"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "P20"
+  },
+  {
+    "qid": "RW-0013",
+    "family": "one-hop",
+    "text": "乔万尼·薄伽丘的母语是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Q397",
+      "Q652"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "P1412"
+  },
+  {
+    "qid": "RW-0014",
+    "family": "one-hop",
+    "text": "埃米利奥·朱塞佩·法里纳的国籍是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Q38",
+      "Q172579"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "P27"
+  },
+  {
+    "qid": "RW-0015",
+    "family": "one-hop",
+    "text": "埃米利奥·朱塞佩·法里纳的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Q10349745",
+      "Q10841764"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0016",
+    "family": "one-hop",
+    "text": "埃米利奥·朱塞佩·法里纳的出生地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Q495"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "P19"
+  },
+  {
+    "qid": "RW-0017",
+    "family": "one-hop",
+    "text": "埃米利奥·朱塞佩·法里纳的死亡地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Q165090"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "P20"
+  },
+  {
+    "qid": "RW-0018",
+    "family": "one-hop",
+    "text": "埃米利奥·朱塞佩·法里纳的母语是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Q652"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "P1412"
+  },
+  {
+    "qid": "RW-0019",
+    "family": "one-hop",
+    "text": "布拉迪斯拉发的所属组织是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1780",
+    "gold_values": [
+      "Q9383972",
+      "Q15477956"
+    ],
+    "zh_label": "布拉迪斯拉发",
+    "en_label": "Bratislava",
+    "gold_entity": "Q1780",
+    "predicate": "P463"
+  },
+  {
+    "qid": "RW-0020",
+    "family": "one-hop",
+    "text": "黎剎的国籍是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q928",
+      "Q2721139"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P27"
+  },
+  {
+    "qid": "RW-0021",
+    "family": "one-hop",
+    "text": "黎剎的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q36180",
+      "Q39631",
+      "Q49757",
+      "Q82955",
+      "Q270141"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0022",
+    "family": "one-hop",
+    "text": "黎剎的出生地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q75978"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P19"
+  },
+  {
+    "qid": "RW-0023",
+    "family": "one-hop",
+    "text": "黎剎的死亡地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q1461"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P20"
+  },
+  {
+    "qid": "RW-0024",
+    "family": "one-hop",
+    "text": "黎剎的母语是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q1321"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P1412"
+  },
+  {
+    "qid": "RW-0025",
+    "family": "one-hop",
+    "text": "黎剎的母校是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q151510",
+      "Q219694",
+      "Q533235",
+      "Q1401524",
+      "Q7896262"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P69"
+  },
+  {
+    "qid": "RW-0026",
+    "family": "one-hop",
+    "text": "黎剎的所属组织是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "Q41726",
+      "Q5884395"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "P463"
+  },
+  {
+    "qid": "RW-0027",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的国籍是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q183"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P27"
+  },
+  {
+    "qid": "RW-0028",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的职业是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q40348",
+      "Q56022",
+      "Q82955",
+      "Q2285706",
+      "Q11986654"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P106"
+  },
+  {
+    "qid": "RW-0029",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的出生地是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q1949455"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P19"
+  },
+  {
+    "qid": "RW-0030",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的母语是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q188"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P1412"
+  },
+  {
+    "qid": "RW-0031",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的母校是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q152838"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P69"
+  },
+  {
+    "qid": "RW-0032",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的雇主是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q691563",
+      "Q1141123",
+      "Q1961890"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P108"
+  },
+  {
+    "qid": "RW-0033",
+    "family": "one-hop",
+    "text": "格哈德·施羅德的所属组织是什么？",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Q83172",
+      "Q218868"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "P463"
+  },
+  {
+    "qid": "RW-0034",
+    "family": "cross-lingual",
+    "text": "请查找安特衛普省的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1116",
+    "gold_values": [
+      "Antwerp"
+    ],
+    "zh_label": "安特衛普省",
+    "en_label": "Antwerp",
+    "gold_entity": "Q1116",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0035",
+    "family": "cross-lingual",
+    "text": "请查找安大略省的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1904",
+    "gold_values": [
+      "Ontario"
+    ],
+    "zh_label": "安大略省",
+    "en_label": "Ontario",
+    "gold_entity": "Q1904",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0036",
+    "family": "cross-lingual",
+    "text": "请查找墨丘利的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1150",
+    "gold_values": [
+      "Mercury"
+    ],
+    "zh_label": "墨丘利",
+    "en_label": "Mercury",
+    "gold_entity": "Q1150",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0037",
+    "family": "cross-lingual",
+    "text": "请查找美因茨的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1720",
+    "gold_values": [
+      "Mainz"
+    ],
+    "zh_label": "美因茨",
+    "en_label": "Mainz",
+    "gold_entity": "Q1720",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0038",
+    "family": "cross-lingual",
+    "text": "请查找圣雄甘地的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1001",
+    "gold_values": [
+      "Mahatma Gandhi"
+    ],
+    "zh_label": "圣雄甘地",
+    "en_label": "Mahatma Gandhi",
+    "gold_entity": "Q1001",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0039",
+    "family": "cross-lingual",
+    "text": "请查找乔万尼·薄伽丘的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1402",
+    "gold_values": [
+      "Giovanni Boccaccio"
+    ],
+    "zh_label": "乔万尼·薄伽丘",
+    "en_label": "Giovanni Boccaccio",
+    "gold_entity": "Q1402",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0040",
+    "family": "cross-lingual",
+    "text": "请查找埃米利奥·朱塞佩·法里纳的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2040",
+    "gold_values": [
+      "Giuseppe Farina"
+    ],
+    "zh_label": "埃米利奥·朱塞佩·法里纳",
+    "en_label": "Giuseppe Farina",
+    "gold_entity": "Q2040",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0041",
+    "family": "cross-lingual",
+    "text": "请查找特里格拉夫峰的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1024",
+    "gold_values": [
+      "Triglav"
+    ],
+    "zh_label": "特里格拉夫峰",
+    "en_label": "Triglav",
+    "gold_entity": "Q1024",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0042",
+    "family": "cross-lingual",
+    "text": "请查找圣克莱芒-叙瓦尔索讷的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1970",
+    "gold_values": [
+      "Saint-Clément-sur-Valsonne"
+    ],
+    "zh_label": "圣克莱芒-叙瓦尔索讷",
+    "en_label": "Saint-Clément-sur-Valsonne",
+    "gold_entity": "Q1970",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0043",
+    "family": "cross-lingual",
+    "text": "请查找布拉迪斯拉发的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1780",
+    "gold_values": [
+      "Bratislava"
+    ],
+    "zh_label": "布拉迪斯拉发",
+    "en_label": "Bratislava",
+    "gold_entity": "Q1780",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0044",
+    "family": "cross-lingual",
+    "text": "请查找南卡罗来纳州的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1456",
+    "gold_values": [
+      "South Carolina"
+    ],
+    "zh_label": "南卡罗来纳州",
+    "en_label": "South Carolina",
+    "gold_entity": "Q1456",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0045",
+    "family": "cross-lingual",
+    "text": "请查找楠榜省的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2110",
+    "gold_values": [
+      "Lampung"
+    ],
+    "zh_label": "楠榜省",
+    "en_label": "Lampung",
+    "gold_entity": "Q2110",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0046",
+    "family": "cross-lingual",
+    "text": "请查找費嫩達爾的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1840",
+    "gold_values": [
+      "Veenendaal"
+    ],
+    "zh_label": "費嫩達爾",
+    "en_label": "Veenendaal",
+    "gold_entity": "Q1840",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0047",
+    "family": "cross-lingual",
+    "text": "请查找英語的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1860",
+    "gold_values": [
+      "English"
+    ],
+    "zh_label": "英語",
+    "en_label": "English",
+    "gold_entity": "Q1860",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0048",
+    "family": "cross-lingual",
+    "text": "请查找汉堡旧城的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1551",
+    "gold_values": [
+      "Hamburg-Altstadt"
+    ],
+    "zh_label": "汉堡旧城",
+    "en_label": "Hamburg-Altstadt",
+    "gold_entity": "Q1551",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0049",
+    "family": "cross-lingual",
+    "text": "请查找黎剎的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q1500",
+    "gold_values": [
+      "José Rizal"
+    ],
+    "zh_label": "黎剎",
+    "en_label": "José Rizal",
+    "gold_entity": "Q1500",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0050",
+    "family": "cross-lingual",
+    "text": "请查找3月30日的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2460",
+    "gold_values": [
+      "March 30"
+    ],
+    "zh_label": "3月30日",
+    "en_label": "March 30",
+    "gold_entity": "Q2460",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0051",
+    "family": "cross-lingual",
+    "text": "请查找格哈德·施羅德的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2530",
+    "gold_values": [
+      "Gerhard Schröder"
+    ],
+    "zh_label": "格哈德·施羅德",
+    "en_label": "Gerhard Schröder",
+    "gold_entity": "Q2530",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0052",
+    "family": "cross-lingual",
+    "text": "请查找馬洛洛斯的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2180",
+    "gold_values": [
+      "Malolos"
+    ],
+    "zh_label": "馬洛洛斯",
+    "en_label": "Malolos",
+    "gold_entity": "Q2180",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0053",
+    "family": "cross-lingual",
+    "text": "请查找2月6日的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2320",
+    "gold_values": [
+      "February 6"
+    ],
+    "zh_label": "2月6日",
+    "en_label": "February 6",
+    "gold_entity": "Q2320",
+    "predicate": "label"
+  },
+  {
+    "qid": "RW-0054",
+    "family": "cross-lingual",
+    "text": "请查找3月2日的英文资料",
+    "gold_uri": "http://www.wikidata.org/entity/Q2390",
+    "gold_values": [
+      "March 2"
+    ],
+    "zh_label": "3月2日",
+    "en_label": "March 2",
+    "gold_entity": "Q2390",
+    "predicate": "label"
+  }
+]

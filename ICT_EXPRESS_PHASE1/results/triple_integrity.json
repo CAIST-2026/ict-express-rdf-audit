@@ -1,0 +1,13 @@
+{
+  "seed": 20260101,
+  "graphs_rebuilt": 2,
+  "triples_in_regenerated_store": 49781,
+  "unique_objects": 14527,
+  "unique_subjects": 7764,
+  "queries_checked": 500,
+  "gold_value_found_in_regenerated_graph": 500,
+  "gold_value_missing": 0,
+  "gold_missing_examples": [],
+  "context_le_scanned": 500,
+  "context_violations": 0
+}

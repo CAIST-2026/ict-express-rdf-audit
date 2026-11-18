@@ -1,0 +1,29 @@
+system,group,category,n,hits1,mrr,ac1,vic,gsr
+LLM-guided localized,MATCHED_SUPERVISION,1-hop,200,0.975,0.9775,0.905,0.915,0.000305
+LLM-guided localized,MATCHED_SUPERVISION,2-hop,150,0.96,0.96,0.9333,0.9333,0.000502
+LLM-guided localized,MATCHED_SUPERVISION,cross-lingual,150,0.4333,0.65,0.4333,0.8267,0.000309
+LLM-guided localized,MATCHED_SUPERVISION,OVERALL,500,0.808,0.874,0.772,0.894,0.000365
+LLM-guided localized,NO_SUPERVISION,1-hop,200,1.0,1.0,1.0,1.0,0.000261
+LLM-guided localized,NO_SUPERVISION,2-hop,150,1.0,1.0,1.0,1.0,0.000402
+LLM-guided localized,NO_SUPERVISION,cross-lingual,150,0.0,0.0,0.0,0.0,0.000242
+LLM-guided localized,NO_SUPERVISION,OVERALL,500,0.7,0.7,0.7,0.7,0.000298
+Non-LLM localized traversal,NO_SUPERVISION,1-hop,200,1.0,1.0,1.0,1.0,0.000261
+Non-LLM localized traversal,NO_SUPERVISION,2-hop,150,0.0,0.0,0.0,1.0,0.000402
+Non-LLM localized traversal,NO_SUPERVISION,cross-lingual,150,0.0,0.0,0.0,0.0,0.000242
+Non-LLM localized traversal,NO_SUPERVISION,OVERALL,500,0.4,0.4,0.4,0.7,0.000298
+Non-LLM localized traversal,MATCHED_SUPERVISION,1-hop,200,0.92,0.92,0.92,0.93,0.000483
+Non-LLM localized traversal,MATCHED_SUPERVISION,2-hop,150,0.0,0.0,0.0,0.92,0.000734
+Non-LLM localized traversal,MATCHED_SUPERVISION,cross-lingual,150,0.4333,0.65,0.4333,0.8667,0.000428
+Non-LLM localized traversal,MATCHED_SUPERVISION,OVERALL,500,0.498,0.563,0.498,0.908,0.000542
+Non-LLM localized traversal,ORACLE,1-hop,200,1.0,1.0,1.0,1.0,0.000313
+Non-LLM localized traversal,ORACLE,2-hop,150,1.0,1.0,1.0,1.0,0.000201
+Non-LLM localized traversal,ORACLE,cross-lingual,150,1.0,1.0,1.0,1.0,0.000169
+Non-LLM localized traversal,ORACLE,OVERALL,500,1.0,1.0,1.0,1.0,0.000236
+sparql_real (saved),NO_SUPERVISION,1-hop,200,0.94,0.9667,0.94,1.0,0.155994
+sparql_real (saved),NO_SUPERVISION,2-hop,150,0.9,0.9312,0.9,1.0,0.155991
+sparql_real (saved),NO_SUPERVISION,cross-lingual,150,0.0,0.0,0.0,0.0,0.155963
+sparql_real (saved),NO_SUPERVISION,OVERALL,500,0.646,0.666,0.646,0.7,0.155984
+dense (saved),NO_SUPERVISION,1-hop,200,0.925,0.9533,0.925,0.99,0.000783
+dense (saved),NO_SUPERVISION,2-hop,150,0.58,0.6871,0.58,0.9133,0.001167
+dense (saved),NO_SUPERVISION,cross-lingual,150,0.0,0.0033,0.0,0.0067,0.000789
+dense (saved),NO_SUPERVISION,OVERALL,500,0.544,0.5885,0.544,0.672,0.0009

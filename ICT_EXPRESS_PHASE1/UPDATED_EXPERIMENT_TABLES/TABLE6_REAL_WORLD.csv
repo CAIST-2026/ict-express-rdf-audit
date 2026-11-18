@@ -1,0 +1,7 @@
+group,family,hits1,ac1,vic
+MATCHED_SUPERVISION,cross-lingual,0.0,0.0,0.0
+MATCHED_SUPERVISION,one-hop,1.0,1.0,1.0
+NO_SUPERVISION,cross-lingual,0.0,0.0,0.0
+NO_SUPERVISION,one-hop,1.0,1.0,1.0
+ORACLE,cross-lingual,1.0,1.0,1.0
+ORACLE,one-hop,1.0,1.0,1.0
