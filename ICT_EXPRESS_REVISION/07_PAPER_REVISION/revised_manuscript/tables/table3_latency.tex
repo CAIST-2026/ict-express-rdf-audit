@@ -1,0 +1,13 @@
+{\setlength{\tabcolsep}{3pt}\scriptsize%
+\begin{tabular}{lrrrrr}
+\toprule
+System & $n$ & mean (ms) & median (ms) & P95 (ms) & ac1 \\
+\midrule
+Localized (full) & 24 & 8379 & 8584 & 9674 & 0.792 \\
+\quad $-$ aligner ($k{=}6$) & 24 & 0.2 & 0.2 & 0.4 & 0.667 \\
+SPARQL (legacy, no engine) & 24 & 0.1 & 0.1 & 0.2 & 0.333 \\
+Vector-GraphRAG (legacy) & 24 & 2.6 & 2.4 & 5.1 & 0.500 \\
+SPARQL 1.1 (rdflib) & 24 & 290 & 157 & 606 & 0.542 \\
+Transliteration linker & 24 & 0.1 & 0.1 & 0.1 & 0.500 \\
+\bottomrule
+\end{tabular}}

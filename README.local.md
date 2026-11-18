@@ -13,6 +13,7 @@ Contribute?"* by Yuxiang Sun and Nan Yin.
 | `tables/`, `figures/` | Script-generated LaTeX tables and PDF figures |
 | `paper/main.tex`, `paper/main.pdf` | Manuscript source and compiled PDF (Elsevier `cas-dc`, 6 pages) |
 | `ICT_EXPRESS_PHASE1/` | Phase 1 audit: matched-supervision experiment, real Wikidata transfer check, exact statistics, reports, and publication-ready tables |
+| `ICT_EXPRESS_REVISION/` | Systematic revision package: original-result audit, serialized alignment table, unified latency workload, expanded Wikidata benchmark, consolidated statistics, GSR reanalysis, verified references, paper revision, and final reports |
 | `docs/` | Positioning memo and final verification report |
 | `traceability.csv` | Maps every number in the paper to its source file, columns, and generating script |
 
@@ -69,6 +70,21 @@ python ICT_EXPRESS_PHASE1/statistical_verification/stats_verify.py
 python ICT_EXPRESS_PHASE1/reports/generate_tables.py
 # real-Wikidata offline check: python ICT_EXPRESS_PHASE1/real_world_benchmark/RUN_LOCAL_EXPERIMENT.py
 ```
+
+# 6. Systematic revision artefacts (all deterministic; no LLM server)
+python ICT_EXPRESS_REVISION/00_AUDIT/recalculate_original_results.py
+python ICT_EXPRESS_REVISION/01_MATCHED_SUPERVISION/code/alignment_leakage_audit.py
+python ICT_EXPRESS_REVISION/02_LATENCY/code/validate_unified_latency.py
+python ICT_EXPRESS_REVISION/03_WIKIDATA/code/build_wikidata_benchmark.py
+python ICT_EXPRESS_REVISION/04_STATISTICS/code/build_statistics_package.py
+python ICT_EXPRESS_REVISION/04_STATISTICS/FIGURE_GENERATION_CODE/make_figures.py
+python ICT_EXPRESS_REVISION/FINAL_REPORT/consistency_check.py
+```
+
+The accepted unified-latency run requires `pyparsing` for rdflib SPARQL and
+records a hard preflight in `ICT_EXPRESS_REVISION/02_LATENCY/code/unified_latency.py`.
+Dense e5 was not executable in that latency environment because
+torch/transformers were unavailable; this is documented, not estimated.
 
 **Note on `upstream_results/`:** the reused main run (500 queries × 7 variants)
 from the original study is included under `upstream_results/` so the probe,

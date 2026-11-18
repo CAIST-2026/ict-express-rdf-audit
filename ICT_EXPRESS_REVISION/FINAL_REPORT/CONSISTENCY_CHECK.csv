@@ -1,0 +1,22 @@
+check,status,detail
+manuscript_exists,PASS,/Users/yuxiangsun/Desktop/ICT/ict_express_submission/paper/main.tex
+log_exists,PASS,/Users/yuxiangsun/Desktop/ICT/ict_express_submission/paper/main.log
+no_undefined_or_fatal,PASS,main.log
+abstract_under_250,PASS,checked separately by word count
+final_pdf_six_pages,PASS,checked via mdls
+latency_summary_exists,PASS,unified latency
+wikidata_results_exist,PASS,expanded Wikidata
+stats_results_exist,PASS,consolidated statistics
+reference_verification_exists,PASS,references
+final_manuscript_copy_exists,PASS,revised manuscript
+tex_contains_0.498,PASS,0.498
+tex_contains_exact CI upper 0.168,PASS,0.168
+tex_contains_matched cross-lingual 0.433,PASS,0.433
+tex_contains_unified latency median,PASS,8.58
+tex_contains_wikidata 184 queries,PASS,184 offline queries
+tex_contains_corrected pan DOI,PASS,10.1109/TKDE.2024.3352100
+tex_contains_corrected barnett DOI,PASS,10.1145/3644815.3644945
+tex_contains_release commit,PASS,37cab3e
+latency_full_median_8584,PASS,8584.218
+latency_workload_24,PASS,all variants
+wikidata_heldout_0of21,PASS,0/21

@@ -1,0 +1,554 @@
+%% ICT Express submission — revised manuscript
+%% Format: Elsevier CAS double-column (cas-dc), per the current official
+%% Guide for Authors (els-cas-templates is the template bundle the journal
+%% currently recommends; LaTeX two-column is permitted for LaTeX submissions).
+%% All numbers in tables/figures are \input from script-generated files in
+%% ../tables and ../figures; see ../traceability.csv for provenance.
+
+\documentclass[a4paper,fleqn]{cas-dc}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{caption}
+
+\newcommand{\ac}[0]{\ensuremath{ac_1}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+\shorttitle{What does the LLM actually contribute?}
+\shortauthors{Y. Sun and N. Yin}
+
+\title[mode = title]{What Does the LLM Actually Contribute? An Evidence-Constrained
+Audit of LLM-Guided Retrieval over Heterogeneous Bilingual RDF Graphs}
+
+\author[1]{Yuxiang Sun}[type=editor,
+  orcid=0000-0003-0165-7664]
+\credit{Conceptualization, Methodology, Software, Investigation, Writing -- original draft}
+\ead{syx921120@gmail.com}
+\affiliation[1]{organization={Guangzhou University of Software},
+            city={Guangzhou},
+            country={China}}
+
+\author[2]{Nan Yin}[orcid=0009-0007-3506-9592]
+\credit{Validation, Data curation, Writing -- review \& editing}
+\ead{ny@caist.ca}
+\affiliation[2]{organization={Canada Advanced Institute of Science and Technology},
+            city={Ottawa},
+            country={Canada}}
+
+\cortext[1]{Corresponding author.}
+
+\begin{abstract}
+Retrieval pipelines that place a large language model (LLM) inside
+knowledge-graph retrieval are usually evaluated end-to-end, making gains hard
+to attribute. We re-examine one such pipeline -- LLM-guided alignment plus
+bounded traversal over two heterogeneous bilingual RDF graphs (no
+\texttt{owl:sameAs}) -- under three controls. First, an evidence-constrained
+metric (\ac{}) replaces a judge-proxy metric coupled to the answer generator.
+Second, an alignment-supervision probe re-derives the planner's prompt: on a
+49{,}781-triple, 500-query synthetic benchmark the gold cross-lingual URI is
+present in 130/150 queries; Hits@1 is 0.500 when present versus 0/20 observed
+successes when absent (exact 95\% CI $[0,0.168]$). Third, real SPARQL~1.1 and
+multilingual dense baselines replace capability-limited surrogates, and a
+matched-supervision control gives the compared systems the same alignment
+table. Under that control a deterministic linker matches the 7B planner exactly
+on cross-lingual \ac{} (0.433; zero discordant pairs), so the original
+advantage reflected unequal supervision. The LLM retains an overall planning
+advantage (0.772 vs.\ 0.498; $p<10^{-20}$), but cross-lingual ability comes
+from the supplied table, not autonomous alignment. Real SPARQL restores
+two-hop accuracy to 0.900; localized traversal cuts logical triple access by
+$\sim$3 orders of magnitude at unchanged accuracy, while the LLM dominates
+latency. A small authentic Wikidata check supports methodology transfer but
+not cross-graph alignment. Code, data, and per-query records are released.
+\end{abstract}
+
+\begin{keywords}
+knowledge graph \sep RDF retrieval \sep cross-lingual entity alignment \sep large language model \sep evaluation methodology
+\end{keywords}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+GraphRAG-style pipelines increasingly put an LLM inside the retrieval loop: the
+model reads the question, emits a plan (aligned entity URIs, predicate
+constraints), and a traversal engine executes the plan over a store. Reported
+end-to-end gains are easy to produce and hard to interpret, for three reasons.
+The answer generator and the judge may be the same model (inflating every
+metric); baselines may be weaker than the real methods they claim to represent;
+and when the LLM's prompt already contains ground-truth alignment information,
+``the LLM aligned the entity'' may actually mean ``the planner copied a URI it
+was given''~\cite{pan2024unifying,barnett2024seven}.
+Prior work spans LLM--KG unification~\cite{pan2024unifying}, GraphRAG-style
+graph access~\cite{edge2024graphrag}, cross-lingual entity
+alignment~\cite{sun2018jape,yang2024segalign}, multilingual dense
+retrieval~\cite{e5,zhang2023miracl}, and evidence-grounded
+evaluation~\cite{thorne2018fever}. These strands typically report end-to-end
+gains or optimise alignment itself; they do not ask whether LLM planning keeps
+an advantage when the same alignment table, workload, and literal-evidence
+criterion are given to a deterministic retriever. Our audit targets that
+attribution gap rather than proposing a new architecture.
+
+This letter is an evidence-constrained re-evaluation of such a pipeline for
+retrieval over two heterogeneous bilingual RDF graphs. The setting is
+deliberately synthetic: graph~A uses Chinese labels and schema~X predicates,
+graph~B uses English labels and schema~Y predicates, the two graphs describe
+the same persons under different URIs, and there is no cross-graph identity
+link. We make three contributions:
+\begin{enumerate}
+\item \textbf{A judge-free, evidence-constrained metric.} \ac{} counts a query
+as correct only if the gold entity is ranked first \emph{and} the gold value is
+literally present in the retrieved evidence triples; $v_{ic}$ drops the ranking
+requirement. Both are computed from saved per-query records and replace a
+success metric that was coupled to a deterministic mock answerer.
+\item \textbf{An alignment-supervision probe.} For every query we re-derive the
+LLM planner's prompt and mark whether the gold URI appears in it verbatim. This
+single measurement separates ``the model solved it'' from ``the model selected
+what it was shown'' and, to our knowledge, is not routinely reported in
+LLM-in-the-loop retrieval evaluations.
+\item \textbf{Capability-corrected baselines, matched supervision, and cost
+accounting.} We replace a ``SPARQL'' baseline that never executed SPARQL with
+real SPARQL~1.1 via rdflib, and a monolingual hashed-encoder vector baseline
+with multilingual dense retrieval (e5-small) plus traversal. Crucially, we also
+re-run a deterministic localized linker with \emph{the same alignment table}
+given to the planner, which isolates alignment information from LLM planning.
+Finally we separate serial service time, loaded response time, and logical
+triple access (GSR), an access ratio rather than I/O or memory.
+\end{enumerate}
+The headline outcome is a demotion, not a promotion: after the corrections,
+the pipeline still leads on full-benchmark accuracy (\ac{} $0.772$ vs.\
+$0.498$ for a non-LLM linker under the same alignment table and $0.646$ for
+unaided real SPARQL; Holm-corrected $p<10^{-20}$ and $p<3.2\times10^{-8}$), but
+that linker matches its cross-lingual \ac{} exactly ($0.433$; zero discordant
+pairs in 150 queries). The surviving contribution is planning and predicate
+selection on in-language queries, not cross-lingual alignment
+(Sections~\ref{sec:probe}--\ref{sec:baselines}). A transliteration baseline
+solves every two-character-name query perfectly at $\sim$0.1\,ms
+(Section~\ref{sec:baselines}), and the LLM dominates end-to-end latency by
+roughly five orders of magnitude over traversal. Although our benchmark is
+synthetic, the audit protocol itself is domain-agnostic;
+Section~\ref{sec:conclusion} draws out what it implies for three ICT settings
+with the same structure: infrastructure metadata management, cross-domain
+telecom knowledge-graph integration, and heterogeneous IoT retrieval.
+
+\section{System and benchmark}\label{sec:system}
+\textbf{Store.} A deterministic generator builds two rdflib \texttt{Graph}s
+with a target of 50{,}000 triples (realized: 49{,}781 triples, 3{,}481
+entities, 8{,}218 labels/aliases). Three noise sources are built in: polysemy
+(same label, different identities), schema mismatch (synonymous predicates
+within each schema), and a cross-lingual naming gap (labels share no
+characters across graphs; for two-character names the pair is a romanisation
+pair, for three-character names it is not). The generator, queries, seeds,
+and all derived records are released with the letter (see the code and data
+availability statement), so every number below can be recomputed from the
+per-query CSVs alone.
+
+\textbf{Pipeline.} A surface stage matches the query against the label/alias
+index in both graphs; an LLM planner (qwen2.5:7b served by Ollama, temperature
+0, JSON output, 256-token budget) receives the matched anchors together with
+\emph{entity profiles} -- the canonical entity's surface forms in both
+languages and all URIs denoting it -- and emits aligned URIs plus predicate
+constraints; a localized executor then traverses only the aligned subjects'
+triples, expanding one hop along work links when the intent targets work
+attributes. The planner is wrapped with a simulated parametric memory whose
+coverage (92\%) is an input parameter modelling the long tail an LLM has never
+seen; coverage is disclosed rather than measured.
+
+\textbf{Queries.} 500 queries in three families: 200 one-hop attribute
+questions, 150 two-hop work-attribute questions, and 150 cross-lingual
+questions whose gold counterpart lives only in the other graph. Ground truth
+is recorded by the generator, so no answer is invented by a judge.
+
+\textbf{Notation and metrics.} For query $q$, let $R(q)$ be the system's ranked
+answer list with rank operator $\rho(q)\in\{1,2,\dots\}$ of the gold entity,
+$E(q)\subseteq T$ the evidence triples returned to the answer stage, $v^{*}(q)$
+the generator-recorded gold value, and $S(q)\subseteq T$ the triples the
+executor logically scanned. Given $n$ queries, the ranking metrics are
+\begin{equation}
+\mathrm{Hits@1} \;=\; \frac{1}{n}\sum_{q}\mathbf{1}\!\left[\rho(q)=1\right],
+\qquad
+\mathrm{MRR} \;=\; \frac{1}{n}\sum_{q}\frac{1}{\rho(q)} .
+\label{eq:rank}
+\end{equation}
+The evidence-constrained metrics couple ranking to grounding:
+\begin{align}
+\ac{}(q) &= \mathbf{1}\!\left[\rho(q)=1 \wedge v^{*}(q)\in E(q)\right],
+\label{eq:ac1}\\
+v_{ic}(q) &= \mathbf{1}\!\left[v^{*}(q)\in E(q)\right],
+\label{eq:vic}
+\end{align}
+so \ac{} scores a query only when the gold entity is ranked first \emph{and}
+the gold value is literally present in the returned evidence; $v_{ic}$ drops
+the ranking conjunct. Neither can be satisfied by a judge agreeing with the
+answer generator. Logical access is the ratio
+\begin{equation}
+\mathrm{GSR}(q)\;=\;\frac{|S(q)|}{|T|}\in[0,1],
+\label{eq:gsr}
+\end{equation}
+reported strictly as an access ratio over the store $T$, not as measured
+I/O or memory. Accuracy and GSR are aggregated over all 500 queries per
+system.
+
+\textbf{Paired tests.} For a binary metric, systems A and B are compared on
+the identical query set with McNemar's exact test on the discordant pairs:
+writing $b$ for the count with $ac_{1,A}(q)=1,\,ac_{1,B}(q)=0$ and $c$ for the
+reverse,
+\begin{equation}
+p \;=\; 2\!\!\sum_{i=0}^{\min(b,c)}\!\!\binom{b+c}{i}\Big/2^{\,b+c},
+\label{eq:mcnemar}
+\end{equation}
+the two-sided exact tail of $\mathrm{Bin}(b{+}c,\tfrac12)$. For the
+continuous GSR we use the Wilcoxon signed-rank statistic on paired
+differences $d_q=\mathrm{GSR}_A(q)-\mathrm{GSR}_B(q)$, and Holm's
+step-down correction over the family of contrasts within each metric:
+$p_{(k)}^{\mathrm{Holm}}=\max_{j\le k}\,(m{-}j{+}1)\,p_{(j)}$ for the ordered
+$m$ raw $p$-values. For a binomial proportion $k/n$ we use the two-sided
+Clopper--Pearson exact interval
+\begin{equation}
+\mathrm{CI}_{1-\alpha}=\left[B^{-1}\!\left(\tfrac{\alpha}{2};k,n-k+1\right),\;
+B^{-1}\!\left(1-\tfrac{\alpha}{2};k+1,n-k\right)\right],
+\label{eq:cp}
+\end{equation}
+where $B^{-1}(\cdot;a,b)$ is the Beta quantile; this avoids a normal
+approximation when $k=0$.
+
+\section{What the probe shows}\label{sec:probe}
+The planner's prompt is built from a ground-truth surface-form table. When the
+simulated memory covers an entity, the correct cross-lingual counterpart URI is
+inside the prompt. Let $P(q)\subset T$ be the set of URIs that appear in the
+planner's prompt for query $q$ (re-derived deterministically from the same
+seeds as the main run), $u^{*}(q)$ the gold entity URI, and let
+\begin{equation}
+g(q)\;=\;\mathbf{1}\!\left[u^{*}(q)\in P(q)\right]
+\label{eq:probe}
+\end{equation}
+mark the \emph{alignment-supervision} condition. The probe estimator simply
+stratifies any metric $M$ by this condition,
+$\hat{M}_{g=i}=\tfrac{1}{n_i}\sum_{q:\,g(q)=i}M(q)$ with $n_i$ the stratum
+size, so a system can be credited with cross-lingual accuracy only on queries
+where the gold URI was \emph{not} already shown to it.
+
+Table~\ref{tab:probe} and Figure~\ref{fig:probe} give the outcome split. For
+130 of the 150 cross-lingual
+queries (86.7\%) the gold URI was in the prompt; the planner achieved Hits@1
+$0.500$ on those (exact 95\% CI $[0.411,0.589]$) and 0/20 observed successes on
+the uncovered queries (exact 95\% CI $[0,0.168]$ by Eq.~\eqref{eq:cp}). Thus no
+success was observed without exposure, but zero observed successes do not
+establish zero capability. The cross-lingual ability of the pipeline is
+therefore bounded by the supplied alignment table, modulated by a
+near-coin-flip selection rate; it is not evidence of model-supplied world
+knowledge. One structural caveat: the two-hop family's gold answer is a
+\emph{work} URI reached by traversal, so the probe does not apply there (marked
+n/a); those queries succeed through person alignment plus the two-hop executor,
+which the ablations confirm (removing the predicate constraint collapses two-hop
+\ac{} from 0.933 to 0.000).
+
+\input{../tables/table2_probe}
+\captionof{table}{Alignment-supervision probe: outcomes stratified by whether
+the gold URI was present in the planner's prompt.}\label{tab:probe}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{../figures/fig3_probe.pdf}
+\caption{Alignment-supervision probe. When the gold URI is in the planner's
+prompt the 7B planner selects it only half the time on cross-lingual queries;
+when it is absent no success was observed in 20 queries, with an exact 95\%
+interval reaching 0.168. On one-hop queries the prompt
+almost always contains the gold entity (surface matching), and accuracy is
+near-perfect.}
+\label{fig:probe}
+\end{figure}
+
+\section{Capability-corrected baselines}\label{sec:baselines}
+The original evaluation compared against (i) a ``SPARQL'' baseline that walked
+Python triple patterns without a SPARQL engine and scored 0.000 on two-hop and
+cross-lingual families, and (ii) a dense baseline with a monolingual hashed
+encoder that scored 0.000 cross-lingually by construction. Neither number
+supports a claim about SPARQL or dense retrieval in general.
+
+Table~\ref{tab:main} and Figure~\ref{fig:acc} add three fair systems on the
+identical store and query set. \emph{Real SPARQL~1.1} (rdflib engine; two-stage
+resolution over \texttt{rdfs:label} and alias predicates, \texttt{VALUES}
+push-down, two-hop work pattern) recovers two-hop \ac{} to $0.900$ -- the legacy
+number of $0.000$ was an implementation artefact -- and reaches $0.940$ on
+one-hop. It scores $0.000$ cross-lingually, which \emph{is} a genuine result:
+without \texttt{owl:sameAs} no query can cross the naming gap unaided.
+\emph{Multilingual dense retrieval} (e5-small, 8{,}218 passage documents, mean
+pooled, L2-normalised) with traversal reaches $0.925$ on one-hop but $0.580$
+on two-hop and $0.000$ cross-lingually; removing traversal collapses two-hop
+to $0.000$, isolating what the graph step contributes. \emph{Dense without
+traversal} reaches only $0.370$ overall: neither head has a cross-lingual
+route, so this family of methods is structurally capped on the cross-lingual
+third of the benchmark.
+
+\emph{Transliteration.} A small pinyin matcher with identical traversal scores
+$0.640/0.613$ on one-hop/two-hop and $0.307$ cross-lingually at $\sim$0.08\,ms
+per query (mean, $n=198$). Diagnosis matters more than the headline: its
+cross-lingual successes are exactly the 46 two-character-name queries (Hits@1
+$1.000$, since those pairs are romanisation pairs by construction) and none of
+the 104 three-character-name queries (Hits@1 $0.000$). The $0.307$ is a mixture
+fixed by the generator's name-length distribution and must not be read as
+evidence that phonetic matching is a strong cross-lingual linker.
+
+\emph{Matched alignment supervision.} The original cross-lingual comparison
+confounded capability with information: the planner's prompt contained a
+truth-derived alias table, while SPARQL and dense retrieval did not. We
+therefore rebuilt the planner's lookup path
+(\texttt{knowledge}$\to$\texttt{label\_to\_key}$\to$\texttt{alias\_index}) and
+ran a deterministic localized linker under three conditions: no alignment
+table, the same matched table as the planner, and oracle gold URIs (an upper
+bound only, not a deployable baseline).
+Table~\ref{tab:matched} reports the cross-lingual subset. With the same table
+the deterministic linker and the 7B planner are indistinguishable query by
+query ($0.433$ each; 0/150 discordant pairs). Without the table both score
+$0.000$; the oracle linker reaches $1.000$. The original cross-lingual lead is
+therefore attributable to supplied alignment information rather than LLM
+reasoning. On the full 500-query set the LLM still leads the matched linker
+($0.772$ vs.\ $0.498$); its simplified two-hop ranker understates a fully tuned
+non-LLM system, but this does not affect the cross-lingual rank-by-rank
+equality.
+
+For accuracy contrasts, Holm-adjusted $p<10^{-3}$ throughout ($n=500$ paired
+queries); fair-baseline contrasts satisfy $p\le3.2\times10^{-8}$, whereas the
+strongest ablation, \texttt{no\_aligner}, is $p=7.85\times10^{-4}$. The margin
+over the strongest fair baseline is $0.772-0.646=0.126$, roughly half of what
+the legacy baselines suggested. The in-language ablation also cuts against the
+design: dropping the aligner entirely raises one-hop, two-hop and overall
+\ac{} to $1.000$, because surface matching plus traversal already suffices
+when no cross-graph alignment is required -- the aligner pays a tax
+(mis-selection) on the two-thirds of queries that never needed it, connecting
+to the known failure mode of retrieving the wrong entity before reasoning
+begins \cite{barnett2024seven}.
+
+\input{../tables/table1_main}
+\captionof{table}{Main results at 49{,}781 triples / 500 queries. \ac{} is the
+evidence-constrained strict metric; GSR is a logical access ratio, not measured
+I/O. $^{\dagger}$Legacy baselines, shown for comparability only; claims rest on
+the fair systems. MRR of the full system is 0.874.}\label{tab:main}
+
+\input{../tables/table_matched}
+\captionof{table}{Matched-supervision control on the 150 cross-lingual queries.
+The matched condition gives the compared systems the same truth-derived alias
+table; oracle rows are upper bounds only. The LLM and deterministic linker have
+0/150 discordant pairs under matched supervision.}\label{tab:matched}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{../figures/fig2_accuracy.pdf}
+\caption{Strict accuracy (\ac{}) per query family. The real SPARQL baseline
+recovers two-hop accuracy that the legacy implementation reported as zero;
+cross-lingual accuracy is available only to systems that are handed an
+alignment table.}
+\label{fig:acc}
+\end{figure}
+
+\section{Cost structure}\label{sec:cost}
+Table~\ref{tab:latency} reports a unified 24-query workload: all executable
+systems received the same qids, order, warm-up and cache policy. On this serial
+service-time protocol the LLM planner costs $8.38$\,s per query on average
+(median $8.58$\,s), of which $\sim$99.99\% is model time, while traversal and
+non-LLM linkers are sub-millisecond. A separate four-worker run confirms that
+queueing, not parallelism, dominates when one local model backend is shared;
+loaded response time is therefore reported separately from service time. GSR
+behaves as
+designed: removing localized pruning leaves accuracy identical (\ac{} $0.772$,
+$p=1$) while logical access jumps to $1.0$ of the store and traversal time
+from $0.19$\,ms to $47.1$\,ms ($\sim$245$\times$), i.e.\ pruning is a pure
+cost lever worth $\sim$3 orders of magnitude of logical access, with no
+accuracy claim attached.
+The scaling sweep confirms the same structure as the store grows. We fit the
+log--log model
+\begin{equation}
+\log \overline{\mathrm{GSR}} \;=\; a + \beta\,\log|T|
+\label{eq:fit}
+\end{equation}
+at sizes $|T|\in\{10^4, 5{\times}10^4, 10^5, 2{\times}10^5\}$: across
+10K--200K triples the localized variants' GSR decays with $\beta=-0.98$ to
+$-1.02$ ($R^2 \ge 0.999$), but this is a denominator effect: the mean number
+of logically scanned triples stays 17.5--19.3 across the same 20-fold size
+range (exponent $0.015$, $R^2=0.195$). We therefore do not claim overall
+$O(1)$ complexity; the supported statement is that observed logical access
+stays approximately constant under the evaluated scaling conditions. The
+unpruned variant stays at $1.0$
+and the SPARQL systems at $\approx 0.156$ of the store regardless of size
+(Fig.~\ref{fig:scaling}). Real SPARQL latency grows with store size, whereas
+the full system stays LLM-dominated. On the unified 24-query workload, real
+SPARQL costs $290$\,ms mean / $157$\,ms median versus $2.6$\,ms for
+vector-GraphRAG and $0.09$\,ms for the transliteration linker, i.e.\ one to
+five orders of magnitude below the LLM. Dense e5 is excluded from this
+unified latency run because torch/transformers were unavailable in that
+environment; its accuracy remains reported on the 500-query benchmark.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{../figures/fig4_scaling.pdf}
+\caption{GSR (logical access ratio) vs.\ store size, log--log. Localized
+variants decay as $|T|^{-1}$; unpruned and SPARQL-family access is
+size-proportional.}
+\label{fig:scaling}
+\end{figure}
+
+\input{../tables/table3_latency}
+\captionof{table}{Unified serial-service workload (same 24 qids, fixed order,
+two warm-up queries, two timed repeats, plan cache cleared). Dense e5 was not
+executable in this latency environment; its 500-query accuracy is reported
+elsewhere. The $n$ column is the number of timed queries.}\label{tab:latency}
+
+\section{Threats to validity and scope}\label{sec:limits}
+\textbf{Synthetic main benchmark; limited real-RDF check.} System comparisons
+come from one generated benchmark; there is no real ICT/telecommunications
+deployment claim. A separate transfer check used 632 authentic Wikidata zh/en
+triples (70 entities) and 184 offline queries (114 one-hop, 70 cross-lingual):
+one-hop \ac{}=1.000 in all three supervision groups. Cross-lingual matched
+\ac{} was 0.700 overall ($49/70$), exactly the train-pool alignment coverage;
+the 21 held-out non-oracle queries scored 0/21 (exact 95\% CI $[0,0.161]$) and
+the oracle scored 1.000. This supports metric and stratification transfer, not
+cross-graph alignment: Wikidata is identity-linked, and two-hop, ambiguous,
+and predicate-mapping families were not executed. The synthetic cross-lingual family tests whether an alignment
+table was \emph{provided}, not whether a system can \emph{infer} alignment;
+systems without such a table are structurally capped at zero here.
+\textbf{Simulated memory.} The 92\% coverage parameter controls the
+cross-lingual upper bound directly; it is a disclosed input, not a measured
+model property. \textbf{One model, one machine.} Latency numbers are specific
+to qwen2.5:7b on a local Ollama server and would change with a hosted API.
+\textbf{No independent human annotation.} \ac{}/$v_{ic}$ are string-match
+checks over saved evidence, not human judgements; the earlier mock-judge
+metrics were removed precisely because they could be. \textbf{GSR} counts
+logical triple access; it is not measured I/O, memory, or dollars.
+
+\section{Conclusion}\label{sec:conclusion}
+With a judge-free metric, a supervision probe, capability-corrected baselines,
+and a matched-supervision control, the same benchmark tells a more defensible
+story. Localized traversal is a pure cost lever: it cuts logical access by
+$\sim$3 orders of magnitude without changing accuracy. The LLM's real gain is
+planning and predicate selection on in-language queries ($0.772$ vs.\ $0.498$
+for the matched linker), whereas cross-lingual \ac{} is identical to a
+deterministic linker once both receive the same table ($0.433$). Answering
+RQ1--RQ5: (i) the LLM beats unaided SPARQL/dense overall, but not the matched
+linker on cross-lingual queries; (ii) cross-lingual performance is inherited
+from the supplied table; (iii) the protocol transfers to authentic Wikidata
+without establishing cross-graph alignment; (iv) the remaining contributions
+decompose into alignment table, planner, and cost-only traversal; and (v) LLM
+latency is justified only for planning-heavy queries, not for cross-lingual
+linking. The actionable lessons are methodological: report what the prompt
+contains, judge with metrics the answer generator cannot influence, and let
+baselines use the capability they claim to represent.
+
+\textbf{Implications for ICT systems.} The three controls transfer directly
+to ICT settings that share the structure studied here -- heterogeneous
+schemas, bilingual or multilingual labelling, and no shared identity links.
+In \emph{ICT infrastructure metadata management}, asset and catalogue
+metadata spread across CRs, inventory and topology systems is exactly the
+``two schemas, one entity'' situation; before an LLM planner is credited
+with ``resolving'' an asset, the same probe can ask whether the mapped
+identifier was already in its prompt. In \emph{cross-domain telecom
+knowledge-graph integration}, operator and vendor graphs maintained in
+different languages will realistically be bridged by curated alignment
+tables rather than \texttt{owl:sameAs}; Eq.~\eqref{eq:probe} gives
+integrators a cheap audit of how much of the measured accuracy is inherited
+from the table rather than produced by the model. In \emph{heterogeneous
+IoT retrieval}, where device, platform, and application ontologies coexist,
+the cost findings (LLM seconds vs.\ sub-millisecond traversal; near-constant
+scanned-triple counts in the scaling sweep) bound where an in-the-loop planner
+is affordable --
+planning is justified for in-language predicate and plan selection, whereas
+cross-graph alignment should be audited as an explicit information source
+rather than credited to the model. Future work must move the evaluation
+to settings where the alignment table is not handed to the model -- real
+public cross-lingual KGs and operational ICT metadata traces -- before any
+claim about LLM-supplied cross-lingual knowledge is warranted.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Yuxiang Sun:} Conceptualization, Methodology, Software, Investigation,
+Writing -- original draft. \textbf{Nan Yin:} Validation, Data curation,
+Writing -- review \& editing.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work reported
+in this paper.
+
+\section*{Funding}
+This work was supported by the 2026 Research Project of Guangzhou University
+of Software (grant number KY202649).
+
+\section*{Declaration of generative AI and AI-assisted technologies in the
+manuscript preparation process}
+During the preparation of this work the authors used an AI assistant in order
+to assist with code refactoring, statistical verification and manuscript
+editing. After using this tool, the authors reviewed and edited the content as
+needed and take full responsibility for the content of the published article.
+
+\section*{Code and data availability}
+To support independent verification, the complete audit artefacts are
+publicly released under the MIT licence at the repository
+\url{https://github.com/CAIST-2026/ict-express-rdf-audit} (release commit
+37cab3e): (i) the deterministic benchmark generator with its fixed seeds and
+the 500 ground-truth queries; (ii) the alignment-supervision probe; (iii) all
+baseline and ablation implementations; (iv) the statistical-analysis
+scripts; (v) the per-query result records from which every table, figure,
+and number in this letter is derived; and (vi) the Phase~1 matched-supervision,
+real-RDF transfer, and exact-CI artefacts, together with a provenance index
+mapping each reported value to its source file and script; and (vii) the
+systematic-revision package with the unified latency workload, expanded
+Wikidata benchmark, consolidated statistics, and reference-verification
+records. No real operator,
+subscriber, or device data is contained in the released artefacts; the
+benchmark is synthetic throughout.
+
+\begin{thebibliography}{00}
+\bibitem{pan2024unifying}
+S. Pan, L. Luo, Y. Wang, C. Chen, X. Wang, X. Wu, Unifying large language
+models and knowledge graphs: a roadmap, IEEE Trans. Knowl. Data Eng. 36 (7)
+(2024) 3580--3599. https://doi.org/10.1109/TKDE.2024.3352100.
+\bibitem{barnett2024seven}
+S. Barnett, S. Kurniawan, S. Thudumu, Z. Brannelly, M. Abdelrazek, Seven
+failure points when engineering a retrieval augmented generation system, in:
+Proc.\ IEEE/ACM 3rd Int.\ Conf.\ AI Engineering (CAIN), ACM, 2024, pp.\ 194--199.
+https://doi.org/10.1145/3644815.3644945.
+\bibitem{edge2024graphrag}
+D. Edge, H. Trinh, N. Cheng, et al., From local to global: a graph RAG approach
+to query-focused summarization, arXiv:2404.16130, 2024.
+\bibitem{sun2018jape}
+Z. Sun, W. Hu, Q. Zhang, Y. Qu, Bootstrapping entity alignment with knowledge
+graph embedding, in: Proc.\ IJCAI, 2018, pp.\ 4396--4402.
+https://doi.org/10.24963/ijcai.2018/611.
+\bibitem{yang2024segalign}
+L. Yang, J. Cheng, F. Zhang, Advancing cross-lingual entity alignment with
+large language models, in: Findings of EMNLP 2024, ACL, 2024, pp.\ 8122--8138.
+https://doi.org/10.18653/v1/2024.findings-emnlp.475.
+\bibitem{zhang2023miracl}
+X. Zhang, N. Thakur, O. Ogundepo, et al., MIRACL: a multilingual retrieval
+dataset covering 18 diverse languages, Trans. Assoc. Comput. Linguist. 11
+(2023) 1114--1131. https://doi.org/10.1162/tacl\_a\_00595.
+\bibitem{thorne2018fever}
+J. Thorne, A. Vlachos, C. Christodoulopoulos, A. Mittal, FEVER: a large-scale
+dataset for fact extraction and VERification, in: Proc.\ NAACL-HLT, 2018,
+pp.\ 809--819. https://doi.org/10.18653/v1/N18-1074.
+\bibitem{lewis2020rag}
+P. Lewis, E. Perez, A. Piktus, et al., Retrieval-augmented generation for
+knowledge-intensive NLP tasks, in: Advances in Neural Information Processing
+Systems 33 (NeurIPS), 2020, pp.\ 9459--9474.
+\bibitem{rdflib}
+G. van Harmelen, S. Schalkwijk, et al., rdflib: a Python library for working
+with RDF, version 7.6.0, 2025. https://github.com/RDFLib/rdflib.
+\bibitem{e5}
+X. Wang, et al., Multilingual E5 text embeddings: a technical report,
+arXiv:2402.05672, 2024. https://arxiv.org/abs/2402.05672.
+\bibitem{qwen25}
+A. Yang, et al., Qwen2.5 technical report, arXiv:2412.15115, 2024.
+https://arxiv.org/abs/2412.15115.
+\bibitem{mcnemar1947}
+Q. McNemar, Note on the sampling error of the difference between correlated
+proportions or percentages, Psychometrika 12 (2) (1947) 153--157.
+\bibitem{holm1979}
+S. Holm, A simple sequentially rejective multiple test procedure, Scand. J.
+Stat. 6 (2) (1979) 65--70.
+\end{thebibliography}
+
+\end{document}
