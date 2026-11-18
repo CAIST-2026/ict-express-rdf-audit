@@ -1,0 +1,7 @@
+variant,protocol,workers,n_qids,n_runs,repeats,warmup,mean_ms,median_ms,sd_ms,p95_ms,min_ms,max_ms,mean_llm_ms,mean_traversal_ms,ac1
+full_system,serial_service,1,24,48,2,2,8378.576,8584.218,1027.372,9673.866,5809.259,9845.391,8378.261,0.1558,0.7917
+no_aligner_k6,serial_service,1,24,48,2,2,0.192,0.174,0.077,0.363,0.077,0.383,0.0,0.0922,0.6667
+sparql_baseline,serial_service,1,24,48,2,2,0.148,0.139,0.047,0.232,0.087,0.293,0.0,0.083,0.3333
+sparql_real,serial_service,1,24,48,2,2,289.58,156.704,183.688,605.531,145.317,711.65,0.0,289.4846,0.5417
+translit,serial_service,1,24,48,2,2,0.086,0.081,0.026,0.126,0.046,0.193,0.0,0.0529,0.5
+vector_graphrag,serial_service,1,24,48,2,2,2.583,2.408,1.24,5.061,1.336,6.205,0.0,0.1878,0.5

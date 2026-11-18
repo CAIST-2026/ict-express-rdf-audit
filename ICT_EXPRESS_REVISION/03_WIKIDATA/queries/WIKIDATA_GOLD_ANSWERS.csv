@@ -1,0 +1,185 @@
+qid,family,gold_entity,gold_uri,gold_values,predicate,alignment_split,source
+RW2-X0001,cross-lingual,Q23,http://www.wikidata.org/entity/Q23,"[""George Washington""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0002,cross-lingual,Q76,http://www.wikidata.org/entity/Q76,"[""Barack Obama""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0003,cross-lingual,Q108,http://www.wikidata.org/entity/Q108,"[""January""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0004,cross-lingual,Q161,http://www.wikidata.org/entity/Q161,"[""fiber""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0005,cross-lingual,Q165,http://www.wikidata.org/entity/Q165,"[""sea""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0006,cross-lingual,Q225,http://www.wikidata.org/entity/Q225,"[""Bosnia and Herzegovina""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0007,cross-lingual,Q270,http://www.wikidata.org/entity/Q270,"[""Warsaw""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0008,cross-lingual,Q254,http://www.wikidata.org/entity/Q254,"[""Wolfgang Amadeus Mozart""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0009,cross-lingual,Q298,http://www.wikidata.org/entity/Q298,"[""Chile""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0010,cross-lingual,Q309,http://www.wikidata.org/entity/Q309,"[""history""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0011,cross-lingual,Q342,http://www.wikidata.org/entity/Q342,"[""Quimper""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0012,cross-lingual,Q359,http://www.wikidata.org/entity/Q359,"[""WikiLeaks""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0013,cross-lingual,Q416,http://www.wikidata.org/entity/Q416,"[""disk magazine""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0014,cross-lingual,Q360,http://www.wikidata.org/entity/Q360,"[""Julian Assange""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0015,cross-lingual,Q478,http://www.wikidata.org/entity/Q478,"[""Derval""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0016,cross-lingual,Q483,http://www.wikidata.org/entity/Q483,"[""Megaupload""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0017,cross-lingual,Q491,http://www.wikidata.org/entity/Q491,"[""friendship""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0018,cross-lingual,Q510,http://www.wikidata.org/entity/Q510,"[""Mariana Trench""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0019,cross-lingual,Q517,http://www.wikidata.org/entity/Q517,"[""Napoleon""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0020,cross-lingual,Q544,http://www.wikidata.org/entity/Q544,"[""Solar System""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0021,cross-lingual,Q560,http://www.wikidata.org/entity/Q560,"[""helium""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0022,cross-lingual,Q571,http://www.wikidata.org/entity/Q571,"[""book""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0023,cross-lingual,Q539,http://www.wikidata.org/entity/Q539,"[""Giuseppe Garibaldi""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0024,cross-lingual,Q775,http://www.wikidata.org/entity/Q775,"[""Gelderland""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0025,cross-lingual,Q768,http://www.wikidata.org/entity/Q768,"[""Supetar""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0026,cross-lingual,Q678,http://www.wikidata.org/entity/Q678,"[""Tonga""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0027,cross-lingual,Q802,http://www.wikidata.org/entity/Q802,"[""Nowy Sącz""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0028,cross-lingual,Q613,http://www.wikidata.org/entity/Q613,"[""Emirate of Dubai""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0029,cross-lingual,Q882,http://www.wikidata.org/entity/Q882,"[""Charlie Chaplin""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0030,cross-lingual,Q901,http://www.wikidata.org/entity/Q901,"[""scientist""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0031,cross-lingual,Q663,http://www.wikidata.org/entity/Q663,"[""aluminium""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0032,cross-lingual,Q589,http://www.wikidata.org/entity/Q589,"[""black hole""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0033,cross-lingual,Q831,http://www.wikidata.org/entity/Q831,"[""ciao""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0034,cross-lingual,Q866,http://www.wikidata.org/entity/Q866,"[""YouTube""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0035,cross-lingual,Q700,http://www.wikidata.org/entity/Q700,"[""Swedish Chef""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0036,cross-lingual,Q721,http://www.wikidata.org/entity/Q721,"[""Life, the Universe and Everything""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0037,cross-lingual,Q733,http://www.wikidata.org/entity/Q733,"[""Paraguay""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0038,cross-lingual,Q1234,http://www.wikidata.org/entity/Q1234,"[""seaborgium""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0039,cross-lingual,Q1198,http://www.wikidata.org/entity/Q1198,"[""North Rhine-Westphalia""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0040,cross-lingual,Q1050,http://www.wikidata.org/entity/Q1050,"[""Eswatini""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0041,cross-lingual,Q924,http://www.wikidata.org/entity/Q924,"[""Tanzania""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0042,cross-lingual,Q951,http://www.wikidata.org/entity/Q951,"[""toilet paper orientation""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0043,cross-lingual,Q937,http://www.wikidata.org/entity/Q937,"[""Albert Einstein""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0044,cross-lingual,Q742,http://www.wikidata.org/entity/Q742,"[""Jean Racine""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0045,cross-lingual,Q1088,http://www.wikidata.org/entity/Q1088,"[""blue""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0046,cross-lingual,Q1281,http://www.wikidata.org/entity/Q1281,"[""Category:Contents""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0047,cross-lingual,Q978,http://www.wikidata.org/entity/Q978,"[""meme""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0048,cross-lingual,Q1319,http://www.wikidata.org/entity/Q1319,"[""Federico Errázuriz Echaurren""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0049,cross-lingual,Q1664,http://www.wikidata.org/entity/Q1664,"[""Ruhr""]",label,train,saved Wikidata zh/en rdfs:label
+RW2-X0050,cross-lingual,Q1116,http://www.wikidata.org/entity/Q1116,"[""Antwerp""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0051,cross-lingual,Q1904,http://www.wikidata.org/entity/Q1904,"[""Ontario""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0052,cross-lingual,Q1150,http://www.wikidata.org/entity/Q1150,"[""Mercury""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0053,cross-lingual,Q1720,http://www.wikidata.org/entity/Q1720,"[""Mainz""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0054,cross-lingual,Q1001,http://www.wikidata.org/entity/Q1001,"[""Mahatma Gandhi""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0055,cross-lingual,Q1402,http://www.wikidata.org/entity/Q1402,"[""Giovanni Boccaccio""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0056,cross-lingual,Q2040,http://www.wikidata.org/entity/Q2040,"[""Giuseppe Farina""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0057,cross-lingual,Q1024,http://www.wikidata.org/entity/Q1024,"[""Triglav""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0058,cross-lingual,Q1970,http://www.wikidata.org/entity/Q1970,"[""Saint-Clément-sur-Valsonne""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0059,cross-lingual,Q1780,http://www.wikidata.org/entity/Q1780,"[""Bratislava""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0060,cross-lingual,Q1456,http://www.wikidata.org/entity/Q1456,"[""South Carolina""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0061,cross-lingual,Q2110,http://www.wikidata.org/entity/Q2110,"[""Lampung""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0062,cross-lingual,Q1840,http://www.wikidata.org/entity/Q1840,"[""Veenendaal""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0063,cross-lingual,Q1860,http://www.wikidata.org/entity/Q1860,"[""English""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0064,cross-lingual,Q1551,http://www.wikidata.org/entity/Q1551,"[""Hamburg-Altstadt""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0065,cross-lingual,Q1500,http://www.wikidata.org/entity/Q1500,"[""José Rizal""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0066,cross-lingual,Q2460,http://www.wikidata.org/entity/Q2460,"[""March 30""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0067,cross-lingual,Q2530,http://www.wikidata.org/entity/Q2530,"[""Gerhard Schröder""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0068,cross-lingual,Q2180,http://www.wikidata.org/entity/Q2180,"[""Malolos""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0069,cross-lingual,Q2320,http://www.wikidata.org/entity/Q2320,"[""February 6""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-X0070,cross-lingual,Q2390,http://www.wikidata.org/entity/Q2390,"[""March 2""]",label,held-out,saved Wikidata zh/en rdfs:label
+RW2-O0001,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q1476974""]",P19,train,saved Wikidata direct property triple
+RW2-O0002,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q731635""]",P20,train,saved Wikidata direct property triple
+RW2-O0003,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q30"", ""Q161885""]",P27,train,saved Wikidata direct property triple
+RW2-O0004,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q30461"", ""Q36180"", ""Q81096"", ""Q82955"", ""Q131512"", ""Q294126"", ""Q372436"", ""Q380782"", ""Q1734662"", ""Q3242115"", ""Q21772571"", ""Q38239859""]",P106,train,saved Wikidata direct property triple
+RW2-O0005,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q41726"", ""Q463303"", ""Q466089"", ""Q1632484"", ""Q26721351""]",P463,train,saved Wikidata direct property triple
+RW2-O0006,one-hop,Q23,http://www.wikidata.org/entity/Q23,"[""Q1860""]",P1412,train,saved Wikidata direct property triple
+RW2-O0007,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q6366688""]",P19,train,saved Wikidata direct property triple
+RW2-O0008,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q30""]",P27,train,saved Wikidata direct property triple
+RW2-O0009,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q13371"", ""Q49088"", ""Q49122"", ""Q1346110"", ""Q3273124"", ""Q4122998"", ""Q5059051"", ""Q6411346"", ""Q14875335"", ""Q15262435""]",P69,train,saved Wikidata direct property triple
+RW2-O0010,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q40348"", ""Q82955"", ""Q185351"", ""Q372436"", ""Q3400985"", ""Q11774156"", ""Q15077007"", ""Q15958642"", ""Q28532974""]",P106,train,saved Wikidata direct property triple
+RW2-O0011,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q131252"", ""Q3483312"", ""Q4537328"", ""Q4537781"", ""Q4537985""]",P108,train,saved Wikidata direct property triple
+RW2-O0012,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q168778"", ""Q170018"", ""Q463303"", ""Q466089"", ""Q2015366""]",P463,train,saved Wikidata direct property triple
+RW2-O0013,one-hop,Q76,http://www.wikidata.org/entity/Q76,"[""Q1860"", ""Q9240""]",P1412,train,saved Wikidata direct property triple
+RW2-O0014,one-hop,Q225,http://www.wikidata.org/entity/Q225,"[""Q1065"", ""Q7809"", ""Q7817"", ""Q8475"", ""Q8908"", ""Q17495"", ""Q81299"", ""Q162656"", ""Q170424"", ""Q186444"", ""Q191384"", ""Q376150"", ""Q498496"", ""Q605326"", ""Q656801"", ""Q663492"", ""Q827525"", ""Q842490"", ""Q899770"", ""Q1043527"", ""Q1928989""]",P463,train,saved Wikidata direct property triple
+RW2-O0015,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q34713""]",P19,train,saved Wikidata direct property triple
+RW2-O0016,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q1741""]",P20,train,saved Wikidata direct property triple
+RW2-O0017,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q701614""]",P27,train,saved Wikidata direct property triple
+RW2-O0018,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q36834"", ""Q158852"", ""Q486748"", ""Q639669"", ""Q765778"", ""Q1259917"", ""Q16145150""]",P106,train,saved Wikidata direct property triple
+RW2-O0019,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q76555"", ""Q615681""]",P108,train,saved Wikidata direct property triple
+RW2-O0020,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q41726""]",P463,train,saved Wikidata direct property triple
+RW2-O0021,one-hop,Q254,http://www.wikidata.org/entity/Q254,"[""Q188""]",P1412,train,saved Wikidata direct property triple
+RW2-O0022,one-hop,Q270,http://www.wikidata.org/entity/Q270,"[""Q485087"", ""Q734958""]",P463,train,saved Wikidata direct property triple
+RW2-O0023,one-hop,Q298,http://www.wikidata.org/entity/Q298,"[""Q1065"", ""Q4230"", ""Q7809"", ""Q7817"", ""Q7825"", ""Q8475"", ""Q12585"", ""Q17495"", ""Q41550"", ""Q45177"", ""Q123759"", ""Q162656"", ""Q170424"", ""Q170481"", ""Q182814"", ""Q186444"", ""Q191384"", ""Q233611"", ""Q286946"", ""Q376150"", ""Q471690"", ""Q605326"", ""Q656801"", ""Q827525"", ""Q842490"", ""Q899770"", ""Q1043527"", ""Q3369762"", ""Q5611262"", ""Q60746147""]",P463,train,saved Wikidata direct property triple
+RW2-O0024,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q190021""]",P19,train,saved Wikidata direct property triple
+RW2-O0025,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q408""]",P27,train,saved Wikidata direct property triple
+RW2-O0026,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q319078"", ""Q1053985"", ""Q7830286""]",P69,train,saved Wikidata direct property triple
+RW2-O0027,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q1487"", ""Q26102"", ""Q36180"", ""Q578109"", ""Q947873"", ""Q1930187"", ""Q2059704"", ""Q2516866"", ""Q5482740"", ""Q13590141"", ""Q15253558"", ""Q19890746""]",P106,train,saved Wikidata direct property triple
+RW2-O0028,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q359""]",P108,train,saved Wikidata direct property triple
+RW2-O0029,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q6805365""]",P463,train,saved Wikidata direct property triple
+RW2-O0030,one-hop,Q360,http://www.wikidata.org/entity/Q360,"[""Q1860""]",P1412,train,saved Wikidata direct property triple
+RW2-O0031,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q40104""]",P19,train,saved Wikidata direct property triple
+RW2-O0032,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q578060""]",P20,train,saved Wikidata direct property triple
+RW2-O0033,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q142""]",P27,train,saved Wikidata direct property triple
+RW2-O0034,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q273480""]",P69,train,saved Wikidata direct property triple
+RW2-O0035,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q39018"", ""Q82955"", ""Q1402561"", ""Q2304859"", ""Q10732476"", ""Q17010072"", ""Q38239859""]",P106,train,saved Wikidata direct property triple
+RW2-O0036,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q188771"", ""Q63195474""]",P463,train,saved Wikidata direct property triple
+RW2-O0037,one-hop,Q517,http://www.wikidata.org/entity/Q517,"[""Q150"", ""Q33111""]",P1412,train,saved Wikidata direct property triple
+RW2-O0038,one-hop,Q539,http://www.wikidata.org/entity/Q539,"[""Q33959""]",P19,train,saved Wikidata direct property triple
+RW2-O0039,one-hop,Q539,http://www.wikidata.org/entity/Q539,"[""Q845310""]",P20,train,saved Wikidata direct property triple
+RW2-O0040,one-hop,Q539,http://www.wikidata.org/entity/Q539,"[""Q142"", ""Q419"", ""Q162192"", ""Q172579"", ""Q2577303""]",P27,train,saved Wikidata direct property triple
+RW2-O0041,one-hop,Q539,http://www.wikidata.org/entity/Q539,"[""Q36180"", ""Q47064"", ""Q82955"", ""Q178197"", ""Q1397808"", ""Q18814623"", ""Q30242234""]",P106,train,saved Wikidata direct property triple
+RW2-O0042,one-hop,Q539,http://www.wikidata.org/entity/Q539,"[""Q150"", ""Q188"", ""Q652"", ""Q1321"", ""Q1860"", ""Q5146""]",P1412,train,saved Wikidata direct property triple
+RW2-O0043,one-hop,Q678,http://www.wikidata.org/entity/Q678,"[""Q1065"", ""Q7785"", ""Q7809"", ""Q7817"", ""Q7825"", ""Q8475"", ""Q17495"", ""Q170424"", ""Q186444"", ""Q188822"", ""Q191384"", ""Q233611"", ""Q294278"", ""Q376150"", ""Q496967"", ""Q605326"", ""Q656801"", ""Q827525"", ""Q842490"", ""Q899770""]",P463,train,saved Wikidata direct property triple
+RW2-O0044,one-hop,Q700,http://www.wikidata.org/entity/Q700,"[""Q35""]",P19,train,saved Wikidata direct property triple
+RW2-O0045,one-hop,Q700,http://www.wikidata.org/entity/Q700,"[""Q34""]",P27,train,saved Wikidata direct property triple
+RW2-O0046,one-hop,Q700,http://www.wikidata.org/entity/Q700,"[""Q156839""]",P106,train,saved Wikidata direct property triple
+RW2-O0047,one-hop,Q733,http://www.wikidata.org/entity/Q733,"[""Q1065"", ""Q4230"", ""Q4264"", ""Q7809"", ""Q7817"", ""Q7825"", ""Q8475"", ""Q17495"", ""Q123759"", ""Q170424"", ""Q186444"", ""Q191384"", ""Q376150"", ""Q471690"", ""Q605326"", ""Q656801"", ""Q827525"", ""Q842490"", ""Q899770"", ""Q1043527"", ""Q3369762"", ""Q5611262""]",P463,train,saved Wikidata direct property triple
+RW2-O0048,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q454511""]",P19,train,saved Wikidata direct property triple
+RW2-O0049,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q90""]",P20,train,saved Wikidata direct property triple
+RW2-O0050,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q70972""]",P27,train,saved Wikidata direct property triple
+RW2-O0051,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q471980"", ""Q108740666""]",P69,train,saved Wikidata direct property triple
+RW2-O0052,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q36180"", ""Q49757"", ""Q201788"", ""Q214917"", ""Q333634"", ""Q8178443""]",P106,train,saved Wikidata direct property triple
+RW2-O0053,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q161806"", ""Q337526""]",P463,train,saved Wikidata direct property triple
+RW2-O0054,one-hop,Q742,http://www.wikidata.org/entity/Q742,"[""Q150"", ""Q397""]",P1412,train,saved Wikidata direct property triple
+RW2-O0055,one-hop,Q775,http://www.wikidata.org/entity/Q775,"[""Q64153030"", ""Q69725772""]",P463,train,saved Wikidata direct property triple
+RW2-O0056,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q1231883""]",P19,train,saved Wikidata direct property triple
+RW2-O0057,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q57110""]",P20,train,saved Wikidata direct property triple
+RW2-O0058,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q145"", ""Q174193""]",P27,train,saved Wikidata direct property triple
+RW2-O0059,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q4920058"", ""Q5192369""]",P69,train,saved Wikidata direct property triple
+RW2-O0060,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q28389"", ""Q33999"", ""Q36180"", ""Q36834"", ""Q177220"", ""Q245068"", ""Q639669"", ""Q1414443"", ""Q1415090"", ""Q2259451"", ""Q2526255"", ""Q3282637"", ""Q3455803"", ""Q7042855"", ""Q10800557"", ""Q18814623"", ""Q69423232""]",P106,train,saved Wikidata direct property triple
+RW2-O0061,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q540590"", ""Q1368540"", ""Q1740372""]",P108,train,saved Wikidata direct property triple
+RW2-O0062,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q414110"", ""Q7731652"", ""Q15646111""]",P463,train,saved Wikidata direct property triple
+RW2-O0063,one-hop,Q882,http://www.wikidata.org/entity/Q882,"[""Q652"", ""Q1860""]",P1412,train,saved Wikidata direct property triple
+RW2-O0064,one-hop,Q924,http://www.wikidata.org/entity/Q924,"[""Q1065"", ""Q7159"", ""Q7785"", ""Q7809"", ""Q7817"", ""Q7825"", ""Q8475"", ""Q17495"", ""Q170424"", ""Q186444"", ""Q191384"", ""Q294278"", ""Q340195"", ""Q376150"", ""Q384535"", ""Q605326"", ""Q656801"", ""Q816706"", ""Q827525"", ""Q842490"", ""Q899770"", ""Q1043527"", ""Q50828855""]",P463,train,saved Wikidata direct property triple
+RW2-O0065,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q3012""]",P19,train,saved Wikidata direct property triple
+RW2-O0066,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q138518""]",P20,train,saved Wikidata direct property triple
+RW2-O0067,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q30"", ""Q39"", ""Q183"", ""Q41304"", ""Q159631"", ""Q223050"", ""Q533534""]",P27,train,saved Wikidata direct property triple
+RW2-O0068,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q11942"", ""Q206702"", ""Q435651"", ""Q1876751""]",P69,train,saved Wikidata direct property triple
+RW2-O0069,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q901"", ""Q36180"", ""Q121594"", ""Q169470"", ""Q170790"", ""Q205375"", ""Q1231865"", ""Q1622272"", ""Q2896489"", ""Q3745071"", ""Q4964182"", ""Q16003550"", ""Q16389557"", ""Q19350898""]",P106,train,saved Wikidata direct property triple
+RW2-O0070,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q70"", ""Q11942"", ""Q21578"", ""Q31519"", ""Q152087"", ""Q156598"", ""Q168756"", ""Q206702"", ""Q329464"", ""Q635642"", ""Q659080"", ""Q685539"", ""Q708038"", ""Q819187"", ""Q1729754""]",P108,train,saved Wikidata direct property triple
+RW2-O0071,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q83172"", ""Q123885"", ""Q188771"", ""Q191583"", ""Q253439"", ""Q270794"", ""Q329464"", ""Q338432"", ""Q414188"", ""Q463303"", ""Q466089"", ""Q543804"", ""Q684415"", ""Q1683229"", ""Q2095524"", ""Q2497232"", ""Q2945826"", ""Q3603946""]",P463,train,saved Wikidata direct property triple
+RW2-O0072,one-hop,Q937,http://www.wikidata.org/entity/Q937,"[""Q188"", ""Q1860""]",P1412,train,saved Wikidata direct property triple
+RW2-O0073,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q6419912""]",P19,held-out,saved Wikidata direct property triple
+RW2-O0074,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q1381516""]",P20,held-out,saved Wikidata direct property triple
+RW2-O0075,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q668""]",P27,held-out,saved Wikidata direct property triple
+RW2-O0076,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q193196"", ""Q1233784"", ""Q4722851"", ""Q100148173""]",P69,held-out,saved Wikidata direct property triple
+RW2-O0077,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q36180"", ""Q40348"", ""Q82955"", ""Q185351"", ""Q482980"", ""Q808967"", ""Q1021386"", ""Q1930187"", ""Q3242115"", ""Q4964182"", ""Q11774156"", ""Q11774202"", ""Q15958642"", ""Q16003550"", ""Q16323111"", ""Q17351648"", ""Q18814623"", ""Q22336956"", ""Q30242234""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0078,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q1233784"", ""Q2154954""]",P463,held-out,saved Wikidata direct property triple
+RW2-O0079,one-hop,Q1001,http://www.wikidata.org/entity/Q1001,"[""Q5137""]",P1412,held-out,saved Wikidata direct property triple
+RW2-O0080,one-hop,Q1050,http://www.wikidata.org/entity/Q1050,"[""Q1065"", ""Q7159"", ""Q7785"", ""Q7809"", ""Q7817"", ""Q7825"", ""Q8475"", ""Q17495"", ""Q40970"", ""Q170424"", ""Q191384"", ""Q253414"", ""Q294278"", ""Q340195"", ""Q376150"", ""Q605326"", ""Q656801"", ""Q816706"", ""Q827525"", ""Q842490"", ""Q899770"", ""Q1043527"", ""Q1344350"", ""Q2867530"", ""Q50828855""]",P463,train,saved Wikidata direct property triple
+RW2-O0081,one-hop,Q1150,http://www.wikidata.org/entity/Q1150,"[""Q696819""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0082,one-hop,Q1198,http://www.wikidata.org/entity/Q1198,"[""Q1654951"", ""Q1768108""]",P463,train,saved Wikidata direct property triple
+RW2-O0083,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q2887""]",P19,train,saved Wikidata direct property triple
+RW2-O0084,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q33986""]",P20,train,saved Wikidata direct property triple
+RW2-O0085,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q298""]",P27,train,saved Wikidata direct property triple
+RW2-O0086,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q232141"", ""Q2422271"", ""Q5777152""]",P69,train,saved Wikidata direct property triple
+RW2-O0087,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q40348"", ""Q82955"", ""Q131512"", ""Q185351"", ""Q466956""]",P106,train,saved Wikidata direct property triple
+RW2-O0088,one-hop,Q1319,http://www.wikidata.org/entity/Q1319,"[""Q1321""]",P1412,train,saved Wikidata direct property triple
+RW2-O0089,one-hop,Q1402,http://www.wikidata.org/entity/Q1402,"[""Q2044""]",P19,held-out,saved Wikidata direct property triple
+RW2-O0090,one-hop,Q1402,http://www.wikidata.org/entity/Q1402,"[""Q82646""]",P20,held-out,saved Wikidata direct property triple
+RW2-O0091,one-hop,Q1402,http://www.wikidata.org/entity/Q1402,"[""Q148540""]",P27,held-out,saved Wikidata direct property triple
+RW2-O0092,one-hop,Q1402,http://www.wikidata.org/entity/Q1402,"[""Q36180"", ""Q49757"", ""Q193391"", ""Q333634"", ""Q864380"", ""Q15949613"", ""Q24387326""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0093,one-hop,Q1402,http://www.wikidata.org/entity/Q1402,"[""Q397"", ""Q652""]",P1412,held-out,saved Wikidata direct property triple
+RW2-O0094,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q75978""]",P19,held-out,saved Wikidata direct property triple
+RW2-O0095,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q1461""]",P20,held-out,saved Wikidata direct property triple
+RW2-O0096,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q928"", ""Q2721139""]",P27,held-out,saved Wikidata direct property triple
+RW2-O0097,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q151510"", ""Q219694"", ""Q533235"", ""Q1401524"", ""Q7896262""]",P69,held-out,saved Wikidata direct property triple
+RW2-O0098,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q36180"", ""Q39631"", ""Q49757"", ""Q82955"", ""Q270141"", ""Q333634"", ""Q774306"", ""Q1028181"", ""Q3242115"", ""Q6625963"", ""Q9363889"", ""Q11499147"", ""Q12013238"", ""Q14467526"", ""Q16351788"", ""Q140197632""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0099,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q41726"", ""Q5884395""]",P463,held-out,saved Wikidata direct property triple
+RW2-O0100,one-hop,Q1500,http://www.wikidata.org/entity/Q1500,"[""Q1321""]",P1412,held-out,saved Wikidata direct property triple
+RW2-O0101,one-hop,Q1720,http://www.wikidata.org/entity/Q1720,"[""Q747279"", ""Q1750151"", ""Q1768108""]",P463,held-out,saved Wikidata direct property triple
+RW2-O0102,one-hop,Q1780,http://www.wikidata.org/entity/Q1780,"[""Q9383972"", ""Q15477956""]",P463,held-out,saved Wikidata direct property triple
+RW2-O0103,one-hop,Q2040,http://www.wikidata.org/entity/Q2040,"[""Q495""]",P19,held-out,saved Wikidata direct property triple
+RW2-O0104,one-hop,Q2040,http://www.wikidata.org/entity/Q2040,"[""Q165090""]",P20,held-out,saved Wikidata direct property triple
+RW2-O0105,one-hop,Q2040,http://www.wikidata.org/entity/Q2040,"[""Q38"", ""Q172579""]",P27,held-out,saved Wikidata direct property triple
+RW2-O0106,one-hop,Q2040,http://www.wikidata.org/entity/Q2040,"[""Q10349745"", ""Q10841764""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0107,one-hop,Q2040,http://www.wikidata.org/entity/Q2040,"[""Q652""]",P1412,held-out,saved Wikidata direct property triple
+RW2-O0108,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q1949455""]",P19,held-out,saved Wikidata direct property triple
+RW2-O0109,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q183""]",P27,held-out,saved Wikidata direct property triple
+RW2-O0110,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q152838""]",P69,held-out,saved Wikidata direct property triple
+RW2-O0111,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q40348"", ""Q56022"", ""Q82955"", ""Q2285706"", ""Q11986654"", ""Q15978655"", ""Q15980158""]",P106,held-out,saved Wikidata direct property triple
+RW2-O0112,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q691563"", ""Q1141123"", ""Q1961890""]",P108,held-out,saved Wikidata direct property triple
+RW2-O0113,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q83172"", ""Q218868""]",P463,held-out,saved Wikidata direct property triple
+RW2-O0114,one-hop,Q2530,http://www.wikidata.org/entity/Q2530,"[""Q188""]",P1412,held-out,saved Wikidata direct property triple

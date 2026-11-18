@@ -1,0 +1,16 @@
+protocol: serial_service
+workload_qids: ["Q0499", "Q0276", "Q0065", "Q0002", "Q0046", "Q0369", "Q0022", "Q0423", "Q0081", "Q0092", "Q0300", "Q0215", "Q0025", "Q0034", "Q0296", "Q0406", "Q0402", "Q0112", "Q0079", "Q0134", "Q0093", "Q0008", "Q0438", "Q0427"]
+qids_per_category: 8
+repeat_count: 2
+warmup_queries: 2
+workers: 1
+cache_policy: llm_plan_cache_cleared_before_each_repeat
+query_order: fixed (SERIAL_QIDS)
+timeout_ms: 120000
+queueing_included: false
+model: qwen2.5:7b (Ollama, temperature 0, num_predict 256)
+sparql_engine: rdflib SPARQL 1.1 engine; pyparsing=3.3.3
+dense_e5_included: false
+dense_e5_reason: torch/transformers not installed in this execution environment
+started: 2026-11-18 21:18:38
+finished: 2026-11-18 21:25:51

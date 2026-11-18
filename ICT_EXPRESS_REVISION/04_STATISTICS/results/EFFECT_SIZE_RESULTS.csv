@@ -1,0 +1,86 @@
+source,contrast,metric,effect,effect_value,ci95_low,ci95_high,interpretation
+phase1_500,no_aligner,hits1,odds_ratio,5.695652173913044,,,as reported by source test
+phase1_500,no_aligner,hits1,odds_to_r,0.7012987012987013,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_aligner_k6,hits1,odds_ratio,5.695652173913044,,,as reported by source test
+phase1_500,no_aligner_k6,hits1,odds_to_r,0.7012987012987013,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_predicate_constraint,hits1,odds_ratio,289.0,,,as reported by source test
+phase1_500,no_predicate_constraint,hits1,odds_to_r,0.993103448275862,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,vector_graphrag,hits1,odds_ratio,13.26086956521739,,,as reported by source test
+phase1_500,vector_graphrag,hits1,odds_to_r,0.8597560975609756,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,sparql_baseline,hits1,odds_ratio,38.09090909090909,,,as reported by source test
+phase1_500,sparql_baseline,hits1,odds_to_r,0.9488372093023256,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,dense,hits1,odds_ratio,13.571428571428571,,,as reported by source test
+phase1_500,dense,hits1,odds_to_r,0.8627450980392157,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,dense_ne,hits1,odds_ratio,40.81818181818182,,,as reported by source test
+phase1_500,dense_ne,hits1,odds_to_r,0.9521739130434783,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,sparql_real,hits1,odds_ratio,8.043478260869565,,,as reported by source test
+phase1_500,sparql_real,hits1,odds_to_r,0.7788461538461539,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,translit,hits1,odds_ratio,6.411764705882353,,,as reported by source test
+phase1_500,translit,hits1,odds_to_r,0.7301587301587301,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_aligner,ac1,odds_ratio,2.2203389830508473,,,as reported by source test
+phase1_500,no_aligner,ac1,odds_to_r,0.3789473684210526,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_aligner_k6,ac1,odds_ratio,2.2203389830508473,,,as reported by source test
+phase1_500,no_aligner_k6,ac1,odds_to_r,0.3789473684210526,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_predicate_constraint,ac1,odds_ratio,9.689655172413794,,,as reported by source test
+phase1_500,no_predicate_constraint,ac1,odds_to_r,0.8129032258064516,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,vector_graphrag,ac1,odds_ratio,5.315789473684211,,,as reported by source test
+phase1_500,vector_graphrag,ac1,odds_to_r,0.6833333333333333,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,sparql_baseline,ac1,odds_ratio,10.538461538461538,,,as reported by source test
+phase1_500,sparql_baseline,ac1,odds_to_r,0.8266666666666667,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,dense,ac1,odds_ratio,5.30188679245283,,,as reported by source test
+phase1_500,dense,ac1,odds_to_r,0.6826347305389222,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,dense_ne,ac1,odds_ratio,11.307692307692308,,,as reported by source test
+phase1_500,dense_ne,ac1,odds_to_r,0.8375,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,sparql_real,ac1,odds_ratio,3.135593220338983,,,as reported by source test
+phase1_500,sparql_real,ac1,odds_to_r,0.5163934426229508,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,translit,ac1,odds_ratio,4.478260869565218,,,as reported by source test
+phase1_500,translit,ac1,odds_to_r,0.634920634920635,,,derived (OR-1)/(OR+1); descriptive only
+phase1_500,no_aligner,gsr,mean_diff,6.765633474618829e-05,,,as reported by source test
+phase1_500,no_aligner_k6,gsr,mean_diff,6.765633474618829e-05,,,as reported by source test
+phase1_500,no_predicate_constraint,gsr,mean_diff,5.885779715152367e-05,,,as reported by source test
+phase1_500,no_pruning,gsr,mean_diff,-0.999634840601836,,,as reported by source test
+phase1_500,vector_graphrag,gsr,mean_diff,-0.0005394025833149194,,,as reported by source test
+phase1_500,sparql_baseline,gsr,mean_diff,-0.15575311865972963,,,as reported by source test
+phase1_500,dense,gsr,mean_diff,-0.000534621642795444,,,as reported by source test
+phase1_500,dense_ne,gsr,mean_diff,-0.00041509812980856155,,,as reported by source test
+phase1_500,sparql_real,gsr,mean_diff,-0.1556186898615938,,,as reported by source test
+phase1_500,translit,gsr,mean_diff,-7.24774512364155e-05,,,as reported by source test
+phase1_500,full_system,ac1,proportion,0.772,0.7332,0.8066,as reported by source test
+phase1_500,no_aligner,ac1,proportion,0.7,0.6584,0.7385,as reported by source test
+phase1_500,no_aligner_k6,ac1,proportion,0.7,0.6584,0.7385,as reported by source test
+phase1_500,no_predicate_constraint,ac1,proportion,0.52,0.4762,0.5635,as reported by source test
+phase1_500,no_pruning,ac1,proportion,0.772,0.7332,0.8066,as reported by source test
+phase1_500,vector_graphrag,ac1,proportion,0.526,0.4822,0.5694,as reported by source test
+phase1_500,sparql_baseline,ac1,proportion,0.4,0.358,0.4435,as reported by source test
+phase1_500,dense,ac1,proportion,0.544,0.5002,0.5872,as reported by source test
+phase1_500,dense_ne,ac1,proportion,0.37,0.3288,0.4132,as reported by source test
+phase1_500,sparql_real,ac1,proportion,0.646,0.6031,0.6867,as reported by source test
+phase1_500,translit,ac1,proportion,0.532,0.4882,0.5753,as reported by source test
+phase1_500,cross-lingual:gold_absent,hits1,proportion,0.0,0.0,0.1684,as reported by source test
+phase1_500,cross-lingual:gold_in_prompt,hits1,proportion,0.5,0.4111,0.5889,as reported by source test
+revision_matched,overall_500,ac1,odds_ratio,10.785714285714286,0.23,0.318,as reported by source test
+revision_matched,overall_500,ac1,odds_to_r,0.8303030303030303,,,derived (OR-1)/(OR+1); descriptive only
+revision_matched,overall_500,vic,mean_diff,-0.014,-0.038,0.008,as reported by source test
+revision_matched,cross_lingual_150,vic,mean_diff,-0.04,-0.07333333333333333,-0.013333333333333334,as reported by source test
+revision_probe,1-hop_gold_in_prompt,hits1,proportion,1.0,0.9801513721157983,1.0,as reported by source test
+revision_probe,1-hop_gold_absent,hits1,proportion,0.6875,0.41337936354864135,0.8898300452828825,as reported by source test
+revision_probe,2-hop_gold_absent,hits1,proportion,0.96,0.9149721852818012,0.985181478885102,as reported by source test
+revision_probe,cross-lingual_gold_in_prompt,hits1,proportion,0.5,0.4110837731407387,0.5889162268592614,as reported by source test
+revision_probe,cross-lingual_gold_absent,hits1,proportion,0.0,0.0,0.16843347098308528,as reported by source test
+revision_wikidata,wikidata_ALL_NO_SUPERVISION,ac1,proportion,0.630435,0.556317,0.700276,as reported by source test
+revision_wikidata,wikidata_ALL_MATCHED_SUPERVISION,ac1,proportion,0.88587,0.830842,0.927947,as reported by source test
+revision_wikidata,wikidata_ALL_ORACLE,ac1,proportion,1.0,0.980151,1.0,as reported by source test
+revision_wikidata,wikidata_one-hop_NO_SUPERVISION,ac1,proportion,1.0,0.968159,1.0,as reported by source test
+revision_wikidata,wikidata_one-hop_MATCHED_SUPERVISION,ac1,proportion,1.0,0.968159,1.0,as reported by source test
+revision_wikidata,wikidata_one-hop_ORACLE,ac1,proportion,1.0,0.968159,1.0,as reported by source test
+revision_wikidata,wikidata_cross-lingual_NO_SUPERVISION,ac1,proportion,0.028571,0.003479,0.099429,as reported by source test
+revision_wikidata,wikidata_cross-lingual_MATCHED_SUPERVISION,ac1,proportion,0.7,0.578666,0.803773,as reported by source test
+revision_wikidata,wikidata_cross_lingual_matched_train,ac1,proportion,1.0,0.927481,1.0,as reported by source test
+revision_wikidata,wikidata_cross_lingual_matched_held_out,ac1,proportion,0.0,0.0,0.161098,as reported by source test
+revision_wikidata,wikidata_cross-lingual_ORACLE,ac1,proportion,1.0,0.948666,1.0,as reported by source test
+revision_latency,full_system,median_service_ms,median_ms,8584.218499999999,8151.467,8819.605,as reported by source test
+revision_latency,no_aligner_k6,median_service_ms,median_ms,0.1745,0.158,0.197,as reported by source test
+revision_latency,sparql_baseline,median_service_ms,median_ms,0.139,0.118,0.161,as reported by source test
+revision_latency,sparql_real,median_service_ms,median_ms,156.704,152.2815,338.402,as reported by source test
+revision_latency,translit,median_service_ms,median_ms,0.0805,0.074,0.093,as reported by source test
+revision_latency,vector_graphrag,median_service_ms,median_ms,2.408,1.742,2.781,as reported by source test

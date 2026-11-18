@@ -84,6 +84,15 @@ metric); baselines may be weaker than the real methods they claim to represent;
 and when the LLM's prompt already contains ground-truth alignment information,
 ``the LLM aligned the entity'' may actually mean ``the planner copied a URI it
 was given''~\cite{pan2024unifying,barnett2024seven}.
+Prior work spans LLM--KG unification~\cite{pan2024unifying}, GraphRAG-style
+graph access~\cite{edge2024graphrag}, cross-lingual entity
+alignment~\cite{sun2018jape,yang2024segalign}, multilingual dense
+retrieval~\cite{e5,zhang2023miracl}, and evidence-grounded
+evaluation~\cite{thorne2018fever}. These strands typically report end-to-end
+gains or optimise alignment itself; they do not ask whether LLM planning keeps
+an advantage when the same alignment table, workload, and literal-evidence
+criterion are given to a deterministic retriever. Our audit targets that
+attribution gap rather than proposing a new architecture.
 
 This letter is an evidence-constrained re-evaluation of such a pipeline for
 retrieval over two heterogeneous bilingual RDF graphs. The setting is
@@ -339,14 +348,14 @@ alignment table.}
 \end{figure}
 
 \section{Cost structure}\label{sec:cost}
-Table~\ref{tab:latency} and Figure~\ref{fig:lat} separate three quantities
-that the original evaluation mixed into one column. Serial service time
-(cache cleared, warm-up discarded) is dominated by the LLM: the planner costs
-$6.7$\,s per query on a stratified 24-query subset, of which $\sim$99.99\% is
-model time, while traversal costs fractions of a millisecond. A four-worker
-loaded protocol raises the mean to $23.2$\,s ($\sim$3.5$\times$) at the same
-0.16 queries/s, confirming that it measures queueing, not parallelism, because
-the local Ollama backend serves one request at a time. GSR behaves as
+Table~\ref{tab:latency} reports a unified 24-query workload: all executable
+systems received the same qids, order, warm-up and cache policy. On this serial
+service-time protocol the LLM planner costs $8.38$\,s per query on average
+(median $8.58$\,s), of which $\sim$99.99\% is model time, while traversal and
+non-LLM linkers are sub-millisecond. A separate four-worker run confirms that
+queueing, not parallelism, dominates when one local model backend is shared;
+loaded response time is therefore reported separately from service time. GSR
+behaves as
 designed: removing localized pruning leaves accuracy identical (\ac{} $0.772$,
 $p=1$) while logical access jumps to $1.0$ of the store and traversal time
 from $0.19$\,ms to $47.1$\,ms ($\sim$245$\times$), i.e.\ pruning is a pure
@@ -360,16 +369,20 @@ log--log model
 \end{equation}
 at sizes $|T|\in\{10^4, 5{\times}10^4, 10^5, 2{\times}10^5\}$: across
 10K--200K triples the localized variants' GSR decays with $\beta=-0.98$ to
-$-1.02$ ($R^2 \ge 0.999$), i.e.\ logical access stays $O(1)$ in
-the number of aligned subjects ($\overline{\mathrm{GSR}}\propto|T|^{-1}$),
-while the unpruned variant stays at $1.0$
+$-1.02$ ($R^2 \ge 0.999$), but this is a denominator effect: the mean number
+of logically scanned triples stays 17.5--19.3 across the same 20-fold size
+range (exponent $0.015$, $R^2=0.195$). We therefore do not claim overall
+$O(1)$ complexity; the supported statement is that observed logical access
+stays approximately constant under the evaluated scaling conditions. The
+unpruned variant stays at $1.0$
 and the SPARQL systems at $\approx 0.156$ of the store regardless of size
-(Fig.~\ref{fig:scaling}). Real SPARQL latency grows linearly
-($63$\,ms$\to$$1250$\,ms) whereas the full system stays flat ($\sim$$8.6$\,s,
-LLM-dominated).
-The real SPARQL engine costs $271$\,ms per query at the 50K operating point
-(mean; $146.7$\,ms median) versus $16$\,ms for dense retrieval and $0.08$\,ms for
-the transliteration linker, three to five orders of magnitude below the LLM.
+(Fig.~\ref{fig:scaling}). Real SPARQL latency grows with store size, whereas
+the full system stays LLM-dominated. On the unified 24-query workload, real
+SPARQL costs $290$\,ms mean / $157$\,ms median versus $2.6$\,ms for
+vector-GraphRAG and $0.09$\,ms for the transliteration linker, i.e.\ one to
+five orders of magnitude below the LLM. Dense e5 is excluded from this
+unified latency run because torch/transformers were unavailable in that
+environment; its accuracy remains reported on the 500-query benchmark.
 
 \begin{figure}
 \centering
@@ -381,30 +394,22 @@ size-proportional.}
 \end{figure}
 
 \input{../tables/table3_latency}
-\captionof{table}{Latency protocols. Serial = service time with plan cache
-cleared (4 warm-up queries discarded); loaded = 4 workers, which measures
-queueing on a single-model backend, not parallelism. $n$ = number of timed
-queries; LLM time is measured and included.}\label{tab:latency}
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{../figures/fig5_latency.pdf}
-\caption{Median serial service time (log scale). The LLM planner dominates
-end-to-end latency by about four orders of magnitude over traversal; the
-localized executor and the transliteration linker are sub-millisecond.}
-\label{fig:lat}
-\end{figure}
+\captionof{table}{Unified serial-service workload (same 24 qids, fixed order,
+two warm-up queries, two timed repeats, plan cache cleared). Dense e5 was not
+executable in this latency environment; its 500-query accuracy is reported
+elsewhere. The $n$ column is the number of timed queries.}\label{tab:latency}
 
 \section{Threats to validity and scope}\label{sec:limits}
 \textbf{Synthetic main benchmark; limited real-RDF check.} System comparisons
 come from one generated benchmark; there is no real ICT/telecommunications
 deployment claim. A separate transfer check used 632 authentic Wikidata zh/en
-triples (70 entities) and 55 offline queries: one-hop \ac{}=1.000 in all three
-supervision groups, while cross-lingual \ac{}=0/21 for both non-oracle groups
-(exact 95\% CI $[0,0.161]$) and 1.000 for the oracle. This supports metric and
-stratification transfer, not cross-graph alignment: Wikidata is
-identity-linked, and two-hop, ambiguous, and predicate-mapping families were
-not executed. The synthetic cross-lingual family tests whether an alignment
+triples (70 entities) and 184 offline queries (114 one-hop, 70 cross-lingual):
+one-hop \ac{}=1.000 in all three supervision groups. Cross-lingual matched
+\ac{} was 0.700 overall ($49/70$), exactly the train-pool alignment coverage;
+the 21 held-out non-oracle queries scored 0/21 (exact 95\% CI $[0,0.161]$) and
+the oracle scored 1.000. This supports metric and stratification transfer, not
+cross-graph alignment: Wikidata is identity-linked, and two-hop, ambiguous,
+and predicate-mapping families were not executed. The synthetic cross-lingual family tests whether an alignment
 table was \emph{provided}, not whether a system can \emph{infer} alignment;
 systems without such a table are structurally capped at zero here.
 \textbf{Simulated memory.} The 92\% coverage parameter controls the
@@ -448,8 +453,9 @@ tables rather than \texttt{owl:sameAs}; Eq.~\eqref{eq:probe} gives
 integrators a cheap audit of how much of the measured accuracy is inherited
 from the table rather than produced by the model. In \emph{heterogeneous
 IoT retrieval}, where device, platform, and application ontologies coexist,
-the cost findings (LLM seconds vs.\ sub-millisecond traversal; GSR as an
-O(1) access ratio) bound where an in-the-loop planner is affordable --
+the cost findings (LLM seconds vs.\ sub-millisecond traversal; near-constant
+scanned-triple counts in the scaling sweep) bound where an in-the-loop planner
+is affordable --
 planning is justified for in-language predicate and plan selection, whereas
 cross-graph alignment should be audited as an explicit information source
 rather than credited to the model. Future work must move the evaluation
@@ -482,13 +488,16 @@ needed and take full responsibility for the content of the published article.
 To support independent verification, the complete audit artefacts are
 publicly released under the MIT licence at the repository
 \url{https://github.com/CAIST-2026/ict-express-rdf-audit} (release commit
-ee24bc3): (i) the deterministic benchmark generator with its fixed seeds and
+RELEASE\_COMMIT\_PLACEHOLDER): (i) the deterministic benchmark generator with its fixed seeds and
 the 500 ground-truth queries; (ii) the alignment-supervision probe; (iii) all
 baseline and ablation implementations; (iv) the statistical-analysis
 scripts; (v) the per-query result records from which every table, figure,
 and number in this letter is derived; and (vi) the Phase~1 matched-supervision,
 real-RDF transfer, and exact-CI artefacts, together with a provenance index
-mapping each reported value to its source file and script. No real operator,
+mapping each reported value to its source file and script; and (vii) the
+systematic-revision package with the unified latency workload, expanded
+Wikidata benchmark, consolidated statistics, and reference-verification
+records. No real operator,
 subscriber, or device data is contained in the released artefacts; the
 benchmark is synthetic throughout.
 
@@ -496,12 +505,31 @@ benchmark is synthetic throughout.
 \bibitem{pan2024unifying}
 S. Pan, L. Luo, Y. Wang, C. Chen, X. Wang, X. Wu, Unifying large language
 models and knowledge graphs: a roadmap, IEEE Trans. Knowl. Data Eng. 36 (7)
-(2024) 3580--3599. https://doi.org/10.1109/TKDE.2024.3305490.
+(2024) 3580--3599. https://doi.org/10.1109/TKDE.2024.3352100.
 \bibitem{barnett2024seven}
-C. Barnett, S. Bhatt, K. Côté, et al., Seven failure points when engineering a
-retrieval augmented generation system, in: Proc.\ 3rd International Conference
-on AI Engineering (CAiSE), ACM, 2024, pp.\ 1--5.
-https://doi.org/10.1145/3726302.3730130.
+S. Barnett, S. Kurniawan, S. Thudumu, Z. Brannelly, M. Abdelrazek, Seven
+failure points when engineering a retrieval augmented generation system, in:
+Proc.\ IEEE/ACM 3rd Int.\ Conf.\ AI Engineering (CAIN), ACM, 2024, pp.\ 194--199.
+https://doi.org/10.1145/3644815.3644945.
+\bibitem{edge2024graphrag}
+D. Edge, H. Trinh, N. Cheng, et al., From local to global: a graph RAG approach
+to query-focused summarization, arXiv:2404.16130, 2024.
+\bibitem{sun2018jape}
+Z. Sun, W. Hu, Q. Zhang, Y. Qu, Bootstrapping entity alignment with knowledge
+graph embedding, in: Proc.\ IJCAI, 2018, pp.\ 4396--4402.
+https://doi.org/10.24963/ijcai.2018/611.
+\bibitem{yang2024segalign}
+L. Yang, J. Cheng, F. Zhang, Advancing cross-lingual entity alignment with
+large language models, in: Findings of EMNLP 2024, ACL, 2024, pp.\ 8122--8138.
+https://doi.org/10.18653/v1/2024.findings-emnlp.475.
+\bibitem{zhang2023miracl}
+X. Zhang, N. Thakur, O. Ogundepo, et al., MIRACL: a multilingual retrieval
+dataset covering 18 diverse languages, Trans. Assoc. Comput. Linguist. 11
+(2023) 1114--1131. https://doi.org/10.1162/tacl\_a\_00595.
+\bibitem{thorne2018fever}
+J. Thorne, A. Vlachos, C. Christodoulopoulos, A. Mittal, FEVER: a large-scale
+dataset for fact extraction and VERification, in: Proc.\ NAACL-HLT, 2018,
+pp.\ 809--819. https://doi.org/10.18653/v1/N18-1074.
 \bibitem{lewis2020rag}
 P. Lewis, E. Perez, A. Piktus, et al., Retrieval-augmented generation for
 knowledge-intensive NLP tasks, in: Advances in Neural Information Processing

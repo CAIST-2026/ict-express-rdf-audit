@@ -1,0 +1,32 @@
+claim_id,paper_claim,recomputed_value,source_file,filter,status,notes
+S1,"RDF triples = 49,781",49781,ict_express_submission/ICT_EXPRESS_PHASE1/results/triple_integrity.json,regenerated graph,MATCH,
+S2,"Entities = 3,481",3481,ict_express_submission/upstream,build_dataset(SEED),MATCH,
+S3,"Labels/aliases = 8,218",8218,ict_express_submission/upstream/engine.py,len(CandidateAnchorMapper._labels),MATCH,Anchor index labels; alias index entries are counted separately in run logs
+S4,Queries = 500,500,ict_express_submission/upstream_results/run_config.json,config,MATCH,
+Q1,Main run rows = 500 x 7,3500,ict_express_submission/upstream_results/experimental_results.csv,all rows,MATCH,
+Q2,Baseline rows = 500 x 4,2000,ict_express_submission/results/baselines/seed_20260101/per_query.csv,all rows,MATCH,unique qids=500
+M1,Main full_system ac1 = 0.772,0.772,ict_express_submission/upstream_results/experimental_results.csv,system=full_system,MATCH,
+M2,Main sparql_real ac1 = 0.646,0.646,ict_express_submission/results/baselines/seed_20260101/per_query.csv,system=sparql_real,MATCH,
+M3,Main dense ac1 = 0.544,0.544,ict_express_submission/results/baselines/seed_20260101/per_query.csv,system=dense,MATCH,
+M4,Main translit ac1 = 0.532,0.532,ict_express_submission/results/baselines/seed_20260101/per_query.csv,system=translit,MATCH,
+C1,full_system:2-hop ac1 = 0.933,0.933333,ict_express_submission/upstream_results/experimental_results.csv,system=full_system; category=2-hop,MATCH,
+C2,sparql_real:2-hop ac1 = 0.9,0.9,ict_express_submission/results/baselines/seed_20260101/per_query.csv,system=sparql_real; category=2-hop,MATCH,
+C3,dense:2-hop ac1 = 0.58,0.58,ict_express_submission/results/baselines/seed_20260101/per_query.csv,system=dense; category=2-hop,MATCH,
+C4,full_system:cross-lingual ac1 = 0.433,0.433333,ict_express_submission/upstream_results/experimental_results.csv,system=full_system; category=cross-lingual,MATCH,
+P1,Cross-lingual exposure 86.7%,130/150 = 0.8667,ict_express_submission/results/main/alignment_probe/probe_by_group.csv,category=cross-lingual,MATCH,
+P2,Hits@1 exposed = 0.500,0.5,ict_express_submission/results/main/alignment_probe/probe_by_group.csv,cross-lingual & gold_in_prompt,MATCH,
+P3,Hits@1 absent reported as 0.000,"0/20 observed; exact 95% CI [0.0000,0.1684]",ict_express_submission/ICT_EXPRESS_PHASE1/UPDATED_EXPERIMENT_TABLES/TABLE5_EXACT_CI_UNEXPOSED.csv,cross-lingual & gold_absent,REVISED,"Paper now reports observed count and exact CI, not exact zero capability"
+X1,LLM planner / matched cross-lingual ac1 = 0.433,0.433333,ict_express_submission/upstream_results/experimental_results.csv,system=full_system; category=cross-lingual (saved LLM run = matched table),MATCH,
+X2,Non-LLM traversal / matched cross-lingual ac1 = 0.433,0.433333,ict_express_submission/ICT_EXPRESS_PHASE1/baseline_fairness/MATCHED_SUPERVISION_RESULTS.csv,system=localized_traversal; group=MATCHED_SUPERVISION; category=cross-lingual,MATCH,
+X3,LLM planner / no-alignment cross-lingual ac1 = 0.000,0.0,ict_express_submission/upstream_results/experimental_results.csv,system=no_aligner; category=cross-lingual,MATCH,
+X4,Non-LLM traversal / no-alignment cross-lingual ac1 = 0.000,0.0,ict_express_submission/ICT_EXPRESS_PHASE1/baseline_fairness/MATCHED_SUPERVISION_RESULTS.csv,system=localized_traversal; group=NO_SUPERVISION; category=cross-lingual,MATCH,
+X5,Oracle cross-lingual ac1 = 1.000,1.0,ict_express_submission/ICT_EXPRESS_PHASE1/baseline_fairness/MATCHED_SUPERVISION_RESULTS.csv,system=localized_traversal; group=ORACLE; category=cross-lingual,MATCH,
+A498,Abstract matched linker ac1 = 0.498,0.498,ict_express_submission/ICT_EXPRESS_PHASE1/baseline_fairness/MATCHED_SUPERVISION_RESULTS.csv,system=Non-LLM localized traversal; group=MATCHED_SUPERVISION; ALL 500 queries,TRACEABLE,"n=500; this is the OVERALL 500-query ac1, not the cross-lingual subset (cross-lingual ac1=0.433333, n=150). It comes from the Phase-1 matched-supervision experiment, not from the original main table and not from the 150-query cross-lingual table."
+A498P,Abstract p<1e-20 for 0.772 vs 0.498,3.394212270680311e-30,ict_express_submission/upstream_results/experimental_results.csv,paired McNemar exact on 500 qids; full_system vs matched localized_traversal,MATCH,"full wins=151, matched-linker wins=14"
+T-no_aligner,Holm p for no_aligner on ac1,0.0007850496971307811,ict_express_submission/ICT_EXPRESS_PHASE1/statistical_verification/STATISTICAL_RESULTS.csv,contrast=no_aligner; metric=ac1,MATCH,
+T-sparql_real,Holm p for sparql_real on ac1,3.190848788238392e-08,ict_express_submission/ICT_EXPRESS_PHASE1/statistical_verification/STATISTICAL_RESULTS.csv,contrast=sparql_real; metric=ac1,MATCH,
+T-translit,Holm p for translit on ac1,9.622865715552706e-19,ict_express_submission/ICT_EXPRESS_PHASE1/statistical_verification/STATISTICAL_RESULTS.csv,contrast=translit; metric=ac1,MATCH,
+W1,Wikidata 632 triples / 70 entities / 55 queries,632 / 70 / 55,ict_express_submission/ICT_EXPRESS_PHASE1/real_world_benchmark/REAL_WORLD_VALIDATION_REPORT.md,authentic saved responses,MATCH,
+W-one-hop,Wikidata one-hop ac1 by group,"{'MATCHED_SUPERVISION': 1.0, 'NO_SUPERVISION': 1.0, 'ORACLE': 1.0}",ict_express_submission/ICT_EXPRESS_PHASE1/real_world_benchmark/EXPERIMENT_RESULTS.csv,family=one-hop; n=34,MATCH,
+W-cross-lingual,Wikidata cross-lingual ac1 by group,"{'MATCHED_SUPERVISION': 0.0, 'NO_SUPERVISION': 0.0, 'ORACLE': 1.0}",ict_express_submission/ICT_EXPRESS_PHASE1/real_world_benchmark/EXPERIMENT_RESULTS.csv,family=cross-lingual; n=21,MATCH,
+L1,Latency workload counts,"{'full_system_rows': 48, 'full_system_unique_qids': 24, 'fast_method_unique_qids': 210}",ict_express_submission/results/latency/per_query.csv,all rows,MISMATCH,P0 finding: existing latency table mixes 24-query LLM workload with 198-query fast-method workload

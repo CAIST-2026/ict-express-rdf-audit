@@ -1,0 +1,13 @@
+contrast,numerator_median_ms,denominator_median_ms,slowdown_vs_full
+full_system_vs_full_system,8584.218,8584.218,1.0
+full_system_vs_full_system,8584.218,8584.218,1.0
+no_aligner_k6_vs_full_system,0.174,8584.218,2.0269755497821697e-05
+full_system_vs_no_aligner_k6,8584.218,0.174,49334.58620689656
+sparql_baseline_vs_full_system,0.139,8584.218,1.6192505828719636e-05
+full_system_vs_sparql_baseline,8584.218,0.139,61756.96402877698
+sparql_real_vs_full_system,156.704,8584.218,0.018254895204199147
+full_system_vs_sparql_real,8584.218,156.704,54.77982693485808
+translit_vs_full_system,0.081,8584.218,9.435920662779067e-06
+full_system_vs_translit,8584.218,0.081,105978.0
+vector_graphrag_vs_full_system,2.408,8584.218,0.0002805147772342221
+full_system_vs_vector_graphrag,8584.218,2.408,3564.8745847176083

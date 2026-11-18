@@ -1,0 +1,5 @@
+scope,metric,test,n,mean_ref,mean_nonllm,diff,ci95_low,ci95_high,full_wins,nonllm_wins,n_discordant,p_exact,odds_ratio,p_holm,odds_rank_biserial
+overall_500,ac1,McNemar exact + paired bootstrap,500,0.772,0.498,0.274,0.23,0.318,151,14,165,3.394212270680311e-30,10.785714285714286,1.3576849082721244e-29,
+overall_500,vic,Wilcoxon signed-rank + paired bootstrap,500,0.894,0.908,-0.014,-0.038,0.008,14,21,35,0.23672357063785732,,0.47344714127571463,
+cross_lingual_150,ac1,McNemar exact + paired bootstrap,150,0.43333333333333335,0.43333333333333335,0.0,0.0,0.0,0,0,0,1.0,,1.0,
+cross_lingual_150,vic,Wilcoxon signed-rank + paired bootstrap,150,0.8266666666666667,0.8666666666666667,-0.04,-0.07333333333333333,-0.013333333333333334,0,6,6,0.014305878435429647,,0.04291763530628894,

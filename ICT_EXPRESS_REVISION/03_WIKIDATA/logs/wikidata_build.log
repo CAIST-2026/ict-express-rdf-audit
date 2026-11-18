@@ -1,0 +1,5 @@
+queries=184 per_query_rows=552 summary_rows=39
+slice_by slice        family               group  n    hits1      ac1      vic  ac1_successes  ac1_ci95_low  ac1_ci95_high
+     ALL   ALL cross-lingual      NO_SUPERVISION 70 0.028571 0.028571 0.028571              2      0.003479       0.099429
+     ALL   ALL cross-lingual MATCHED_SUPERVISION 70 0.700000 0.700000 0.700000             49      0.578666       0.803773
+     ALL   ALL cross-lingual              ORACLE 70 1.000000 1.000000 1.000000             70      0.948666       1.000000

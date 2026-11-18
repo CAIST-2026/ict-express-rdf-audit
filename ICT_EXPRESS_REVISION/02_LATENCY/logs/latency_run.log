@@ -1,0 +1,24 @@
+21:18:38 INFO    SPARQL preflight passed: rdflib SPARQL 1.1 engine; pyparsing=3.3.3
+21:18:39 INFO    Dataset @ target=50000 -> A=24598 B=25183 total=49781 | entities=3481
+21:18:39 INFO    Unified workload: 24 qids, categories={'1-hop': 8, '2-hop': 8, 'cross-lingual': 8}
+21:18:39 INFO    Anchor index built: aliases=8150 labels=8218
+21:18:39 INFO    Simulated LLM memory: 3183/3481 entities memorised (coverage=92%)
+21:18:39 INFO    Anchor index built: aliases=8150 labels=8218
+21:18:39 INFO    Warm-up full_system (cache cleared=True)
+21:22:17 INFO    full_system rep=1 mean=8409.4ms median=8612.7ms qps=0.12
+21:25:37 INFO    full_system rep=2 mean=8347.7ms median=8529.0ms qps=0.12
+21:25:37 INFO    Warm-up no_aligner_k6 (cache cleared=True)
+21:25:37 INFO    no_aligner_k6 rep=1 mean=0.2ms median=0.2ms qps=4708.07
+21:25:37 INFO    no_aligner_k6 rep=2 mean=0.2ms median=0.2ms qps=5189.75
+21:25:37 INFO    Warm-up sparql_baseline (cache cleared=True)
+21:25:37 INFO    sparql_baseline rep=1 mean=0.2ms median=0.2ms qps=6012.46
+21:25:37 INFO    sparql_baseline rep=2 mean=0.1ms median=0.1ms qps=7032.62
+21:25:37 INFO    Warm-up vector_graphrag (cache cleared=True)
+21:25:37 INFO    vector_graphrag rep=1 mean=2.3ms median=2.2ms qps=424.25
+21:25:37 INFO    vector_graphrag rep=2 mean=2.8ms median=2.7ms qps=351.86
+21:25:37 INFO    Warm-up sparql_real (cache cleared=True)
+21:25:45 INFO    sparql_real rep=1 mean=291.8ms median=158.8ms qps=3.43
+21:25:51 INFO    sparql_real rep=2 mean=287.3ms median=152.5ms qps=3.48
+21:25:51 INFO    Warm-up translit (cache cleared=True)
+21:25:51 INFO    translit rep=1 mean=0.1ms median=0.1ms qps=9886.38
+21:25:51 INFO    translit rep=2 mean=0.1ms median=0.1ms qps=12769.08
