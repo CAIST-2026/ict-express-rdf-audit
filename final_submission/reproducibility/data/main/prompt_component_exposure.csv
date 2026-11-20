@@ -1,0 +1,8 @@
+application_prompt_component,prompts_with_gold_uri_1hop,prompts_with_gold_uri_cross_lingual,prompts_with_gold_uri_two_hop,prompts_with_any_uri_form
+Candidate-anchor JSON,200,0,0,796
+Candidate-profile JSON,184,130,0,1447
+Query text,0,0,0,0
+Predicate-schema JSON,0,0,0,0
+Static instructions,0,0,0,0
+System-role message,0,0,0,0
+Few-shot examples or additional context,0,0,0,0

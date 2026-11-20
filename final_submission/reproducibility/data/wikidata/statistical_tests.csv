@@ -1,0 +1,7 @@
+contrast,A,B,n,A_successes,B_successes,both_correct,A_only,B_only,both_incorrect,raw_exact_two_sided_p,holm_adjusted_p_family_6
+Matched LLM vs deterministic: all queries,llm_matched,deterministic_matched,184,157,163,156,1,7,20,0.0703125,0.28125
+Matched LLM vs deterministic: one-hop,llm_matched,deterministic_matched,114,107,114,107,0,7,0,0.015625,0.0877997875213623
+Matched LLM vs deterministic: cross-lingual,llm_matched,deterministic_matched,70,50,49,49,1,0,20,1.0,1.0
+Matched LLM vs deterministic: cross train,llm_matched,deterministic_matched,49,49,49,49,0,0,0,1.0,1.0
+Matched LLM vs deterministic: cross held-out,llm_matched,deterministic_matched,21,1,0,0,1,0,20,1.0,1.0
+"No explicit alignment table condition: LLM vs deterministic, cross-lingual",llm_no_alignment,deterministic_matched,70,62,49,43,19,6,2,0.01463329792022705,0.0877997875213623

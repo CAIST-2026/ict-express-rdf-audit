@@ -1,0 +1,13 @@
+qid,target_canonical,gold_uri,full_profile_canonical_correct,redacted_profile_canonical_correct,full_profile_top_uri_is_gold,redacted_profile_top_uri_is_gold,full_profile_gold_uri_exposed,redacted_profile_gold_uri_exposed,full_profile_elapsed_ms,redacted_profile_elapsed_ms,full_profile_canonical_prediction,redacted_profile_canonical_prediction
+Q0102,P01243,http://example.org/kgB/entity/P01243B,0,0,0,0,1,0,4569.2,5071.5,韩宁芳,韩宁芳
+Q0120,P01114,http://example.org/kgA/entity/P01114A,1,0,1,0,1,0,7067.3,6591.1,P01114,马宁晨
+Q0123,P00758,http://example.org/kgA/entity/P00758A,0,0,1,0,1,0,7206.3,5484.6,孙玲,孙玲
+Q0125,P00802,http://example.org/kgA/entity/P00802A,0,0,1,0,1,0,7346.7,6079.9,Deng LingNing,Deng LingNing
+Q0184,P00633,http://example.org/kgA/entity/P00633A,0,0,1,1,1,0,6779.4,6662.0,孙勇涛,孙勇涛
+Q0186,P01240,http://example.org/kgB/entity/P01240B,1,1,0,0,1,0,7255.7,5066.0,P01240,P01240
+Q0295,P00513,http://example.org/kgA/entity/P00513A,1,0,1,0,1,0,7002.9,5246.8,P00513,He QiangYan
+Q0311,P00322,http://example.org/kgA/entity/P00322A,1,0,1,0,1,0,6780.7,5770.7,P00322,Song Lei
+Q0384,P00174,http://example.org/kgA/entity/P00174A,0,0,1,0,1,0,6593.0,6137.1,Hu LeiLing,Hu LeiLing
+Q0408,P01218,http://example.org/kgB/entity/P01218B,0,0,0,0,1,0,7429.6,6075.5,赵杰凯,赵杰凯
+Q0427,P00830,http://example.org/kgA/entity/P00830A,0,0,1,0,1,0,7392.5,5876.2,赵秀,赵秀
+Q0445,P00517,http://example.org/kgA/entity/P00517A,0,0,1,0,1,0,7430.8,5811.3,赵霞宁,赵霞宁

@@ -1,0 +1,8 @@
+group: oracle
+system: direct_gold_uri
+prompt_version: deterministic_v1
+seed: 20261119
+alignment: gold_uri
+gold_answer_exposure: true
+test_gold_uri_exposure: true
+label: Oracle Upper Bound — Not a Deployable Retrieval System

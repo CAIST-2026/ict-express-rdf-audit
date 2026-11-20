@@ -1,0 +1,8 @@
+group: deterministic_matched
+system: local_surface_alignment
+prompt_version: deterministic_v1
+seed: 20261119
+alignment: train_pool_zh_to_uri_table
+rank_rule: alignment_uri_first_then_surface_match
+gold_answer_exposure: false
+test_gold_uri_exposure: false

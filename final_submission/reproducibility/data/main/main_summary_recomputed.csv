@@ -1,0 +1,7 @@
+variant,label,n,strict_n,strict,hits_n,hits,evidence_n,evidence,gsr,triples_scanned
+full_system,LLM planner,500,386,0.772,404,0.808,447,0.894,0.00036515939816389556,18.178
+no_aligner_k6,No aligner (fixed $k=6$),500,350,0.7,350,0.7,350,0.7,0.0002975030634177178,14.81
+no_predicate_constraint,No predicate constraint,500,260,0.52,260,0.52,328,0.656,0.00030630160101236225,15.248
+no_pruning,Global scan (no pruning),500,386,0.772,404,0.808,447,0.894,1.0,49781.0
+vector_graphrag,Hashed-vector GraphRAG,500,263,0.526,263,0.526,313,0.626,0.0009045619814788281,45.03
+sparql_baseline,Label-lookup pattern baseline,500,200,0.4,200,0.4,200,0.4,0.15611827805789355,7771.724

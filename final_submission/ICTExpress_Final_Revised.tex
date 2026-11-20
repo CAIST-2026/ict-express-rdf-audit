@@ -1,0 +1,288 @@
+%% Revised ICT Express manuscript. Build from this directory with latexmk -pdf.
+\documentclass[a4paper,fleqn]{cas-dc}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\hypersetup{pdftitle={LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?},pdfauthor={Yuxiang Sun; Nan Yin},pdfsubject={Research article},pdfkeywords={knowledge graph, RDF retrieval, cross-lingual entity alignment, large language model}}
+\setlength{\parskip}{0pt plus 1pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\newcommand{\Sstrict}{\ensuremath{S_{\mathrm{strict}}}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+\shorttitle{LLM-guided bilingual RDF retrieval}
+\shortauthors{Y. Sun and N. Yin}
+\title[mode = title]{LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?}
+
+\author[1]{Yuxiang Sun}[type=editor,orcid=0000-0003-0165-7664]
+\credit{Conceptualization, Methodology, Software, Investigation, Writing -- original draft}
+\ead{syx921120@gmail.com}
+\affiliation[1]{organization={Guangzhou University of Software},city={Guangzhou},country={China}}
+\author[2]{Nan Yin}[orcid=0009-0007-3506-9592]
+\credit{Validation, Data curation, Writing -- review \& editing}
+\ead{ny@caist.ca}
+\affiliation[2]{organization={Canada Advanced Institute of Science and Technology},city={Ottawa},country={Canada}}
+\cortext[1]{Corresponding author.}
+
+\begin{abstract}
+Language-model-assisted RDF retrieval can succeed by selecting a supplied identifier, inferring a candidate from semantics, or discovering cross-lingual identity. We audit these distinct sources of value in a specific bilingual pipeline using a synthetic benchmark and archived Wikidata outcomes. Reconstructing the application-level prompt from code and saved seeds, including candidate-anchor URIs, shows explicit gold-URI exposure in 200/200 one-hop prompts and 130/150 cross-lingual prompts. On the synthetic benchmark, the planner achieved 386/500 strict successes, compared with 350/500 for a fixed-$k$ no-aligner baseline (Holm-adjusted paired $p=5.23\times10^{-4}$ across three planned ablations). The baseline succeeded on all 350 one- and two-hop queries and on none of the 150 cross-lingual queries; the planner's net gain was confined to the cross-lingual family. This result is specific to the evaluated prompt and candidate configuration and does not establish autonomous identity discovery. In a new 12-query URI-redaction pilot, rank-1 gold-URI selection was 9/12 with full profiles and 1/12 after profile URI lists were emptied; this small intervention is exploratory and leaves other identity cues visible. In six archived Wikidata paired contrasts, no Holm-adjusted test reached $p<0.05$; this is not evidence of equivalence. A 19/21 held-out result for the No explicit alignment table condition is exploratory, with development-set isolation unverified. Missing source inputs and historical prompt/completion snapshots limit independent reproduction.
+\end{abstract}
+
+\begin{keywords}
+knowledge graph \sep RDF retrieval \sep cross-lingual entity alignment \sep large language model \sep evaluation methodology
+\end{keywords}
+\maketitle
+\hypersetup{pdftitle={LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?},pdfauthor={Yuxiang Sun; Nan Yin},pdfsubject={Research article},pdfkeywords={knowledge graph, RDF retrieval, cross-lingual entity alignment, large language model}}
+
+\section{Introduction}\label{sec:intro}
+Language models are increasingly placed inside knowledge-graph retrieval pipelines to select entities, infer relations, or propose graph traversals. An end-to-end answer can be correct because the model resolved an entity, because the correct identifier was already among its candidates, or because a downstream executor supplied the answer. These mechanisms support different claims. In particular, selecting a URI from a prompt that already contains it is not evidence of autonomous cross-lingual identity discovery.
+
+Research on language models with knowledge graphs, retrieval-augmented generation, and graph retrieval has examined complementary parts of this pipeline~\cite{pan2024unifying,ibrahim2024kgllm,lewis2020rag,edge2024graphrag,gao2024rag}. Cross-lingual entity alignment instead concerns identifying equivalent entities across language-specific graphs, using structural, embedding-based, or language-model methods~\cite{sun2018jape,zeng2021alignment,yang2024segalign}. Evidence-oriented evaluation work also shows why system outputs should be assessed against retrieved evidence rather than answer strings alone~\cite{thorne2018fever,beir2021}. For bilingual RDF retrieval, a central attribution question remains: under different URI-exposure and candidate-information constraints, what retrieval value does an LLM add over a deterministic process?
+
+We examine this question in one synthetic bilingual RDF pipeline and a secondary re-analysis of saved Wikidata outputs. The synthetic graphs have heterogeneous schemas and disjoint URI namespaces, while planner prompts can contain truth-derived bilingual profiles and candidate anchors. We audit the complete application-level prompt message and distinguish explicit URI exposure from other identity cues. ICT network-operations knowledge graphs integrate heterogeneous sources for incident analysis~\cite{tailhardat2024noriaui}. If prompt-supplied URIs are mistaken for cross-language resolution, a stale or missing mapping in a device inventory, alarm graph, service catalog, or regional technical corpus can retrieve the wrong device/service, omit incident context, or misdirect troubleshooting. These are motivating failure modes, not measured outcomes. The Wikidata comparison is also bounded: the matched LLM receives the training-pool alignment map for cross-lingual queries, while the deterministic comparator applies a mapping derived from the same pool directly. The No explicit alignment table condition omits that explicit map but still receives Chinese query text and English candidate labels.
+
+This paper makes three empirical contributions: a code-and-seed reconstruction of prompt URI exposure; paired re-analysis of synthetic and archived Wikidata outcomes; and a transparent account of which results can be regenerated versus reanalysed. We audit one system's information flow rather than propose a new retrieval or entity-alignment algorithm.
+
+\section{Benchmark and evaluation}\label{sec:method}
+\subsection{Synthetic benchmark and retrieval pipeline}
+A deterministic generator builds two \texttt{rdflib} graphs~\cite{rdflib} containing 49,781 triples, 3,481 entities, and 8,218 labels or aliases. Graph A uses Chinese labels and one predicate schema; Graph B uses English labels and a different schema. Matched entities have different URIs, and no cross-graph identity predicate is included. The benchmark contains 500 questions: 200 one-hop attribute queries, 150 two-hop work-attribute queries, and 150 cross-lingual queries whose answer-bearing fact is in the other graph.
+
+A label and alias index supplies candidate anchors to a Qwen2.5-7B planner served by Ollama at temperature zero, in JSON mode, with a 256-token output budget~\cite{qwen25}. The prompt serializes each candidate anchor with its URI, graph, label, and score. It also includes candidate profiles with canonical entity keys, Chinese and English surface forms, and URIs from both graphs, along with a predicate-schema summary containing local predicate names. Although the prompt section header refers to a name-to-description mapping, the reconstructed schema values are local names, not natural-language descriptions. Profiles are generated from gold entity records; the seeded memory coverage parameter is 0.92, with 3,183 of 3,481 entity profiles realized (91.44\%). These fields constitute privileged experimental information, not naturally acquired model knowledge. The answer stage deterministically renders retrieved triples and uses a decoy fallback. The experiment thus measures planning, candidate selection, and retrieval under this prompt construction, rather than open-ended answer generation.
+
+The primary run used store seed 20260101, benchmark seed 20260102, and simulated-memory seed 20260104. Its retained log records 500 Ollama-backed full-system planner calls and no mock fallbacks. Three separate 200-query sensitivity runs used data seeds 20260101, 20260301, and 20260401. One reuses the primary data seed. Their distinct query-text overlaps with the primary run are 91, 0, and 1, respectively. They are sensitivity runs, not independent replications, and are not pooled with the primary sample.
+
+\subsection{Metrics}
+For query $q$, let $R(q)$ denote the ranked URI list, and let $\rho(q)$ be the rank of a gold URI, with $\rho(q)=\infty$ if none appears. Let $E(q)$ be the retrieved triples, $V^{*}(q)$ the generator-recorded gold values, $S(q)$ the triples logically scanned by the executor, and $A(q)$ the deterministic rendered answer. The rank metrics are
+\begin{equation}
+\begin{aligned}
+\mathrm{Hits@1}&=\frac{1}{n}\sum_{q=1}^{n}\mathbf{1}[\rho(q)=1],\\
+\mathrm{MRR}&=\frac{1}{n}\sum_{q=1}^{n}\frac{1}{\rho(q)}.
+\end{aligned}
+\label{eq:rank}
+\end{equation}
+where $1/\infty=0$. Let $V^{*}(q)$ contain the string forms of generator-recorded gold values for $q$. The object-grounded value-in-context indicator is
+\begin{equation}
+\begin{split}
+h_{\mathrm{obj}}(q)=\mathbf{1}\!\big[&\exists(s,p,o)\in E(q):
+\mathrm{str}(o)\in V^{*}(q)\\
+&\land\ \mathrm{str}(o)\text{ is a substring of }A(q)\big].
+\end{split}
+\label{eq:obj}
+\end{equation}
+The implementation converts RDF objects with Python \texttt{str()} and compares lexical strings; it does not preserve or compare RDF datatype or language-tag annotations. A matching lexical value can occur in a triple with a different subject or predicate, and duplicate values are not disambiguated by triple identity. The query-level strict score and value-in-context (VIC) are
+\begin{equation}
+\begin{aligned}
+\Sstrict(q)&=\mathbf{1}[\rho(q)=1]h_{\mathrm{obj}}(q),\\
+\mathrm{StrictAcc}&=\frac{1}{n}\sum_{q=1}^{n}\Sstrict(q),\\
+\mathrm{VIC}&=\frac{1}{n}\sum_{q=1}^{n}h_{\mathrm{obj}}(q).
+\end{aligned}
+\label{eq:strict}
+\end{equation}
+StrictAcc requires both a top-ranked gold URI and a gold lexical object value found in retrieved evidence and the deterministic rendered answer; VIC assesses only the object-value condition. This is string-based object-level grounding, not triple-level validation or full RDF semantic validation. Hits@1 and MRR measure URI ranking and do not imply grounding. No human or LLM judge is used for the synthetic strict score.
+
+For the primary store of $|T|=49{,}781$ triples, the graph scan ratio (GSR) and its mean are
+\begin{equation}
+\begin{aligned}
+\mathrm{GSR}(q)&=\frac{|S(q)|}{|T|},\\
+\overline{\mathrm{GSR}}&=\frac{1}{n}\sum_{q=1}^{n}\mathrm{GSR}(q),\\
+\overline{s}&=\frac{1}{n}\sum_{q=1}^{n}|S(q)|.
+\end{aligned}
+\label{eq:gsr}
+\end{equation}
+GSR records logical triples examined by the implementation; it is not physical I/O, memory use, cost, latency, or an asymptotic runtime estimate.
+
+\subsection{Prompt audit and statistical analysis}
+Let $P_{\mathrm{app}}(q)$ be the set of URI strings in the complete application-level user-message content assembled for query $q$, and let $u^{*}(q)$ be its gold URI. Explicit URI exposure is
+\begin{equation}
+z(q)=\mathbf{1}[u^{*}(q)\in P_{\mathrm{app}}(q)].
+\label{eq:exposure}
+\end{equation}
+The prompt-construction code sends one user-role message and adds no application-level system message, few-shot examples, or other context. Its dynamic fields are the query, candidate-anchor JSON, candidate-profile JSON, and predicate-schema JSON; static instructions are also included. We reconstructed this complete application-level message from the saved seeds and code, rather than inspecting archived historical prompt snapshots, which were not retained. The audit checks all of its fields: URI-bearing strings can occur in the anchor and profile JSON; the reconstructed query text, local-name schema values, and static instructions contain no URI-form strings. We report $z(q)$ for one-hop and cross-lingual queries; two-hop work URIs are traversal targets rather than planner-candidate exposure targets. The Ollama runtime's internal chat template is outside this application-level reconstruction. URI absence does not imply absence of identity information: query semantics, labels, aliases, schema context, and model priors can remain informative. The audit measures explicit URI inclusion only, not these other cues.
+
+For paired query outcomes, let $b$ and $c$ denote discordant pairs favoring systems A and B. The exact two-sided McNemar probability~\cite{mcnemar1947} is
+\begin{equation}
+p_{\mathrm{McN}}=\min\!\left(1,2\sum_{j=0}^{\min(b,c)}{b+c\choose j}2^{-(b+c)}\right).
+\label{eq:mcnemar}
+\end{equation}
+We recalculated the six saved Wikidata contrasts and applied Holm's step-down correction across all six~\cite{holm1979}. For ordered raw probabilities $p_{(1)}\le\cdots\le p_{(6)}$, the adjusted value at rank $i$ is $p^{\mathrm{Holm}}_{(i)}=\min\{1,\max_{j\le i}(7-j)p_{(j)}\}$. The primary synthetic ablations retain their separate, prespecified three-comparison correction family. A zero-discordance result or a non-significant test does not demonstrate equivalence. We report two-sided 95\% Clopper--Pearson intervals for observed proportions $x/n$, with endpoints $[B^{-1}_{.025}(x,n-x+1),B^{-1}_{.975}(x+1,n-x)]$ and the standard boundary values for $x=0$ or $x=n$. Intervals are query-level and do not adjust for dependence from repeated entities or profiles. Sensitivity-run summaries are descriptive; three runs do not support broad uncertainty claims. The boundary between regenerable synthetic analyses and reanalysis-only Wikidata records is summarized in Table~\ref{tab:availability}.
+
+We ran an exploratory paired intervention on 12 randomly sampled (seed 20261120) exposed cross-lingual queries. One arm used the original prompt; the other emptied each profile's URI list while retaining anchors, canonical keys, bilingual surface forms, schema, and instructions. Both used Qwen2.5-7B at temperature 0. We scored exact canonical-key selection and rank-1 URI output descriptively; the small pilot leaves other identity cues visible and is not an autonomous-alignment test. Its exact prompts and completions are archived.
+
+\section{Results}\label{sec:results}
+\subsection{Primary benchmark and ablations}
+The full planner achieved strict accuracy of 386/500 (0.772; 95\% exact CI 0.733--0.808) and Hits@1 of 404/500 (0.808). Strict accuracy was 181/200 (0.905) for one-hop, 140/150 (0.933) for two-hop, and 65/150 (0.433) for cross-lingual queries. Table~\ref{tab:main} presents the saved ablations and implementation-specific baselines. In a paired comparison, the full planner achieved 386/500 strict successes versus 350/500 for fixed-$k$ retrieval without an aligner; the discordant outcomes favored the planner on 65 queries and the baseline on 29 (exact two-sided McNemar $p=2.62\times10^{-4}$; Holm-adjusted $p=5.23\times10^{-4}$ within the prespecified three-ablation family). The baseline succeeded on all 350 combined one-hop and two-hop queries and on none of the 150 cross-lingual queries. Thus, the net overall difference is concentrated in cross-lingual queries, while the baseline is stronger on the one- and two-hop families; it is not a uniform advantage across query types. Removing predicate constraints reduced two-hop strict accuracy to zero. Removing localized pruning left the observed outcomes unchanged (386/500 strict successes, with no discordant pairs; $p=1$) while increasing GSR from 0.000365 to 1.0. This equality on one workload is not an equivalence result.
+
+Across the three planned synthetic ablations, discordant counts $(b,c)$ were $(65,29)$ for fixed-$k$ retrieval without an aligner, $(140,14)$ for removal of predicate constraints, and $(0,0)$ for removal of pruning. Exact McNemar probabilities were $2.62\times10^{-4}$, $2.56\times10^{-27}$, and 1; Holm-adjusted values were $5.23\times10^{-4}$, $7.67\times10^{-27}$, and 1. The vector comparator uses deterministic hashed character n-gram features. The label-lookup comparator is a pattern-matching implementation, not a general SPARQL~1.1 engine.
+
+\begin{table*}[t]
+\centering\small
+\input{tables/table1_main}
+\caption{Primary 500-query results. Strict accuracy is the object-grounded measure in Eq.~(\ref{eq:strict}) with exact 95\% intervals. GSR is logical triple access. The vector and label-lookup rows are implementation-specific comparators.}
+\label{tab:main}
+\end{table*}
+
+\begin{table*}[t]
+\centering\small
+\input{tables/table2_family_comparison}
+\caption{Descriptive strict-success rates for the full planner and fixed-$k$ no-aligner baseline by query family, calculated on the same query identifiers. No subgroup significance tests are reported.}
+\label{tab:family}
+\end{table*}
+
+\subsection{Explicit URI exposure and candidate selection}
+The corrected prompt reconstruction finds the gold URI in all 200 one-hop prompts (100\%) and in 130/150 cross-lingual prompts (86.67\%). On one-hop queries, the planner ranked the gold URI first on 195/200 and achieved strict accuracy on 181/200. Thus, this one-hop condition is not a gold-URI-unexposed retrieval test. For cross-lingual queries with an explicit gold URI, top-rank selection and strict accuracy were both 65/130 (50.0\%; 95\% exact CI for strict accuracy 0.411--0.589). Among the 20 prompts without an explicit gold URI, there were no top-rank or strict successes (0/20; 95\% exact CI for strict accuracy 0--0.168). This zero count does not establish zero capability. In the synthetic prompt, profile mappings derive from truth records; anchor URIs additionally expose every one-hop target. Table~\ref{tab:probe} reports the corrected strata.
+
+These measurements distinguish explicit URI selection from other forms of information. Bilingual labels, aliases, query wording, and model priors may support semantic inference even when the target URI is absent. The audit does not isolate these cues experimentally. A correct selection from a supplied URI is not autonomous identity discovery, and a correct result without an explicitly supplied URI would still require further controls before it could support that claim.
+
+\begin{table*}[t]
+\centering\small
+\input{tables/table3_probe}
+\caption{Primary results by explicit gold-URI presence in the reconstructed prompt. Intervals are two-sided 95\% exact binomial intervals for strict accuracy. Two-hop work URIs are traversal targets, so exposure is not defined for that family.}
+\label{tab:probe}
+\end{table*}
+
+\subsection{Exploratory URI-masking pilot}
+In the pilot, gold-URI rank 1 was 9/12 with full profiles and 1/12 after redaction; exact canonical-key selection was 4/12 and 1/12. Gold-URI exposure changed from 12/12 to 0/12. The remaining URI hit shows that anchors, canonical keys, surface forms, or URI regularities can still cue the output. These descriptive counts are not StrictAcc and are not pooled with the main benchmark; they indicate sensitivity in this sample, not autonomous discovery.
+
+\subsection{Sensitivity runs}
+Strict accuracy across the three 200-query sensitivity runs ranged from 0.760 to 0.805 (mean 0.780; SD 0.023). One run repeats the primary data seed; the numbers of distinct query texts overlapping the primary run were 91, 0, and 1. These results are descriptive checks of the saved pipeline and are not independent-seed replications (Table~\ref{tab:seeds}).
+
+\begin{table*}[t]
+\centering\scriptsize
+\input{tables/table4_seeds}
+\caption{Three sensitivity runs. Query overlap counts are distinct query texts shared with the primary run. The 20260101 sensitivity run reuses the primary data seed; the runs are not independent replications.}
+\label{tab:seeds}
+\end{table*}
+
+\subsection{Archived Wikidata comparison}
+The secondary archive contains 184 Chinese/English queries over 70 Wikidata entities, including 114 one-hop and 70 cross-lingual queries~\cite{wikidata2014}. The matched LLM receives the complete training-pool Chinese-label-to-URI map on cross-lingual queries; the deterministic system uses a mapping derived from the same training pool but applies a direct lookup rather than receiving the same serialized prompt. All paired systems use identical query identifiers and candidate pools. The No explicit alignment table condition receives query text and candidate labels without an explicit alignment table. For cross-lingual queries, these inputs still provide Chinese query semantics and English candidates; the condition therefore removes the explicit mapping but not all cross-language information.
+
+The matched LLM and deterministic systems scored 157/184 and 163/184, respectively (Holm-adjusted $p=0.281$). On one-hop queries they scored 107/114 and 114/114 (adjusted $p=0.088$); on all cross-lingual queries, 50/70 and 49/70 (adjusted $p=1.000$). None of the six contrasts reached $p<0.05$ after the shared six-test Holm correction, including training and held-out subsets and the No explicit alignment table condition versus deterministic cross-lingual comparison (Table~\ref{tab:wikidata}). This lack of statistical significance does not show that the systems are equivalent.
+
+Within the 21-query held-out cross-lingual subset, the No explicit alignment table condition scored 19/21, compared with 1/21 for the matched LLM and 0/21 for the deterministic system. We treat 19/21 as an exploratory observation only. The saved records and code do not establish whether held-out queries influenced prompt development, parameter choices, manual inspection, or experiment selection; successful raw model completions and exact prompt snapshots were also not retained. This result does not demonstrate autonomous cross-lingual entity identity discovery.
+
+\begin{table*}[t]
+\centering\scriptsize
+\input{tables/table5_wikidata}
+\caption{Six paired contrasts recalculated from the archived query-level Wikidata outcomes. Counts are strict successes under the archived Wikidata evaluator. All Holm-adjusted probabilities use the same six-test family; none is below 0.05. The held-out 19/21 result is descriptive and exploratory, not evidence of autonomous alignment.}
+\label{tab:wikidata}
+\end{table*}
+
+\section{Discussion and limitations}\label{sec:discussion}
+The evidence supports a narrower conclusion than end-to-end accuracy alone might suggest. In the synthetic benchmark, the reconstructed application-level prompt contains the gold URI in every one-hop prompt and in 130/150 cross-lingual prompts. The full planner outscored the fixed-$k$ baseline overall, but the family-stratified results show why the aggregate cannot be read as a general retrieval advantage: the baseline succeeded on every one- and two-hop query and failed on every cross-lingual query, whereas the planner's 65 cross-lingual successes generated the net gain. For 130 cross-lingual queries, the gold URI was explicitly available among prompt content; the other 20 still contained semantic signals and do not isolate parametric alignment. The archived Wikidata contrasts show no statistically significant difference after correction, but do not establish equivalence. Taken together, the results describe selection and retrieval in this particular information-constrained pipeline and do not quantify a broadly independent LLM contribution.
+
+The distinctions among selection, inference, and identity discovery matter. Candidate selection chooses among supplied identifiers. Semantic inference uses labels, aliases, relations, schema context, or learned language knowledge to rank candidates. Autonomous entity identity discovery would require evidence that the system establishes cross-graph equivalence without direct alignment mappings and under controls that exclude leakage and development-set reuse. The present experiments measure the first two only in constrained settings and do not establish the third.
+
+Several limits remain (Table~\ref{tab:availability}). The synthetic benchmark uses truth-derived profiles and deterministic answers. Its lexical grounding rule ignores RDF datatype and language tags and does not validate evidence-triple subjects or predicates. The study tests one 7B model; GSR counts logical scans, not physical resource use. Sensitivity runs are not independent. Wikidata source inputs and historical prompts/completions are missing, and held-out development isolation is unverified. The current code, data, pilot, and manuscript are archived in public repository release v2.3.
+
+\begin{table*}[t]
+\centering\scriptsize
+\begin{tabular}{p{2.5cm}p{12.2cm}}
+\toprule
+Material & Reproducibility scope in the public archive \\
+\midrule
+Synthetic workflow & Generator, seeds, primary records/configuration/log, and analysis code are included; outputs and tables can be rebuilt. New model responses require Ollama and may differ. \\
+Sensitivity and prompts & Three result/configuration sets are included; logs are absent and query overlaps are 91, 0, and 1 (one reused seed). Historical prompts/completions are absent; only pilot snapshots are retained. \\
+Wikidata & 736 parsed rows, configurations, manifest, and two LLM logs support reanalysis only. Four source inputs are missing, so the benchmark cannot be rerun from source. \\
+\bottomrule
+\end{tabular}
+\caption{What the archived materials support: regeneration, reanalysis, or neither.}
+\label{tab:availability}
+\end{table*}
+
+The study contains no operator, subscriber, network-device, or IoT workload and therefore estimates no operational error rate. Its ICT relevance is the attribution problem in a plausible network-operations workflow: a stale cross-source URI map could attach an alarm to the wrong device or service, distort impact analysis, or omit a needed troubleshooting record. Knowledge-graph-based ICT incident systems already emphasize correlating heterogeneous information sources~\cite{xie2021iotkg,tailhardat2024noriaui}; our example motivates evaluation design but is not evidence that the audited system causes these failures. A deployment study should measure wrong-entity retrieval and incident-context loss on held-out inventories, alarm records, service catalogs, and multilingual technical documents, with explicit URI exposure controlled.
+
+\section{Conclusion}\label{sec:conclusion}
+This audit found explicit gold-URI exposure in 200/200 one-hop and 130/150 cross-lingual prompts. The full planner achieved 386/500 strict successes versus 350/500 for fixed-$k$ retrieval, with its net gain confined to cross-lingual queries. Six Wikidata contrasts were not significant after Holm correction; the held-out 19/21 result remains exploratory. In a 12-query pilot, gold-URI top-1 fell from 9/12 to 1/12 when profile URI lists were removed. These results characterize selection in one pipeline and do not establish autonomous identity discovery, equivalence, or deployment performance.
+
+\footnotesize
+\section*{CRediT authorship contribution statement}
+\textbf{Yuxiang Sun:} Conceptualization, Methodology, Software, Investigation, Writing -- original draft. \textbf{Nan Yin:} Validation, Data curation, Writing -- review \& editing.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Funding}
+Funding: 2026 Research Project, Guangzhou University of Software (grant KY202649).
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+During the preparation of this work, the authors used an AI assistant for code refactoring, statistical analysis, and manuscript editing. The authors reviewed and edited the content and take responsibility for the published article.
+
+\Needspace{15\baselineskip}
+\section*{Code and data availability}
+Code, synthetic generator, saved analyses, pilot artifacts, and manuscript are in the public repository `https://github.com/CAIST-2026/ict-express-rdf-audit` (release v2.3). Synthetic analyses can be rebuilt; model outputs may vary. Wikidata files support reanalysis only because four source inputs are absent. Historical prompts/completions and sensitivity logs are missing; snapshots are available for the new pilot only.
+
+\balance
+\begin{thebibliography}{00}\footnotesize
+\bibitem{pan2024unifying}
+S. Pan, L. Luo, Y. Wang, C. Chen, X. Wang, X. Wu, Unifying large language
+models and knowledge graphs: a roadmap, IEEE Trans. Knowl. Data Eng. 36 (7)
+(2024) 3580--3599. https://doi.org/10.1109/TKDE.2024.3352100.
+\bibitem{edge2024graphrag}
+D. Edge, H. Trinh, N. Cheng, et al., From local to global: a graph RAG approach
+to query-focused summarization, arXiv:2404.16130, 2024.
+\bibitem{sun2018jape}
+Z. Sun, W. Hu, Q. Zhang, Y. Qu, Bootstrapping entity alignment with knowledge
+graph embedding, in: Proc. IJCAI, 2018, pp. 4396--4402.
+https://doi.org/10.24963/ijcai.2018/611.
+\bibitem{yang2024segalign}
+L. Yang, J. Cheng, F. Zhang, Advancing cross-lingual entity alignment with
+large language models, in: Findings of EMNLP 2024, ACL, 2024, pp. 8122--8138.
+https://doi.org/10.18653/v1/2024.findings-emnlp.475.
+\bibitem{thorne2018fever}
+J. Thorne, A. Vlachos, C. Christodoulopoulos, A. Mittal, FEVER: a large-scale
+dataset for fact extraction and VERification, in: Proc. NAACL-HLT, 2018,
+pp. 809--819. https://doi.org/10.18653/v1/N18-1074.
+\bibitem{lewis2020rag}
+P. Lewis, E. Perez, A. Piktus, et al., Retrieval-augmented generation for
+knowledge-intensive NLP tasks, in: Advances in Neural Information Processing
+Systems 33 (NeurIPS), 2020, pp. 9459--9474.
+\bibitem{rdflib}
+G. van Harmelen, S. Schalkwijk, et al., rdflib: a Python library for working
+with RDF, version 7.6.0, 2025. https://github.com/RDFLib/rdflib.
+\bibitem{qwen25}
+A. Yang, et al., Qwen2.5 technical report, arXiv:2412.15115, 2024.
+https://arxiv.org/abs/2412.15115.
+\bibitem{mcnemar1947}
+Q. McNemar, Note on the sampling error of the difference between correlated
+proportions or percentages, Psychometrika 12 (2) (1947) 153--157.
+\bibitem{holm1979}
+S. Holm, A simple sequentially rejective multiple test procedure, Scand. J.
+Stat. 6 (2) (1979) 65--70.
+\bibitem{gao2024rag}
+Y. Gao, Y. Xiong, Y. Gao, et al., Retrieval-augmented generation for large
+language models: a survey, arXiv:2312.10997, 2024.
+https://doi.org/10.48550/arXiv.2312.10997.
+\bibitem{zeng2021alignment}
+K. Zeng, C. Li, L. Hou, J. Li, L. Feng, A comprehensive survey of entity
+alignment for knowledge graphs, AI Open 2 (2021) 1--13.
+https://doi.org/10.1016/j.aiopen.2021.02.002.
+\bibitem{wikidata2014}
+D. Vrande\v{c}i\'{c}, M. Kr\"{o}tzsch, Wikidata: a free collaborative
+knowledgebase, Commun. ACM 57 (10) (2014) 78--85.
+https://doi.org/10.1145/2629489.
+\bibitem{beir2021}
+N. Thakur, N. Reimers, A. R\"{u}ckl\'{e}, A. Srivastava, I. Gurevych, BEIR: a
+heterogeneous benchmark for zero-shot evaluation of information retrieval
+models, in: NeurIPS Datasets and Benchmarks Track, 2021. arXiv:2104.08663.
+\bibitem{xie2021iotkg}
+C. Xie, B. Yu, Z. Zeng, Y. Yang, Q. Liu, Multilayer Internet-of-Things
+middleware based on knowledge graph, IEEE Internet Things J. 8 (4) (2021)
+2635--2648. https://doi.org/10.1109/JIOT.2020.3019707.
+\bibitem{tailhardat2024noriaui}
+L. Tailhardat, Y. Chabot, A. Py, P. Guillemette, NORIA UI: efficient incident
+management on large-scale ICT systems represented as knowledge graphs, in:
+Proc. ARES 2024, GRASEC workshop, 2024.
+https://doi.org/10.1145/3664476.3670438.
+\bibitem{ibrahim2024kgllm}
+N. Ibrahim et al., A survey on augmenting knowledge graphs with LLMs, Discov.
+Artif. Intell. 4 (2024) 76. https://doi.org/10.1007/s44163-024-00175-8.
+\end{thebibliography}
+\end{document}

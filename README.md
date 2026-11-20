@@ -1,134 +1,48 @@
-# Evidence-Constrained Audit of LLM-Guided Retrieval over Heterogeneous Bilingual RDF Graphs
+# LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?
 
-Reproduction package for the ICT Express letter *"What Does the LLM Actually
-Contribute?"* by Yuxiang Sun and Nan Yin.
+Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yin. The latest, corrected six-page submission package is in [`final_submission/`](final_submission/), version **v2.3**. Earlier experiment and audit artifacts remain in the repository as historical records; use the `final_submission/` materials for the current manuscript and its reported analyses.
 
-## What this repository contains
+## Current manuscript and package
 
-| Path | Contents |
+- [`ICTExpress_Final_Revised.pdf`](final_submission/ICTExpress_Final_Revised.pdf): six-page manuscript.
+- [`ICTExpress_Final_Revised.tex`](final_submission/ICTExpress_Final_Revised.tex): LaTeX source.
+- [`ICTExpress_Final_Supplementary.zip`](final_submission/ICTExpress_Final_Supplementary.zip): source code, synthetic records, analysis outputs, figures, tables, and the URI-masking pilot records.
+- [`ICTExpress_Final_Validation_Report.docx`](final_submission/ICTExpress_Final_Validation_Report.docx): concise revision and evidence-scope record.
+- [`reproducibility/README.md`](final_submission/reproducibility/README.md): rebuild instructions and evidence limits.
+
+## Corrected findings
+
+The application-level prompt reconstruction includes candidate-anchor URIs. The gold URI occurs in **200/200 one-hop prompts (100%)** and **130/150 cross-lingual prompts (86.67%)**. The synthetic result is 386/500 strict successes for the LLM planner and 350/500 for the fixed-$k$ no-aligner baseline; the planner's net gain is concentrated in the cross-lingual family. This is evidence about the evaluated candidate and prompt configuration, not autonomous identity discovery.
+
+A new exploratory intervention on 12 exposed cross-lingual queries yielded rank-1 gold-URI output of **9/12 with full profiles and 1/12 after profile URI lists were emptied**. Anchors, canonical keys, bilingual surface forms, query text, and schema remained available. The result is descriptive and does not isolate all identity cues.
+
+Six paired Wikidata contrasts were recalculated with a single Holm family; none reached adjusted *p* < 0.05. This does not establish equivalence. The No explicit alignment table condition still receives Chinese query text and English candidates. Its 19/21 held-out result is exploratory, and held-out isolation from prompt development is unverified.
+
+## Evidence and reproducibility scope
+
+| Materials | Scope |
 |---|---|
-| `experiments/` | All experiment scripts (probe, fair baselines, statistics, latency, scaling, diagnosis, figure/table generation) |
-| `upstream/` | Six core modules from the original `rdf_llm_ea` codebase, bundled so the package is self-contained |
-| `results/` | Per-query result CSVs and run configs for every experiment (500 queries × multiple systems) |
-| `tables/`, `figures/` | Script-generated LaTeX tables and PDF figures |
-| `paper/main.tex`, `paper/main.pdf` | Manuscript source and compiled PDF (Elsevier `cas-dc`, 6 pages) |
-| `ICT_EXPRESS_PHASE1/` | Phase 1 audit: matched-supervision experiment, real Wikidata transfer check, exact statistics, reports, and publication-ready tables |
-| `ICT_EXPRESS_REVISION/` | Systematic revision package: original-result audit, serialized alignment table, unified latency workload, expanded Wikidata benchmark, consolidated statistics, GSR reanalysis, verified references, paper revision, and final reports |
-| `docs/` | Positioning memo and final verification report |
-| `traceability.csv` | Maps every number in the paper to its source file, columns, and generating script |
+| Synthetic generator, saved seeds, primary records/configuration/log, analysis code | Rebuild benchmark records and saved analyses; new model outputs require the Ollama/model environment and may differ. |
+| URI-masking pilot CSV and prompt/completion snapshots | Reanalyse the 12 retained paired cases. |
+| Three sensitivity result/configuration sets | Reanalyse saved runs; query-text overlaps with the primary sample are 91, 0, and 1, and one run reuses the primary data seed. Run logs are absent. |
+| Wikidata rows, configurations, manifest, and two LLM logs | Reanalyse retained outcomes only. The four original query, gold-answer, entity, and attribute inputs listed in the manifest are absent, so a fresh benchmark rerun is not supported. |
+| Historical prompts and successful outputs | Not retained. The exact prompt and completion snapshots in this release are for the new URI-masking pilot only. |
 
-The main benchmark is **fully synthetic** — no real operator, subscriber, or
-device data is included. `ICT_EXPRESS_PHASE1/real_world_benchmark/` contains a
-small transfer check built from authentic, CC0 Wikidata RDF labels; it does not
-contain operator, subscriber, or device data and does not validate cross-graph
-entity alignment.
+The manuscript is an empirical audit of one LLM-guided bilingual RDF retrieval system, not a new retrieval or entity-alignment algorithm. No operator, subscriber, device, or IoT workload was measured. The ICT operations scenarios in the paper motivate the risk of confusing supplied identifiers with entity resolution; they are not measured operational outcomes.
 
-## Quick start
+## Rebuild retained analyses
 
-```bash
-# 1. Install dependencies (Python >= 3.11)
-python -m venv env && source env/bin/activate
-pip install -r requirements.txt
+From the repository root:
 
-# 2. Start the LLM server (needed for main/ablation/latency/scaling runs)
-ollama pull qwen2.5:7b
-ollama serve
-
-# 3. Run experiments (paths are portable — no absolute paths required)
-python experiments/baselines_ict.py --out results/baselines/seed_20260101 \
-    --systems sparql_real,translit,dense,dense_ne
-python experiments/alignment_probe.py \
-    --results upstream_results/experimental_results.csv \
-    --out results/main/alignment_probe
-python experiments/stats_ict.py \
-    --main upstream_results/experimental_results.csv \
-    --baselines results/baselines/seed_20260101/per_query.csv \
-    --out results/stats
-python experiments/latency_ict.py --n 24 --out results/latency
-python experiments/scaling_ict.py \
-    --sizes 10000 50000 100000 200000 --llm-n 8 --fast-n 100 --out results/scaling
-python experiments/translit_diagnosis.py \
-    --baselines results/baselines/seed_20260101/per_query.csv \
-    --out results/diagnostics
-
-# 4. Regenerate tables, figures, and traceability
-python experiments/summarize.py \
-    --main upstream_results/experimental_results.csv \
-    --baselines results/baselines/seed_20260101/per_query.csv \
-    --probe results/main/alignment_probe/probe_by_group.csv \
-    --latency results/latency/protocol_summary.csv \
-    --scaling results/scaling/scaling.csv \
-    --stats results/stats --out .
+```sh
+python -m pip install -r final_submission/reproducibility/requirements.txt
+MPLCONFIGDIR=./final_submission/reproducibility/.mplcache \
+XDG_CACHE_HOME=./final_submission/reproducibility/.cache \
+MPLBACKEND=Agg python3 final_submission/reproducibility/build_assets.py
 ```
 
-# 5. Phase 1 audit (matched supervision, stats, publication tables; no LLM server)
-python ICT_EXPRESS_PHASE1/audit/audit_recompute.py > ICT_EXPRESS_PHASE1/results/audit_recompute.json
-python ICT_EXPRESS_PHASE1/audit/verify_triples.py
-python ICT_EXPRESS_PHASE1/baseline_fairness/matched_supervision.py
-python ICT_EXPRESS_PHASE1/baseline_fairness/build_comparison.py
-python ICT_EXPRESS_PHASE1/statistical_verification/stats_verify.py
-python ICT_EXPRESS_PHASE1/reports/generate_tables.py
-# real-Wikidata offline check: python ICT_EXPRESS_PHASE1/real_world_benchmark/RUN_LOCAL_EXPERIMENT.py
-```
+This rebuilds retained-result tables and figures and reconstructs application-level prompt exposure from source code and saved seeds. It does not reproduce archived model completions byte-for-byte. The URI-masking pilot runner is `final_submission/reproducibility/run_uri_masking_pilot.py`; rerunning it requires Ollama with Qwen2.5-7B and is not expected to guarantee identical completions.
 
-# 6. Systematic revision artefacts (all deterministic; no LLM server)
-python ICT_EXPRESS_REVISION/00_AUDIT/recalculate_original_results.py
-python ICT_EXPRESS_REVISION/01_MATCHED_SUPERVISION/code/alignment_leakage_audit.py
-python ICT_EXPRESS_REVISION/02_LATENCY/code/validate_unified_latency.py
-python ICT_EXPRESS_REVISION/03_WIKIDATA/code/build_wikidata_benchmark.py
-python ICT_EXPRESS_REVISION/04_STATISTICS/code/build_statistics_package.py
-python ICT_EXPRESS_REVISION/04_STATISTICS/FIGURE_GENERATION_CODE/make_figures.py
-python ICT_EXPRESS_REVISION/FINAL_REPORT/consistency_check.py
-```
+## License
 
-The accepted unified-latency run requires `pyparsing` for rdflib SPARQL and
-records a hard preflight in `ICT_EXPRESS_REVISION/02_LATENCY/code/unified_latency.py`.
-Dense e5 was not executable in that latency environment because
-torch/transformers were unavailable; this is documented, not estimated.
-
-**Note on `upstream_results/`:** the reused main run (500 queries × 7 variants)
-from the original study is included under `upstream_results/` so the probe,
-statistics, and summarisation steps work out of the box. Set the environment
-variable `RDF_LLM_EA_SRC` to point at an alternative source tree if needed;
-otherwise the bundled `upstream/` directory is used.
-
-Seeds are fixed (`20260101` data, `+1` benchmark, `+3` memory) so results are
-deterministic given the same model and machine. Every script writes a
-`run_config.json` with exact arguments and per-query CSVs.
-
-## Headline results
-
-| System | ac1 | 1-hop | 2-hop | cross-ling. |
-|---|---|---|---|---|
-| Localized (full) | 0.772 | 0.905 | 0.933 | 0.433 |
-| SPARQL 1.1 (rdflib) | 0.646 | 0.940 | 0.900 | 0.000 |
-| Dense e5 + traversal | 0.544 | 0.925 | 0.580 | 0.000 |
-| Transliteration | 0.532 | 0.640 | 0.613 | 0.307 |
-
-Central finding: on 86.7% of cross-lingual queries the gold URI is already in
-the LLM planner's prompt; Hits@1 is 0.500 when present and 0/20 observed when
-absent (exact 95% CI [0, 0.168]). Under matched supervision a deterministic
-linker attains exactly the same cross-lingual ac1 as the 7B planner (0.433;
-0/150 discordant pairs), so the original cross-lingual advantage came from
-unequal supervision. The LLM's overall lead (0.772 vs.\ 0.498) is confined to
-planning and predicate selection. See `ICT_EXPRESS_PHASE1/` for the matched,
-real-RDF, and exact-CI evidence.
-
-## Environment notes
-
-- Tested on macOS arm64, Python 3.13, torch 2.11 (MPS), transformers 4.46.3,
-  rdflib 7.6.0, pandas 3.1.1, numpy 2.5.4, scipy 1.18.1.
-- LLM: Ollama serving `qwen2.5:7b` (Q4_K_M) at `http://localhost:11434`.
-- Dense encoder: `intfloat/multilingual-e5-small` (auto-downloaded or set
-  `E5_MODEL_PATH`).
-- `sentence-transformers` was unavailable in the original sandbox; the dense
-  baseline uses `transformers` mean pooling with documented equivalence.
-
-## Citation
-
-See `paper/main.tex` for the author list, affiliations, and funding
-(2026 Research Project of Guangzhou University of Software, KY202649).
-
-## Licence
-
-Code and data are released under the MIT License (see `LICENSE`).
+Code and data are released under the MIT License; see [`LICENSE`](LICENSE).

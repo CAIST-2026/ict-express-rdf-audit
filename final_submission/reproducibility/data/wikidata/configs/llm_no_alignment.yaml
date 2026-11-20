@@ -1,0 +1,10 @@
+group: llm_no_alignment
+model: qwen2.5:7b
+backend: ollama
+temperature: 0
+num_predict: 96
+prompt_version: wikidata_llm_v1
+seed: 20261119
+alignment: none
+gold_answer_exposure: false
+test_gold_uri_exposure: false

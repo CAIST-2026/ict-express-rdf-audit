@@ -1,0 +1,4 @@
+contrast,n,full_successes,other_successes,discordant_full_only,discordant_other_only,mcnemar_exact_p,holm_p_3_ablation_family
+full_system vs no_aligner_k6,500,386,350,65,29,0.000261683232376927,0.000523366464753854
+full_system vs no_predicate_constraint,500,386,260,140,14,2.557588560383793e-27,7.67276568115138e-27
+full_system vs no_pruning,500,386,386,0,0,1.0,1.0

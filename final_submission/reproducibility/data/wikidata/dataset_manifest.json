@@ -1,0 +1,25 @@
+{
+  "source_dir": "Original source inputs are absent from this release.",
+  "files": [
+    {
+      "path": "queries/WIKIDATA_QUERY_SET.csv",
+      "size_bytes": 41868,
+      "sha256": "933aeba567b9329c0ce4868ec8553c9f14b8588172e7a36cd4b8cd76f4a5711b"
+    },
+    {
+      "path": "queries/WIKIDATA_GOLD_ANSWERS.csv",
+      "size_bytes": 28316,
+      "sha256": "00accdc9dd8cad900bdce847d97b8ded2e761405e30bcc619b13ca9aa3119af1"
+    },
+    {
+      "path": "processed_data/WIKIDATA_ENTITIES.json",
+      "size_bytes": 9123,
+      "sha256": "4f85747d0145264348eb73db08892979d8747da4f8ab468b63c15a968b2e25f0"
+    },
+    {
+      "path": "processed_data/WIKIDATA_ATTRIBUTES.json",
+      "size_bytes": 10977,
+      "sha256": "fdf1da60f2945390749d8c0f3d79196c50474a490099b21abc68547fb8d207a6"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+variant,n,hits1,mrr,success_loose,success_strict,faithfulness_proxy,relevance_proxy,evidence_grounded,gsr,context_triples,backend_ollama,backend_mock_fallback,fallback_rate
+full_system,200,0.83,0.905,0.955,0.805,0.97,0.955,0.955,0.000366,4.25,200,0,0.0
+no_aligner,200,0.7,0.7,0.7,0.7,0.7,0.565,0.7,0.000278,1.025,0,0,0.0
+no_aligner_k6,200,0.7,0.7,0.7,0.7,0.7,0.565,0.7,0.000278,1.025,0,0,0.0
+no_predicate_constraint,200,0.53,0.605,0.715,0.53,0.69,0.715,0.68,0.000308,15.335,200,0,0.0
+no_pruning,200,0.83,0.905,0.955,0.805,0.97,0.955,0.955,1.0,4.25,200,0,0.0
+vector_graphrag,200,0.51,0.568833,0.625,0.51,0.755,0.355,0.625,0.000912,3.32,0,0,0.0
+sparql_baseline,200,0.4,0.4,0.435,0.4,0.4,0.435,0.4,0.155953,0.4,0,0,0.0

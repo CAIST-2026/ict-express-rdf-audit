@@ -1,0 +1,12 @@
+\begin{tabular}{lcccc}
+\toprule
+System & Strict accuracy (95\% exact CI) & Hits@1 & GSR & Scanned triples/query \\
+\midrule
+LLM planner & 386/500 (0.772; 0.733--0.808) & 404/500 (0.808) & 0.000365 & 18.2 \\
+No aligner (fixed $k=6$) & 350/500 (0.700; 0.658--0.740) & 350/500 (0.700) & 0.000298 & 14.8 \\
+No predicate constraint & 260/500 (0.520; 0.475--0.565) & 260/500 (0.520) & 0.000306 & 15.2 \\
+Global scan (no pruning) & 386/500 (0.772; 0.733--0.808) & 404/500 (0.808) & 1.000000 & 49,781 \\
+Hashed-vector GraphRAG & 263/500 (0.526; 0.481--0.571) & 263/500 (0.526) & 0.000905 & 45.0 \\
+Label-lookup pattern baseline & 200/500 (0.400; 0.357--0.444) & 200/500 (0.400) & 0.156118 & 7,772 \\
+\bottomrule
+\end{tabular}

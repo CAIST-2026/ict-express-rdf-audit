@@ -1,0 +1,4 @@
+seed,n,unique_query_texts,overlap_distinct_query_texts_with_main,strict_n,strict,hits1,evidence_grounded
+20260101,200,199,91,155,0.775,0.81,0.915
+20260301,200,199,0,161,0.805,0.83,0.955
+20260401,200,199,1,152,0.76,0.825,0.915
