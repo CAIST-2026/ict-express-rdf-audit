@@ -1,6 +1,6 @@
 # LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?
 
-Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yin. The latest, corrected six-page submission package is in [`final_submission/`](final_submission/), version **v2.3**. Earlier experiment and audit artifacts remain in the repository as historical records; use the `final_submission/` materials for the current manuscript and its reported analyses.
+Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yin. The latest, corrected six-page manuscript package is in [`final_submission/`](final_submission/), revision **v2.4**. The underlying code and evidence archive remains release **v2.3**. Earlier experiment and audit artifacts remain in the repository as historical records; use `final_submission/` for the current manuscript.
 
 ## Current manuscript and package
 
@@ -9,6 +9,8 @@ Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yi
 - [`ICTExpress_Final_Supplementary.zip`](final_submission/ICTExpress_Final_Supplementary.zip): source code, synthetic records, analysis outputs, figures, tables, and the URI-masking pilot records.
 - [`ICTExpress_Final_Validation_Report.docx`](final_submission/ICTExpress_Final_Validation_Report.docx): concise revision and evidence-scope record.
 - [`reproducibility/README.md`](final_submission/reproducibility/README.md): rebuild instructions and evidence limits.
+
+The v2.4 manuscript removes the requested generative-AI declaration section and includes a metadata check of all 17 references. Three bibliographic details were corrected: one coauthor initial, the RDFLib software citation, and the arXiv survey year.
 
 ## Corrected findings
 
