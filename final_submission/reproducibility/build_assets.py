@@ -266,7 +266,12 @@ for r in wd:
     ptxt=f"{r['holm_adjusted_p_family_6']:.3f}"
     rawtxt=f"{r['raw_exact_two_sided_p']:.3g}"
     discord=f"{r['A_only']}/{r['B_only']}"
-    wiki_rows.append(f"{latex_escape(r['contrast'])} & {r['A_successes']}/{r['n']} & {r['B_successes']}/{r['n']} & {discord} & {rawtxt} & {ptxt} " + r"\\")
+    contrast=str(r["contrast"])
+    if contrast.startswith("No explicit alignment table condition:"):
+        contrast=r"\shortstack[l]{No explicit alignment table condition:\\LLM vs deterministic, cross-lingual}"
+    else:
+        contrast=latex_escape(contrast)
+    wiki_rows.append(f"{contrast} & {r['A_successes']}/{r['n']} & {r['B_successes']}/{r['n']} & {discord} & {rawtxt} & {ptxt} " + r"\\")
 (OUT_T/"table5_wikidata.tex").write_text("\\begin{tabular}{p{5.0cm}ccccc}\n\\toprule\nPaired contrast & A strict successes & B strict successes & A-only/B-only & Exact $p$ & Holm-adjusted $p$ " + "\\\\" + "\n\\midrule\n" + "\n".join(wiki_rows) + "\n\\bottomrule\n\\end{tabular}\n")
 
 # Figure 1: per-family strict accuracy and overall logical access.
