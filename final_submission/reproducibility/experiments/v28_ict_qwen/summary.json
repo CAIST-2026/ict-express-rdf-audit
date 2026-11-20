@@ -1,0 +1,43 @@
+{
+  "n_queries": 60,
+  "n_llm_calls": 60,
+  "model": "qwen2.5:7b",
+  "seed": 20261120,
+  "synthetic": true,
+  "llm_selection_correct": 60,
+  "deterministic_selection_correct": 60,
+  "conditions": {
+    "deterministic": {
+      "complete_mapping": {
+        "n": 60,
+        "selection_correct_n": 60,
+        "target_exact_n": 60,
+        "context_retained_n": 60,
+        "context_loss_n": 0
+      },
+      "missing_stale_mapping": {
+        "n": 60,
+        "selection_correct_n": 60,
+        "target_exact_n": 30,
+        "context_retained_n": 30,
+        "context_loss_n": 30
+      }
+    },
+    "qwen": {
+      "complete_mapping": {
+        "n": 60,
+        "selection_correct_n": 60,
+        "target_exact_n": 60,
+        "context_retained_n": 60,
+        "context_loss_n": 0
+      },
+      "missing_stale_mapping": {
+        "n": 60,
+        "selection_correct_n": 60,
+        "target_exact_n": 30,
+        "context_retained_n": 30,
+        "context_loss_n": 30
+      }
+    }
+  }
+}
