@@ -1,0 +1,662 @@
+@prefix ex: <https://example.org/mini-ict/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/mini-ict/A/alarm/ALARM-001> a ex:Alarm ;
+    rdfs:label "链路中断 ALARM-001"@zh ;
+    ex:assetCode "ALARM-001" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-002> a ex:Alarm ;
+    rdfs:label "CPU过载 ALARM-002"@zh ;
+    ex:assetCode "ALARM-002" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-003> a ex:Alarm ;
+    rdfs:label "信号丢失 ALARM-003"@zh ;
+    ex:assetCode "ALARM-003" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-004> a ex:Alarm ;
+    rdfs:label "温度过高 ALARM-004"@zh ;
+    ex:assetCode "ALARM-004" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-005> a ex:Alarm ;
+    rdfs:label "认证失败 ALARM-005"@zh ;
+    ex:assetCode "ALARM-005" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-006> a ex:Alarm ;
+    rdfs:label "链路中断 ALARM-006"@zh ;
+    ex:assetCode "ALARM-006" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-007> a ex:Alarm ;
+    rdfs:label "CPU过载 ALARM-007"@zh ;
+    ex:assetCode "ALARM-007" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-008> a ex:Alarm ;
+    rdfs:label "信号丢失 ALARM-008"@zh ;
+    ex:assetCode "ALARM-008" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-009> a ex:Alarm ;
+    rdfs:label "温度过高 ALARM-009"@zh ;
+    ex:assetCode "ALARM-009" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-010> a ex:Alarm ;
+    rdfs:label "认证失败 ALARM-010"@zh ;
+    ex:assetCode "ALARM-010" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-011> a ex:Alarm ;
+    rdfs:label "链路中断 ALARM-011"@zh ;
+    ex:assetCode "ALARM-011" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-012> a ex:Alarm ;
+    rdfs:label "CPU过载 ALARM-012"@zh ;
+    ex:assetCode "ALARM-012" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-013> a ex:Alarm ;
+    rdfs:label "信号丢失 ALARM-013"@zh ;
+    ex:assetCode "ALARM-013" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-014> a ex:Alarm ;
+    rdfs:label "温度过高 ALARM-014"@zh ;
+    ex:assetCode "ALARM-014" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-015> a ex:Alarm ;
+    rdfs:label "认证失败 ALARM-015"@zh ;
+    ex:assetCode "ALARM-015" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-016> a ex:Alarm ;
+    rdfs:label "链路中断 ALARM-016"@zh ;
+    ex:assetCode "ALARM-016" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-017> a ex:Alarm ;
+    rdfs:label "CPU过载 ALARM-017"@zh ;
+    ex:assetCode "ALARM-017" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-018> a ex:Alarm ;
+    rdfs:label "信号丢失 ALARM-018"@zh ;
+    ex:assetCode "ALARM-018" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-019> a ex:Alarm ;
+    rdfs:label "温度过高 ALARM-019"@zh ;
+    ex:assetCode "ALARM-019" .
+
+<https://example.org/mini-ict/A/alarm/ALARM-020> a ex:Alarm ;
+    rdfs:label "认证失败 ALARM-020"@zh ;
+    ex:assetCode "ALARM-020" .
+
+<https://example.org/mini-ict/A/device/DEVICE-001> a ex:Device ;
+    rdfs:label "路由器 DEVICE-001"@zh ;
+    ex:assetCode "DEVICE-001" .
+
+<https://example.org/mini-ict/A/device/DEVICE-002> a ex:Device ;
+    rdfs:label "交换机 DEVICE-002"@zh ;
+    ex:assetCode "DEVICE-002" .
+
+<https://example.org/mini-ict/A/device/DEVICE-003> a ex:Device ;
+    rdfs:label "基站 DEVICE-003"@zh ;
+    ex:assetCode "DEVICE-003" .
+
+<https://example.org/mini-ict/A/device/DEVICE-004> a ex:Device ;
+    rdfs:label "防火墙 DEVICE-004"@zh ;
+    ex:assetCode "DEVICE-004" .
+
+<https://example.org/mini-ict/A/device/DEVICE-005> a ex:Device ;
+    rdfs:label "光网络终端 DEVICE-005"@zh ;
+    ex:assetCode "DEVICE-005" .
+
+<https://example.org/mini-ict/A/device/DEVICE-006> a ex:Device ;
+    rdfs:label "路由器 DEVICE-006"@zh ;
+    ex:assetCode "DEVICE-006" .
+
+<https://example.org/mini-ict/A/device/DEVICE-007> a ex:Device ;
+    rdfs:label "交换机 DEVICE-007"@zh ;
+    ex:assetCode "DEVICE-007" .
+
+<https://example.org/mini-ict/A/device/DEVICE-008> a ex:Device ;
+    rdfs:label "基站 DEVICE-008"@zh ;
+    ex:assetCode "DEVICE-008" .
+
+<https://example.org/mini-ict/A/device/DEVICE-009> a ex:Device ;
+    rdfs:label "防火墙 DEVICE-009"@zh ;
+    ex:assetCode "DEVICE-009" .
+
+<https://example.org/mini-ict/A/device/DEVICE-010> a ex:Device ;
+    rdfs:label "光网络终端 DEVICE-010"@zh ;
+    ex:assetCode "DEVICE-010" .
+
+<https://example.org/mini-ict/A/device/DEVICE-011> a ex:Device ;
+    rdfs:label "路由器 DEVICE-011"@zh ;
+    ex:assetCode "DEVICE-011" .
+
+<https://example.org/mini-ict/A/device/DEVICE-012> a ex:Device ;
+    rdfs:label "交换机 DEVICE-012"@zh ;
+    ex:assetCode "DEVICE-012" .
+
+<https://example.org/mini-ict/A/device/DEVICE-013> a ex:Device ;
+    rdfs:label "基站 DEVICE-013"@zh ;
+    ex:assetCode "DEVICE-013" .
+
+<https://example.org/mini-ict/A/device/DEVICE-014> a ex:Device ;
+    rdfs:label "防火墙 DEVICE-014"@zh ;
+    ex:assetCode "DEVICE-014" .
+
+<https://example.org/mini-ict/A/device/DEVICE-015> a ex:Device ;
+    rdfs:label "光网络终端 DEVICE-015"@zh ;
+    ex:assetCode "DEVICE-015" .
+
+<https://example.org/mini-ict/A/device/DEVICE-016> a ex:Device ;
+    rdfs:label "路由器 DEVICE-016"@zh ;
+    ex:assetCode "DEVICE-016" .
+
+<https://example.org/mini-ict/A/device/DEVICE-017> a ex:Device ;
+    rdfs:label "交换机 DEVICE-017"@zh ;
+    ex:assetCode "DEVICE-017" .
+
+<https://example.org/mini-ict/A/device/DEVICE-018> a ex:Device ;
+    rdfs:label "基站 DEVICE-018"@zh ;
+    ex:assetCode "DEVICE-018" .
+
+<https://example.org/mini-ict/A/device/DEVICE-019> a ex:Device ;
+    rdfs:label "防火墙 DEVICE-019"@zh ;
+    ex:assetCode "DEVICE-019" .
+
+<https://example.org/mini-ict/A/device/DEVICE-020> a ex:Device ;
+    rdfs:label "光网络终端 DEVICE-020"@zh ;
+    ex:assetCode "DEVICE-020" .
+
+<https://example.org/mini-ict/A/service/SERVICE-001> a ex:Service ;
+    rdfs:label "语音服务 SERVICE-001"@zh ;
+    ex:assetCode "SERVICE-001" .
+
+<https://example.org/mini-ict/A/service/SERVICE-002> a ex:Service ;
+    rdfs:label "宽带接入 SERVICE-002"@zh ;
+    ex:assetCode "SERVICE-002" .
+
+<https://example.org/mini-ict/A/service/SERVICE-003> a ex:Service ;
+    rdfs:label "移动数据 SERVICE-003"@zh ;
+    ex:assetCode "SERVICE-003" .
+
+<https://example.org/mini-ict/A/service/SERVICE-004> a ex:Service ;
+    rdfs:label "企业VPN SERVICE-004"@zh ;
+    ex:assetCode "SERVICE-004" .
+
+<https://example.org/mini-ict/A/service/SERVICE-005> a ex:Service ;
+    rdfs:label "物联网接入 SERVICE-005"@zh ;
+    ex:assetCode "SERVICE-005" .
+
+<https://example.org/mini-ict/A/service/SERVICE-006> a ex:Service ;
+    rdfs:label "语音服务 SERVICE-006"@zh ;
+    ex:assetCode "SERVICE-006" .
+
+<https://example.org/mini-ict/A/service/SERVICE-007> a ex:Service ;
+    rdfs:label "宽带接入 SERVICE-007"@zh ;
+    ex:assetCode "SERVICE-007" .
+
+<https://example.org/mini-ict/A/service/SERVICE-008> a ex:Service ;
+    rdfs:label "移动数据 SERVICE-008"@zh ;
+    ex:assetCode "SERVICE-008" .
+
+<https://example.org/mini-ict/A/service/SERVICE-009> a ex:Service ;
+    rdfs:label "企业VPN SERVICE-009"@zh ;
+    ex:assetCode "SERVICE-009" .
+
+<https://example.org/mini-ict/A/service/SERVICE-010> a ex:Service ;
+    rdfs:label "物联网接入 SERVICE-010"@zh ;
+    ex:assetCode "SERVICE-010" .
+
+<https://example.org/mini-ict/A/service/SERVICE-011> a ex:Service ;
+    rdfs:label "语音服务 SERVICE-011"@zh ;
+    ex:assetCode "SERVICE-011" .
+
+<https://example.org/mini-ict/A/service/SERVICE-012> a ex:Service ;
+    rdfs:label "宽带接入 SERVICE-012"@zh ;
+    ex:assetCode "SERVICE-012" .
+
+<https://example.org/mini-ict/A/service/SERVICE-013> a ex:Service ;
+    rdfs:label "移动数据 SERVICE-013"@zh ;
+    ex:assetCode "SERVICE-013" .
+
+<https://example.org/mini-ict/A/service/SERVICE-014> a ex:Service ;
+    rdfs:label "企业VPN SERVICE-014"@zh ;
+    ex:assetCode "SERVICE-014" .
+
+<https://example.org/mini-ict/A/service/SERVICE-015> a ex:Service ;
+    rdfs:label "物联网接入 SERVICE-015"@zh ;
+    ex:assetCode "SERVICE-015" .
+
+<https://example.org/mini-ict/A/service/SERVICE-016> a ex:Service ;
+    rdfs:label "语音服务 SERVICE-016"@zh ;
+    ex:assetCode "SERVICE-016" .
+
+<https://example.org/mini-ict/A/service/SERVICE-017> a ex:Service ;
+    rdfs:label "宽带接入 SERVICE-017"@zh ;
+    ex:assetCode "SERVICE-017" .
+
+<https://example.org/mini-ict/A/service/SERVICE-018> a ex:Service ;
+    rdfs:label "移动数据 SERVICE-018"@zh ;
+    ex:assetCode "SERVICE-018" .
+
+<https://example.org/mini-ict/A/service/SERVICE-019> a ex:Service ;
+    rdfs:label "企业VPN SERVICE-019"@zh ;
+    ex:assetCode "SERVICE-019" .
+
+<https://example.org/mini-ict/A/service/SERVICE-020> a ex:Service ;
+    rdfs:label "物联网接入 SERVICE-020"@zh ;
+    ex:assetCode "SERVICE-020" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-001> a ex:Alarm ;
+    rdfs:label "Link down ALARM-001"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-003>,
+        <https://example.org/mini-ict/B/device/DEVICE-002>,
+        <https://example.org/mini-ict/B/service/SERVICE-001> ;
+    ex:assetCode "ALARM-001" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-002> a ex:Alarm ;
+    rdfs:label "High CPU ALARM-002"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-006>,
+        <https://example.org/mini-ict/B/device/DEVICE-005>,
+        <https://example.org/mini-ict/B/service/SERVICE-004> ;
+    ex:assetCode "ALARM-002" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-003> a ex:Alarm ;
+    rdfs:label "Signal loss ALARM-003"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-009>,
+        <https://example.org/mini-ict/B/device/DEVICE-008>,
+        <https://example.org/mini-ict/B/service/SERVICE-007> ;
+    ex:assetCode "ALARM-003" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-004> a ex:Alarm ;
+    rdfs:label "High temperature ALARM-004"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-012>,
+        <https://example.org/mini-ict/B/device/DEVICE-011>,
+        <https://example.org/mini-ict/B/service/SERVICE-010> ;
+    ex:assetCode "ALARM-004" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-005> a ex:Alarm ;
+    rdfs:label "Authentication failure ALARM-005"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-015>,
+        <https://example.org/mini-ict/B/device/DEVICE-014>,
+        <https://example.org/mini-ict/B/service/SERVICE-013> ;
+    ex:assetCode "ALARM-005" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-006> a ex:Alarm ;
+    rdfs:label "Link down ALARM-006"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-018>,
+        <https://example.org/mini-ict/B/device/DEVICE-017>,
+        <https://example.org/mini-ict/B/service/SERVICE-016> ;
+    ex:assetCode "ALARM-006" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-007> a ex:Alarm ;
+    rdfs:label "High CPU ALARM-007"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-001>,
+        <https://example.org/mini-ict/B/device/DEVICE-020>,
+        <https://example.org/mini-ict/B/service/SERVICE-019> ;
+    ex:assetCode "ALARM-007" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-008> a ex:Alarm ;
+    rdfs:label "Signal loss ALARM-008"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-004>,
+        <https://example.org/mini-ict/B/device/DEVICE-003>,
+        <https://example.org/mini-ict/B/service/SERVICE-002> ;
+    ex:assetCode "ALARM-008" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-009> a ex:Alarm ;
+    rdfs:label "High temperature ALARM-009"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-007>,
+        <https://example.org/mini-ict/B/device/DEVICE-006>,
+        <https://example.org/mini-ict/B/service/SERVICE-005> ;
+    ex:assetCode "ALARM-009" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-010> a ex:Alarm ;
+    rdfs:label "Authentication failure ALARM-010"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-010>,
+        <https://example.org/mini-ict/B/device/DEVICE-009>,
+        <https://example.org/mini-ict/B/service/SERVICE-008> ;
+    ex:assetCode "ALARM-010" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-011> a ex:Alarm ;
+    rdfs:label "Link down ALARM-011"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-013>,
+        <https://example.org/mini-ict/B/device/DEVICE-012>,
+        <https://example.org/mini-ict/B/service/SERVICE-011> ;
+    ex:assetCode "ALARM-011" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-012> a ex:Alarm ;
+    rdfs:label "High CPU ALARM-012"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-016>,
+        <https://example.org/mini-ict/B/device/DEVICE-015>,
+        <https://example.org/mini-ict/B/service/SERVICE-014> ;
+    ex:assetCode "ALARM-012" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-013> a ex:Alarm ;
+    rdfs:label "Signal loss ALARM-013"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-019>,
+        <https://example.org/mini-ict/B/device/DEVICE-018>,
+        <https://example.org/mini-ict/B/service/SERVICE-017> ;
+    ex:assetCode "ALARM-013" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-014> a ex:Alarm ;
+    rdfs:label "High temperature ALARM-014"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-002>,
+        <https://example.org/mini-ict/B/device/DEVICE-001>,
+        <https://example.org/mini-ict/B/service/SERVICE-020> ;
+    ex:assetCode "ALARM-014" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-015> a ex:Alarm ;
+    rdfs:label "Authentication failure ALARM-015"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-005>,
+        <https://example.org/mini-ict/B/device/DEVICE-004>,
+        <https://example.org/mini-ict/B/service/SERVICE-003> ;
+    ex:assetCode "ALARM-015" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-016> a ex:Alarm ;
+    rdfs:label "Link down ALARM-016"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-008>,
+        <https://example.org/mini-ict/B/device/DEVICE-007>,
+        <https://example.org/mini-ict/B/service/SERVICE-006> ;
+    ex:assetCode "ALARM-016" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-017> a ex:Alarm ;
+    rdfs:label "High CPU ALARM-017"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-011>,
+        <https://example.org/mini-ict/B/device/DEVICE-010>,
+        <https://example.org/mini-ict/B/service/SERVICE-009> ;
+    ex:assetCode "ALARM-017" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-018> a ex:Alarm ;
+    rdfs:label "Signal loss ALARM-018"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-014>,
+        <https://example.org/mini-ict/B/device/DEVICE-013>,
+        <https://example.org/mini-ict/B/service/SERVICE-012> ;
+    ex:assetCode "ALARM-018" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-019> a ex:Alarm ;
+    rdfs:label "High temperature ALARM-019"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-017>,
+        <https://example.org/mini-ict/B/device/DEVICE-016>,
+        <https://example.org/mini-ict/B/service/SERVICE-015> ;
+    ex:assetCode "ALARM-019" .
+
+<https://example.org/mini-ict/B/alarm/ALARM-020> a ex:Alarm ;
+    rdfs:label "Authentication failure ALARM-020"@en ;
+    ex:affectsService <https://example.org/mini-ict/B/alarm/ALARM-020>,
+        <https://example.org/mini-ict/B/device/DEVICE-019>,
+        <https://example.org/mini-ict/B/service/SERVICE-018> ;
+    ex:assetCode "ALARM-020" .
+
+<https://example.org/mini-ict/B/device/DEVICE-001> a ex:Device ;
+    rdfs:label "Router DEVICE-001"@en ;
+    ex:assetCode "DEVICE-001" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-001>,
+        <https://example.org/mini-ict/B/device/DEVICE-003>,
+        <https://example.org/mini-ict/B/service/SERVICE-002> .
+
+<https://example.org/mini-ict/B/device/DEVICE-002> a ex:Device ;
+    rdfs:label "Switch DEVICE-002"@en ;
+    ex:assetCode "DEVICE-002" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-004>,
+        <https://example.org/mini-ict/B/device/DEVICE-006>,
+        <https://example.org/mini-ict/B/service/SERVICE-005> .
+
+<https://example.org/mini-ict/B/device/DEVICE-003> a ex:Device ;
+    rdfs:label "Base station DEVICE-003"@en ;
+    ex:assetCode "DEVICE-003" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-007>,
+        <https://example.org/mini-ict/B/device/DEVICE-009>,
+        <https://example.org/mini-ict/B/service/SERVICE-008> .
+
+<https://example.org/mini-ict/B/device/DEVICE-004> a ex:Device ;
+    rdfs:label "Firewall DEVICE-004"@en ;
+    ex:assetCode "DEVICE-004" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-010>,
+        <https://example.org/mini-ict/B/device/DEVICE-012>,
+        <https://example.org/mini-ict/B/service/SERVICE-011> .
+
+<https://example.org/mini-ict/B/device/DEVICE-005> a ex:Device ;
+    rdfs:label "Optical network terminal DEVICE-005"@en ;
+    ex:assetCode "DEVICE-005" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-013>,
+        <https://example.org/mini-ict/B/device/DEVICE-015>,
+        <https://example.org/mini-ict/B/service/SERVICE-014> .
+
+<https://example.org/mini-ict/B/device/DEVICE-006> a ex:Device ;
+    rdfs:label "Router DEVICE-006"@en ;
+    ex:assetCode "DEVICE-006" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-016>,
+        <https://example.org/mini-ict/B/device/DEVICE-018>,
+        <https://example.org/mini-ict/B/service/SERVICE-017> .
+
+<https://example.org/mini-ict/B/device/DEVICE-007> a ex:Device ;
+    rdfs:label "Switch DEVICE-007"@en ;
+    ex:assetCode "DEVICE-007" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-019>,
+        <https://example.org/mini-ict/B/device/DEVICE-001>,
+        <https://example.org/mini-ict/B/service/SERVICE-020> .
+
+<https://example.org/mini-ict/B/device/DEVICE-008> a ex:Device ;
+    rdfs:label "Base station DEVICE-008"@en ;
+    ex:assetCode "DEVICE-008" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-002>,
+        <https://example.org/mini-ict/B/device/DEVICE-004>,
+        <https://example.org/mini-ict/B/service/SERVICE-003> .
+
+<https://example.org/mini-ict/B/device/DEVICE-009> a ex:Device ;
+    rdfs:label "Firewall DEVICE-009"@en ;
+    ex:assetCode "DEVICE-009" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-005>,
+        <https://example.org/mini-ict/B/device/DEVICE-007>,
+        <https://example.org/mini-ict/B/service/SERVICE-006> .
+
+<https://example.org/mini-ict/B/device/DEVICE-010> a ex:Device ;
+    rdfs:label "Optical network terminal DEVICE-010"@en ;
+    ex:assetCode "DEVICE-010" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-008>,
+        <https://example.org/mini-ict/B/device/DEVICE-010>,
+        <https://example.org/mini-ict/B/service/SERVICE-009> .
+
+<https://example.org/mini-ict/B/device/DEVICE-011> a ex:Device ;
+    rdfs:label "Router DEVICE-011"@en ;
+    ex:assetCode "DEVICE-011" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-011>,
+        <https://example.org/mini-ict/B/device/DEVICE-013>,
+        <https://example.org/mini-ict/B/service/SERVICE-012> .
+
+<https://example.org/mini-ict/B/device/DEVICE-012> a ex:Device ;
+    rdfs:label "Switch DEVICE-012"@en ;
+    ex:assetCode "DEVICE-012" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-014>,
+        <https://example.org/mini-ict/B/device/DEVICE-016>,
+        <https://example.org/mini-ict/B/service/SERVICE-015> .
+
+<https://example.org/mini-ict/B/device/DEVICE-013> a ex:Device ;
+    rdfs:label "Base station DEVICE-013"@en ;
+    ex:assetCode "DEVICE-013" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-017>,
+        <https://example.org/mini-ict/B/device/DEVICE-019>,
+        <https://example.org/mini-ict/B/service/SERVICE-018> .
+
+<https://example.org/mini-ict/B/device/DEVICE-014> a ex:Device ;
+    rdfs:label "Firewall DEVICE-014"@en ;
+    ex:assetCode "DEVICE-014" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-020>,
+        <https://example.org/mini-ict/B/device/DEVICE-002>,
+        <https://example.org/mini-ict/B/service/SERVICE-001> .
+
+<https://example.org/mini-ict/B/device/DEVICE-015> a ex:Device ;
+    rdfs:label "Optical network terminal DEVICE-015"@en ;
+    ex:assetCode "DEVICE-015" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-003>,
+        <https://example.org/mini-ict/B/device/DEVICE-005>,
+        <https://example.org/mini-ict/B/service/SERVICE-004> .
+
+<https://example.org/mini-ict/B/device/DEVICE-016> a ex:Device ;
+    rdfs:label "Router DEVICE-016"@en ;
+    ex:assetCode "DEVICE-016" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-006>,
+        <https://example.org/mini-ict/B/device/DEVICE-008>,
+        <https://example.org/mini-ict/B/service/SERVICE-007> .
+
+<https://example.org/mini-ict/B/device/DEVICE-017> a ex:Device ;
+    rdfs:label "Switch DEVICE-017"@en ;
+    ex:assetCode "DEVICE-017" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-009>,
+        <https://example.org/mini-ict/B/device/DEVICE-011>,
+        <https://example.org/mini-ict/B/service/SERVICE-010> .
+
+<https://example.org/mini-ict/B/device/DEVICE-018> a ex:Device ;
+    rdfs:label "Base station DEVICE-018"@en ;
+    ex:assetCode "DEVICE-018" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-012>,
+        <https://example.org/mini-ict/B/device/DEVICE-014>,
+        <https://example.org/mini-ict/B/service/SERVICE-013> .
+
+<https://example.org/mini-ict/B/device/DEVICE-019> a ex:Device ;
+    rdfs:label "Firewall DEVICE-019"@en ;
+    ex:assetCode "DEVICE-019" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-015>,
+        <https://example.org/mini-ict/B/device/DEVICE-017>,
+        <https://example.org/mini-ict/B/service/SERVICE-016> .
+
+<https://example.org/mini-ict/B/device/DEVICE-020> a ex:Device ;
+    rdfs:label "Optical network terminal DEVICE-020"@en ;
+    ex:assetCode "DEVICE-020" ;
+    ex:hasAlarm <https://example.org/mini-ict/B/alarm/ALARM-018>,
+        <https://example.org/mini-ict/B/device/DEVICE-020>,
+        <https://example.org/mini-ict/B/service/SERVICE-019> .
+
+<https://example.org/mini-ict/B/service/SERVICE-001> a ex:Service ;
+    rdfs:label "Voice service SERVICE-001"@en ;
+    ex:assetCode "SERVICE-001" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-002>,
+        <https://example.org/mini-ict/B/device/DEVICE-001>,
+        <https://example.org/mini-ict/B/service/SERVICE-003> .
+
+<https://example.org/mini-ict/B/service/SERVICE-002> a ex:Service ;
+    rdfs:label "Broadband access SERVICE-002"@en ;
+    ex:assetCode "SERVICE-002" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-005>,
+        <https://example.org/mini-ict/B/device/DEVICE-004>,
+        <https://example.org/mini-ict/B/service/SERVICE-006> .
+
+<https://example.org/mini-ict/B/service/SERVICE-003> a ex:Service ;
+    rdfs:label "Mobile data SERVICE-003"@en ;
+    ex:assetCode "SERVICE-003" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-008>,
+        <https://example.org/mini-ict/B/device/DEVICE-007>,
+        <https://example.org/mini-ict/B/service/SERVICE-009> .
+
+<https://example.org/mini-ict/B/service/SERVICE-004> a ex:Service ;
+    rdfs:label "Enterprise VPN SERVICE-004"@en ;
+    ex:assetCode "SERVICE-004" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-011>,
+        <https://example.org/mini-ict/B/device/DEVICE-010>,
+        <https://example.org/mini-ict/B/service/SERVICE-012> .
+
+<https://example.org/mini-ict/B/service/SERVICE-005> a ex:Service ;
+    rdfs:label "IoT access SERVICE-005"@en ;
+    ex:assetCode "SERVICE-005" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-014>,
+        <https://example.org/mini-ict/B/device/DEVICE-013>,
+        <https://example.org/mini-ict/B/service/SERVICE-015> .
+
+<https://example.org/mini-ict/B/service/SERVICE-006> a ex:Service ;
+    rdfs:label "Voice service SERVICE-006"@en ;
+    ex:assetCode "SERVICE-006" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-017>,
+        <https://example.org/mini-ict/B/device/DEVICE-016>,
+        <https://example.org/mini-ict/B/service/SERVICE-018> .
+
+<https://example.org/mini-ict/B/service/SERVICE-007> a ex:Service ;
+    rdfs:label "Broadband access SERVICE-007"@en ;
+    ex:assetCode "SERVICE-007" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-020>,
+        <https://example.org/mini-ict/B/device/DEVICE-019>,
+        <https://example.org/mini-ict/B/service/SERVICE-001> .
+
+<https://example.org/mini-ict/B/service/SERVICE-008> a ex:Service ;
+    rdfs:label "Mobile data SERVICE-008"@en ;
+    ex:assetCode "SERVICE-008" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-003>,
+        <https://example.org/mini-ict/B/device/DEVICE-002>,
+        <https://example.org/mini-ict/B/service/SERVICE-004> .
+
+<https://example.org/mini-ict/B/service/SERVICE-009> a ex:Service ;
+    rdfs:label "Enterprise VPN SERVICE-009"@en ;
+    ex:assetCode "SERVICE-009" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-006>,
+        <https://example.org/mini-ict/B/device/DEVICE-005>,
+        <https://example.org/mini-ict/B/service/SERVICE-007> .
+
+<https://example.org/mini-ict/B/service/SERVICE-010> a ex:Service ;
+    rdfs:label "IoT access SERVICE-010"@en ;
+    ex:assetCode "SERVICE-010" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-009>,
+        <https://example.org/mini-ict/B/device/DEVICE-008>,
+        <https://example.org/mini-ict/B/service/SERVICE-010> .
+
+<https://example.org/mini-ict/B/service/SERVICE-011> a ex:Service ;
+    rdfs:label "Voice service SERVICE-011"@en ;
+    ex:assetCode "SERVICE-011" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-012>,
+        <https://example.org/mini-ict/B/device/DEVICE-011>,
+        <https://example.org/mini-ict/B/service/SERVICE-013> .
+
+<https://example.org/mini-ict/B/service/SERVICE-012> a ex:Service ;
+    rdfs:label "Broadband access SERVICE-012"@en ;
+    ex:assetCode "SERVICE-012" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-015>,
+        <https://example.org/mini-ict/B/device/DEVICE-014>,
+        <https://example.org/mini-ict/B/service/SERVICE-016> .
+
+<https://example.org/mini-ict/B/service/SERVICE-013> a ex:Service ;
+    rdfs:label "Mobile data SERVICE-013"@en ;
+    ex:assetCode "SERVICE-013" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-018>,
+        <https://example.org/mini-ict/B/device/DEVICE-017>,
+        <https://example.org/mini-ict/B/service/SERVICE-019> .
+
+<https://example.org/mini-ict/B/service/SERVICE-014> a ex:Service ;
+    rdfs:label "Enterprise VPN SERVICE-014"@en ;
+    ex:assetCode "SERVICE-014" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-001>,
+        <https://example.org/mini-ict/B/device/DEVICE-020>,
+        <https://example.org/mini-ict/B/service/SERVICE-002> .
+
+<https://example.org/mini-ict/B/service/SERVICE-015> a ex:Service ;
+    rdfs:label "IoT access SERVICE-015"@en ;
+    ex:assetCode "SERVICE-015" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-004>,
+        <https://example.org/mini-ict/B/device/DEVICE-003>,
+        <https://example.org/mini-ict/B/service/SERVICE-005> .
+
+<https://example.org/mini-ict/B/service/SERVICE-016> a ex:Service ;
+    rdfs:label "Voice service SERVICE-016"@en ;
+    ex:assetCode "SERVICE-016" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-007>,
+        <https://example.org/mini-ict/B/device/DEVICE-006>,
+        <https://example.org/mini-ict/B/service/SERVICE-008> .
+
+<https://example.org/mini-ict/B/service/SERVICE-017> a ex:Service ;
+    rdfs:label "Broadband access SERVICE-017"@en ;
+    ex:assetCode "SERVICE-017" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-010>,
+        <https://example.org/mini-ict/B/device/DEVICE-009>,
+        <https://example.org/mini-ict/B/service/SERVICE-011> .
+
+<https://example.org/mini-ict/B/service/SERVICE-018> a ex:Service ;
+    rdfs:label "Mobile data SERVICE-018"@en ;
+    ex:assetCode "SERVICE-018" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-013>,
+        <https://example.org/mini-ict/B/device/DEVICE-012>,
+        <https://example.org/mini-ict/B/service/SERVICE-014> .
+
+<https://example.org/mini-ict/B/service/SERVICE-019> a ex:Service ;
+    rdfs:label "Enterprise VPN SERVICE-019"@en ;
+    ex:assetCode "SERVICE-019" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-016>,
+        <https://example.org/mini-ict/B/device/DEVICE-015>,
+        <https://example.org/mini-ict/B/service/SERVICE-017> .
+
+<https://example.org/mini-ict/B/service/SERVICE-020> a ex:Service ;
+    rdfs:label "IoT access SERVICE-020"@en ;
+    ex:assetCode "SERVICE-020" ;
+    ex:dependsOn <https://example.org/mini-ict/B/alarm/ALARM-019>,
+        <https://example.org/mini-ict/B/device/DEVICE-018>,
+        <https://example.org/mini-ict/B/service/SERVICE-020> .

@@ -1,0 +1,488 @@
+{
+  "synthetic": true,
+  "seed": 20261120,
+  "records": [
+    {
+      "type": "device",
+      "code": "DEVICE-001",
+      "zh_label": "路由器 DEVICE-001",
+      "en_label": "Router DEVICE-001",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-001",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-001"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-002",
+      "zh_label": "交换机 DEVICE-002",
+      "en_label": "Switch DEVICE-002",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-002",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-002"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-003",
+      "zh_label": "基站 DEVICE-003",
+      "en_label": "Base station DEVICE-003",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-003",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-003"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-004",
+      "zh_label": "防火墙 DEVICE-004",
+      "en_label": "Firewall DEVICE-004",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-004",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-004"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-005",
+      "zh_label": "光网络终端 DEVICE-005",
+      "en_label": "Optical network terminal DEVICE-005",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-005",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-005"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-006",
+      "zh_label": "路由器 DEVICE-006",
+      "en_label": "Router DEVICE-006",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-006",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-006"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-007",
+      "zh_label": "交换机 DEVICE-007",
+      "en_label": "Switch DEVICE-007",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-007",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-007"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-008",
+      "zh_label": "基站 DEVICE-008",
+      "en_label": "Base station DEVICE-008",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-008",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-008"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-009",
+      "zh_label": "防火墙 DEVICE-009",
+      "en_label": "Firewall DEVICE-009",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-009",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-009"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-010",
+      "zh_label": "光网络终端 DEVICE-010",
+      "en_label": "Optical network terminal DEVICE-010",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-010",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-010"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-011",
+      "zh_label": "路由器 DEVICE-011",
+      "en_label": "Router DEVICE-011",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-011",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-011"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-012",
+      "zh_label": "交换机 DEVICE-012",
+      "en_label": "Switch DEVICE-012",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-012",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-012"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-013",
+      "zh_label": "基站 DEVICE-013",
+      "en_label": "Base station DEVICE-013",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-013",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-013"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-014",
+      "zh_label": "防火墙 DEVICE-014",
+      "en_label": "Firewall DEVICE-014",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-014",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-014"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-015",
+      "zh_label": "光网络终端 DEVICE-015",
+      "en_label": "Optical network terminal DEVICE-015",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-015",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-015"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-016",
+      "zh_label": "路由器 DEVICE-016",
+      "en_label": "Router DEVICE-016",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-016",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-016"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-017",
+      "zh_label": "交换机 DEVICE-017",
+      "en_label": "Switch DEVICE-017",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-017",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-017"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-018",
+      "zh_label": "基站 DEVICE-018",
+      "en_label": "Base station DEVICE-018",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-018",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-018"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-019",
+      "zh_label": "防火墙 DEVICE-019",
+      "en_label": "Firewall DEVICE-019",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-019",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-019"
+    },
+    {
+      "type": "device",
+      "code": "DEVICE-020",
+      "zh_label": "光网络终端 DEVICE-020",
+      "en_label": "Optical network terminal DEVICE-020",
+      "source_uri": "https://example.org/mini-ict/A/device/DEVICE-020",
+      "target_uri": "https://example.org/mini-ict/B/device/DEVICE-020"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-001",
+      "zh_label": "链路中断 ALARM-001",
+      "en_label": "Link down ALARM-001",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-001",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-001"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-002",
+      "zh_label": "CPU过载 ALARM-002",
+      "en_label": "High CPU ALARM-002",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-002",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-002"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-003",
+      "zh_label": "信号丢失 ALARM-003",
+      "en_label": "Signal loss ALARM-003",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-003",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-003"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-004",
+      "zh_label": "温度过高 ALARM-004",
+      "en_label": "High temperature ALARM-004",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-004",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-004"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-005",
+      "zh_label": "认证失败 ALARM-005",
+      "en_label": "Authentication failure ALARM-005",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-005",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-005"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-006",
+      "zh_label": "链路中断 ALARM-006",
+      "en_label": "Link down ALARM-006",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-006",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-006"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-007",
+      "zh_label": "CPU过载 ALARM-007",
+      "en_label": "High CPU ALARM-007",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-007",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-007"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-008",
+      "zh_label": "信号丢失 ALARM-008",
+      "en_label": "Signal loss ALARM-008",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-008",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-008"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-009",
+      "zh_label": "温度过高 ALARM-009",
+      "en_label": "High temperature ALARM-009",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-009",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-009"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-010",
+      "zh_label": "认证失败 ALARM-010",
+      "en_label": "Authentication failure ALARM-010",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-010",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-010"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-011",
+      "zh_label": "链路中断 ALARM-011",
+      "en_label": "Link down ALARM-011",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-011",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-011"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-012",
+      "zh_label": "CPU过载 ALARM-012",
+      "en_label": "High CPU ALARM-012",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-012",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-012"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-013",
+      "zh_label": "信号丢失 ALARM-013",
+      "en_label": "Signal loss ALARM-013",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-013",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-013"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-014",
+      "zh_label": "温度过高 ALARM-014",
+      "en_label": "High temperature ALARM-014",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-014",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-014"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-015",
+      "zh_label": "认证失败 ALARM-015",
+      "en_label": "Authentication failure ALARM-015",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-015",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-015"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-016",
+      "zh_label": "链路中断 ALARM-016",
+      "en_label": "Link down ALARM-016",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-016",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-016"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-017",
+      "zh_label": "CPU过载 ALARM-017",
+      "en_label": "High CPU ALARM-017",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-017",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-017"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-018",
+      "zh_label": "信号丢失 ALARM-018",
+      "en_label": "Signal loss ALARM-018",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-018",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-018"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-019",
+      "zh_label": "温度过高 ALARM-019",
+      "en_label": "High temperature ALARM-019",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-019",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-019"
+    },
+    {
+      "type": "alarm",
+      "code": "ALARM-020",
+      "zh_label": "认证失败 ALARM-020",
+      "en_label": "Authentication failure ALARM-020",
+      "source_uri": "https://example.org/mini-ict/A/alarm/ALARM-020",
+      "target_uri": "https://example.org/mini-ict/B/alarm/ALARM-020"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-001",
+      "zh_label": "语音服务 SERVICE-001",
+      "en_label": "Voice service SERVICE-001",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-001",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-001"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-002",
+      "zh_label": "宽带接入 SERVICE-002",
+      "en_label": "Broadband access SERVICE-002",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-002",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-002"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-003",
+      "zh_label": "移动数据 SERVICE-003",
+      "en_label": "Mobile data SERVICE-003",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-003",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-003"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-004",
+      "zh_label": "企业VPN SERVICE-004",
+      "en_label": "Enterprise VPN SERVICE-004",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-004",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-004"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-005",
+      "zh_label": "物联网接入 SERVICE-005",
+      "en_label": "IoT access SERVICE-005",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-005",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-005"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-006",
+      "zh_label": "语音服务 SERVICE-006",
+      "en_label": "Voice service SERVICE-006",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-006",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-006"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-007",
+      "zh_label": "宽带接入 SERVICE-007",
+      "en_label": "Broadband access SERVICE-007",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-007",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-007"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-008",
+      "zh_label": "移动数据 SERVICE-008",
+      "en_label": "Mobile data SERVICE-008",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-008",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-008"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-009",
+      "zh_label": "企业VPN SERVICE-009",
+      "en_label": "Enterprise VPN SERVICE-009",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-009",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-009"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-010",
+      "zh_label": "物联网接入 SERVICE-010",
+      "en_label": "IoT access SERVICE-010",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-010",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-010"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-011",
+      "zh_label": "语音服务 SERVICE-011",
+      "en_label": "Voice service SERVICE-011",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-011",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-011"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-012",
+      "zh_label": "宽带接入 SERVICE-012",
+      "en_label": "Broadband access SERVICE-012",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-012",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-012"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-013",
+      "zh_label": "移动数据 SERVICE-013",
+      "en_label": "Mobile data SERVICE-013",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-013",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-013"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-014",
+      "zh_label": "企业VPN SERVICE-014",
+      "en_label": "Enterprise VPN SERVICE-014",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-014",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-014"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-015",
+      "zh_label": "物联网接入 SERVICE-015",
+      "en_label": "IoT access SERVICE-015",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-015",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-015"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-016",
+      "zh_label": "语音服务 SERVICE-016",
+      "en_label": "Voice service SERVICE-016",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-016",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-016"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-017",
+      "zh_label": "宽带接入 SERVICE-017",
+      "en_label": "Broadband access SERVICE-017",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-017",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-017"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-018",
+      "zh_label": "移动数据 SERVICE-018",
+      "en_label": "Mobile data SERVICE-018",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-018",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-018"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-019",
+      "zh_label": "企业VPN SERVICE-019",
+      "en_label": "Enterprise VPN SERVICE-019",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-019",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-019"
+    },
+    {
+      "type": "service",
+      "code": "SERVICE-020",
+      "zh_label": "物联网接入 SERVICE-020",
+      "en_label": "IoT access SERVICE-020",
+      "source_uri": "https://example.org/mini-ict/A/service/SERVICE-020",
+      "target_uri": "https://example.org/mini-ict/B/service/SERVICE-020"
+    }
+  ],
+  "triple_count": 540,
+  "note": "Generated controlled inventory entities; not collected from an operator or deployed ICT system."
+}

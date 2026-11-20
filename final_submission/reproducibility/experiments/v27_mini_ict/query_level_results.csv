@@ -1,0 +1,121 @@
+qid,type,query,condition,mapping_state,gold_target_uri,retrieved_target_uri,exact_target,gold_context_triples,retrieved_context_triples,gold_context_retained,context_lost
+I001,device,路由器 DEVICE-001：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-001,https://example.org/mini-ict/B/device/DEVICE-001,1,6,6,1,0
+I001,device,路由器 DEVICE-001：查询关联告警,missing_stale_mapping,missing,https://example.org/mini-ict/B/device/DEVICE-001,,0,6,0,0,1
+I002,device,Switch DEVICE-002: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-002,https://example.org/mini-ict/B/device/DEVICE-002,1,6,6,1,0
+I002,device,Switch DEVICE-002: find associated alarms,missing_stale_mapping,stale,https://example.org/mini-ict/B/device/DEVICE-002,https://example.org/mini-ict/B/device/DEVICE-003,0,6,6,0,1
+I003,device,基站 DEVICE-003：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-003,https://example.org/mini-ict/B/device/DEVICE-003,1,6,6,1,0
+I003,device,基站 DEVICE-003：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-003,https://example.org/mini-ict/B/device/DEVICE-003,1,6,6,1,0
+I004,device,Firewall DEVICE-004: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-004,https://example.org/mini-ict/B/device/DEVICE-004,1,6,6,1,0
+I004,device,Firewall DEVICE-004: find associated alarms,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-004,https://example.org/mini-ict/B/device/DEVICE-004,1,6,6,1,0
+I005,device,光网络终端 DEVICE-005：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-005,https://example.org/mini-ict/B/device/DEVICE-005,1,6,6,1,0
+I005,device,光网络终端 DEVICE-005：查询关联告警,missing_stale_mapping,missing,https://example.org/mini-ict/B/device/DEVICE-005,,0,6,0,0,1
+I006,device,Router DEVICE-006: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-006,https://example.org/mini-ict/B/device/DEVICE-006,1,6,6,1,0
+I006,device,Router DEVICE-006: find associated alarms,missing_stale_mapping,missing,https://example.org/mini-ict/B/device/DEVICE-006,,0,6,0,0,1
+I007,device,交换机 DEVICE-007：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-007,https://example.org/mini-ict/B/device/DEVICE-007,1,6,6,1,0
+I007,device,交换机 DEVICE-007：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-007,https://example.org/mini-ict/B/device/DEVICE-007,1,6,6,1,0
+I008,device,Base station DEVICE-008: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-008,https://example.org/mini-ict/B/device/DEVICE-008,1,6,6,1,0
+I008,device,Base station DEVICE-008: find associated alarms,missing_stale_mapping,missing,https://example.org/mini-ict/B/device/DEVICE-008,,0,6,0,0,1
+I009,device,防火墙 DEVICE-009：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-009,https://example.org/mini-ict/B/device/DEVICE-009,1,6,6,1,0
+I009,device,防火墙 DEVICE-009：查询关联告警,missing_stale_mapping,stale,https://example.org/mini-ict/B/device/DEVICE-009,https://example.org/mini-ict/B/device/DEVICE-010,0,6,6,0,1
+I010,device,Optical network terminal DEVICE-010: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-010,https://example.org/mini-ict/B/device/DEVICE-010,1,6,6,1,0
+I010,device,Optical network terminal DEVICE-010: find associated alarms,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-010,https://example.org/mini-ict/B/device/DEVICE-010,1,6,6,1,0
+I011,device,路由器 DEVICE-011：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-011,https://example.org/mini-ict/B/device/DEVICE-011,1,6,6,1,0
+I011,device,路由器 DEVICE-011：查询关联告警,missing_stale_mapping,stale,https://example.org/mini-ict/B/device/DEVICE-011,https://example.org/mini-ict/B/device/DEVICE-012,0,6,6,0,1
+I012,device,Switch DEVICE-012: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-012,https://example.org/mini-ict/B/device/DEVICE-012,1,6,6,1,0
+I012,device,Switch DEVICE-012: find associated alarms,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-012,https://example.org/mini-ict/B/device/DEVICE-012,1,6,6,1,0
+I013,device,基站 DEVICE-013：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-013,https://example.org/mini-ict/B/device/DEVICE-013,1,6,6,1,0
+I013,device,基站 DEVICE-013：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-013,https://example.org/mini-ict/B/device/DEVICE-013,1,6,6,1,0
+I014,device,Firewall DEVICE-014: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-014,https://example.org/mini-ict/B/device/DEVICE-014,1,6,6,1,0
+I014,device,Firewall DEVICE-014: find associated alarms,missing_stale_mapping,missing,https://example.org/mini-ict/B/device/DEVICE-014,,0,6,0,0,1
+I015,device,光网络终端 DEVICE-015：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-015,https://example.org/mini-ict/B/device/DEVICE-015,1,6,6,1,0
+I015,device,光网络终端 DEVICE-015：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-015,https://example.org/mini-ict/B/device/DEVICE-015,1,6,6,1,0
+I016,device,Router DEVICE-016: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-016,https://example.org/mini-ict/B/device/DEVICE-016,1,6,6,1,0
+I016,device,Router DEVICE-016: find associated alarms,missing_stale_mapping,stale,https://example.org/mini-ict/B/device/DEVICE-016,https://example.org/mini-ict/B/device/DEVICE-017,0,6,6,0,1
+I017,device,交换机 DEVICE-017：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-017,https://example.org/mini-ict/B/device/DEVICE-017,1,6,6,1,0
+I017,device,交换机 DEVICE-017：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-017,https://example.org/mini-ict/B/device/DEVICE-017,1,6,6,1,0
+I018,device,Base station DEVICE-018: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-018,https://example.org/mini-ict/B/device/DEVICE-018,1,6,6,1,0
+I018,device,Base station DEVICE-018: find associated alarms,missing_stale_mapping,stale,https://example.org/mini-ict/B/device/DEVICE-018,https://example.org/mini-ict/B/device/DEVICE-019,0,6,6,0,1
+I019,device,防火墙 DEVICE-019：查询关联告警,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-019,https://example.org/mini-ict/B/device/DEVICE-019,1,6,6,1,0
+I019,device,防火墙 DEVICE-019：查询关联告警,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-019,https://example.org/mini-ict/B/device/DEVICE-019,1,6,6,1,0
+I020,device,Optical network terminal DEVICE-020: find associated alarms,complete_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-020,https://example.org/mini-ict/B/device/DEVICE-020,1,6,6,1,0
+I020,device,Optical network terminal DEVICE-020: find associated alarms,missing_stale_mapping,complete,https://example.org/mini-ict/B/device/DEVICE-020,https://example.org/mini-ict/B/device/DEVICE-020,1,6,6,1,0
+I021,alarm,链路中断 ALARM-001：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-001,https://example.org/mini-ict/B/alarm/ALARM-001,1,6,6,1,0
+I021,alarm,链路中断 ALARM-001：查询影响的服务,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-001,https://example.org/mini-ict/B/alarm/ALARM-001,1,6,6,1,0
+I022,alarm,High CPU ALARM-002: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-002,https://example.org/mini-ict/B/alarm/ALARM-002,1,6,6,1,0
+I022,alarm,High CPU ALARM-002: find affected services,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-002,https://example.org/mini-ict/B/alarm/ALARM-002,1,6,6,1,0
+I023,alarm,信号丢失 ALARM-003：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-003,https://example.org/mini-ict/B/alarm/ALARM-003,1,6,6,1,0
+I023,alarm,信号丢失 ALARM-003：查询影响的服务,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-003,https://example.org/mini-ict/B/alarm/ALARM-003,1,6,6,1,0
+I024,alarm,High temperature ALARM-004: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-004,https://example.org/mini-ict/B/alarm/ALARM-004,1,6,6,1,0
+I024,alarm,High temperature ALARM-004: find affected services,missing_stale_mapping,stale,https://example.org/mini-ict/B/alarm/ALARM-004,https://example.org/mini-ict/B/alarm/ALARM-005,0,6,6,0,1
+I025,alarm,认证失败 ALARM-005：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-005,https://example.org/mini-ict/B/alarm/ALARM-005,1,6,6,1,0
+I025,alarm,认证失败 ALARM-005：查询影响的服务,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-005,https://example.org/mini-ict/B/alarm/ALARM-005,1,6,6,1,0
+I026,alarm,Link down ALARM-006: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-006,https://example.org/mini-ict/B/alarm/ALARM-006,1,6,6,1,0
+I026,alarm,Link down ALARM-006: find affected services,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-006,https://example.org/mini-ict/B/alarm/ALARM-006,1,6,6,1,0
+I027,alarm,CPU过载 ALARM-007：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-007,https://example.org/mini-ict/B/alarm/ALARM-007,1,6,6,1,0
+I027,alarm,CPU过载 ALARM-007：查询影响的服务,missing_stale_mapping,stale,https://example.org/mini-ict/B/alarm/ALARM-007,https://example.org/mini-ict/B/alarm/ALARM-008,0,6,6,0,1
+I028,alarm,Signal loss ALARM-008: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-008,https://example.org/mini-ict/B/alarm/ALARM-008,1,6,6,1,0
+I028,alarm,Signal loss ALARM-008: find affected services,missing_stale_mapping,missing,https://example.org/mini-ict/B/alarm/ALARM-008,,0,6,0,0,1
+I029,alarm,温度过高 ALARM-009：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-009,https://example.org/mini-ict/B/alarm/ALARM-009,1,6,6,1,0
+I029,alarm,温度过高 ALARM-009：查询影响的服务,missing_stale_mapping,missing,https://example.org/mini-ict/B/alarm/ALARM-009,,0,6,0,0,1
+I030,alarm,Authentication failure ALARM-010: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-010,https://example.org/mini-ict/B/alarm/ALARM-010,1,6,6,1,0
+I030,alarm,Authentication failure ALARM-010: find affected services,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-010,https://example.org/mini-ict/B/alarm/ALARM-010,1,6,6,1,0
+I031,alarm,链路中断 ALARM-011：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-011,https://example.org/mini-ict/B/alarm/ALARM-011,1,6,6,1,0
+I031,alarm,链路中断 ALARM-011：查询影响的服务,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-011,https://example.org/mini-ict/B/alarm/ALARM-011,1,6,6,1,0
+I032,alarm,High CPU ALARM-012: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-012,https://example.org/mini-ict/B/alarm/ALARM-012,1,6,6,1,0
+I032,alarm,High CPU ALARM-012: find affected services,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-012,https://example.org/mini-ict/B/alarm/ALARM-012,1,6,6,1,0
+I033,alarm,信号丢失 ALARM-013：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-013,https://example.org/mini-ict/B/alarm/ALARM-013,1,6,6,1,0
+I033,alarm,信号丢失 ALARM-013：查询影响的服务,missing_stale_mapping,missing,https://example.org/mini-ict/B/alarm/ALARM-013,,0,6,0,0,1
+I034,alarm,High temperature ALARM-014: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-014,https://example.org/mini-ict/B/alarm/ALARM-014,1,6,6,1,0
+I034,alarm,High temperature ALARM-014: find affected services,missing_stale_mapping,missing,https://example.org/mini-ict/B/alarm/ALARM-014,,0,6,0,0,1
+I035,alarm,认证失败 ALARM-015：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-015,https://example.org/mini-ict/B/alarm/ALARM-015,1,6,6,1,0
+I035,alarm,认证失败 ALARM-015：查询影响的服务,missing_stale_mapping,missing,https://example.org/mini-ict/B/alarm/ALARM-015,,0,6,0,0,1
+I036,alarm,Link down ALARM-016: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-016,https://example.org/mini-ict/B/alarm/ALARM-016,1,6,6,1,0
+I036,alarm,Link down ALARM-016: find affected services,missing_stale_mapping,stale,https://example.org/mini-ict/B/alarm/ALARM-016,https://example.org/mini-ict/B/alarm/ALARM-017,0,6,6,0,1
+I037,alarm,CPU过载 ALARM-017：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-017,https://example.org/mini-ict/B/alarm/ALARM-017,1,6,6,1,0
+I037,alarm,CPU过载 ALARM-017：查询影响的服务,missing_stale_mapping,stale,https://example.org/mini-ict/B/alarm/ALARM-017,https://example.org/mini-ict/B/alarm/ALARM-018,0,6,6,0,1
+I038,alarm,Signal loss ALARM-018: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-018,https://example.org/mini-ict/B/alarm/ALARM-018,1,6,6,1,0
+I038,alarm,Signal loss ALARM-018: find affected services,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-018,https://example.org/mini-ict/B/alarm/ALARM-018,1,6,6,1,0
+I039,alarm,温度过高 ALARM-019：查询影响的服务,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-019,https://example.org/mini-ict/B/alarm/ALARM-019,1,6,6,1,0
+I039,alarm,温度过高 ALARM-019：查询影响的服务,missing_stale_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-019,https://example.org/mini-ict/B/alarm/ALARM-019,1,6,6,1,0
+I040,alarm,Authentication failure ALARM-020: find affected services,complete_mapping,complete,https://example.org/mini-ict/B/alarm/ALARM-020,https://example.org/mini-ict/B/alarm/ALARM-020,1,6,6,1,0
+I040,alarm,Authentication failure ALARM-020: find affected services,missing_stale_mapping,stale,https://example.org/mini-ict/B/alarm/ALARM-020,https://example.org/mini-ict/B/alarm/ALARM-001,0,6,6,0,1
+I041,service,语音服务 SERVICE-001：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-001,https://example.org/mini-ict/B/service/SERVICE-001,1,6,6,1,0
+I041,service,语音服务 SERVICE-001：查询依赖对象,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-001,https://example.org/mini-ict/B/service/SERVICE-001,1,6,6,1,0
+I042,service,Broadband access SERVICE-002: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-002,https://example.org/mini-ict/B/service/SERVICE-002,1,6,6,1,0
+I042,service,Broadband access SERVICE-002: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-002,https://example.org/mini-ict/B/service/SERVICE-002,1,6,6,1,0
+I043,service,移动数据 SERVICE-003：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-003,https://example.org/mini-ict/B/service/SERVICE-003,1,6,6,1,0
+I043,service,移动数据 SERVICE-003：查询依赖对象,missing_stale_mapping,missing,https://example.org/mini-ict/B/service/SERVICE-003,,0,6,0,0,1
+I044,service,Enterprise VPN SERVICE-004: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-004,https://example.org/mini-ict/B/service/SERVICE-004,1,6,6,1,0
+I044,service,Enterprise VPN SERVICE-004: find dependencies,missing_stale_mapping,stale,https://example.org/mini-ict/B/service/SERVICE-004,https://example.org/mini-ict/B/service/SERVICE-005,0,6,6,0,1
+I045,service,物联网接入 SERVICE-005：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-005,https://example.org/mini-ict/B/service/SERVICE-005,1,6,6,1,0
+I045,service,物联网接入 SERVICE-005：查询依赖对象,missing_stale_mapping,missing,https://example.org/mini-ict/B/service/SERVICE-005,,0,6,0,0,1
+I046,service,Voice service SERVICE-006: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-006,https://example.org/mini-ict/B/service/SERVICE-006,1,6,6,1,0
+I046,service,Voice service SERVICE-006: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-006,https://example.org/mini-ict/B/service/SERVICE-006,1,6,6,1,0
+I047,service,宽带接入 SERVICE-007：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-007,https://example.org/mini-ict/B/service/SERVICE-007,1,6,6,1,0
+I047,service,宽带接入 SERVICE-007：查询依赖对象,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-007,https://example.org/mini-ict/B/service/SERVICE-007,1,6,6,1,0
+I048,service,Mobile data SERVICE-008: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-008,https://example.org/mini-ict/B/service/SERVICE-008,1,6,6,1,0
+I048,service,Mobile data SERVICE-008: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-008,https://example.org/mini-ict/B/service/SERVICE-008,1,6,6,1,0
+I049,service,企业VPN SERVICE-009：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-009,https://example.org/mini-ict/B/service/SERVICE-009,1,6,6,1,0
+I049,service,企业VPN SERVICE-009：查询依赖对象,missing_stale_mapping,stale,https://example.org/mini-ict/B/service/SERVICE-009,https://example.org/mini-ict/B/service/SERVICE-010,0,6,6,0,1
+I050,service,IoT access SERVICE-010: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-010,https://example.org/mini-ict/B/service/SERVICE-010,1,6,6,1,0
+I050,service,IoT access SERVICE-010: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-010,https://example.org/mini-ict/B/service/SERVICE-010,1,6,6,1,0
+I051,service,语音服务 SERVICE-011：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-011,https://example.org/mini-ict/B/service/SERVICE-011,1,6,6,1,0
+I051,service,语音服务 SERVICE-011：查询依赖对象,missing_stale_mapping,stale,https://example.org/mini-ict/B/service/SERVICE-011,https://example.org/mini-ict/B/service/SERVICE-012,0,6,6,0,1
+I052,service,Broadband access SERVICE-012: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-012,https://example.org/mini-ict/B/service/SERVICE-012,1,6,6,1,0
+I052,service,Broadband access SERVICE-012: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-012,https://example.org/mini-ict/B/service/SERVICE-012,1,6,6,1,0
+I053,service,移动数据 SERVICE-013：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-013,https://example.org/mini-ict/B/service/SERVICE-013,1,6,6,1,0
+I053,service,移动数据 SERVICE-013：查询依赖对象,missing_stale_mapping,stale,https://example.org/mini-ict/B/service/SERVICE-013,https://example.org/mini-ict/B/service/SERVICE-014,0,6,6,0,1
+I054,service,Enterprise VPN SERVICE-014: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-014,https://example.org/mini-ict/B/service/SERVICE-014,1,6,6,1,0
+I054,service,Enterprise VPN SERVICE-014: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-014,https://example.org/mini-ict/B/service/SERVICE-014,1,6,6,1,0
+I055,service,物联网接入 SERVICE-015：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-015,https://example.org/mini-ict/B/service/SERVICE-015,1,6,6,1,0
+I055,service,物联网接入 SERVICE-015：查询依赖对象,missing_stale_mapping,missing,https://example.org/mini-ict/B/service/SERVICE-015,,0,6,0,0,1
+I056,service,Voice service SERVICE-016: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-016,https://example.org/mini-ict/B/service/SERVICE-016,1,6,6,1,0
+I056,service,Voice service SERVICE-016: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-016,https://example.org/mini-ict/B/service/SERVICE-016,1,6,6,1,0
+I057,service,宽带接入 SERVICE-017：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-017,https://example.org/mini-ict/B/service/SERVICE-017,1,6,6,1,0
+I057,service,宽带接入 SERVICE-017：查询依赖对象,missing_stale_mapping,missing,https://example.org/mini-ict/B/service/SERVICE-017,,0,6,0,0,1
+I058,service,Mobile data SERVICE-018: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-018,https://example.org/mini-ict/B/service/SERVICE-018,1,6,6,1,0
+I058,service,Mobile data SERVICE-018: find dependencies,missing_stale_mapping,stale,https://example.org/mini-ict/B/service/SERVICE-018,https://example.org/mini-ict/B/service/SERVICE-019,0,6,6,0,1
+I059,service,企业VPN SERVICE-019：查询依赖对象,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-019,https://example.org/mini-ict/B/service/SERVICE-019,1,6,6,1,0
+I059,service,企业VPN SERVICE-019：查询依赖对象,missing_stale_mapping,missing,https://example.org/mini-ict/B/service/SERVICE-019,,0,6,0,0,1
+I060,service,IoT access SERVICE-020: find dependencies,complete_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-020,https://example.org/mini-ict/B/service/SERVICE-020,1,6,6,1,0
+I060,service,IoT access SERVICE-020: find dependencies,missing_stale_mapping,complete,https://example.org/mini-ict/B/service/SERVICE-020,https://example.org/mini-ict/B/service/SERVICE-020,1,6,6,1,0

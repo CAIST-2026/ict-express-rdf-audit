@@ -1,36 +1,26 @@
 # LLM-Guided Bilingual RDF Retrieval: Alignment or Selection?
 
-Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yin. The latest, corrected six-page manuscript package is in [`final_submission/`](final_submission/), revision **v2.6**. The underlying code and evidence archive remains release **v2.3**. Earlier experiment and audit artifacts remain in the repository as historical records; use `final_submission/` for the current manuscript.
+Public evidence archive for the ICT Express manuscript by Yuxiang Sun and Nan Yin. The current manuscript package is revision **v2.7** in [`final_submission/`](final_submission/); earlier tagged revisions remain available as historical records.
 
-## Current manuscript and package
+## Current package
 
-- [`ICTExpress_Final_Revised.pdf`](final_submission/ICTExpress_Final_Revised.pdf): six-page manuscript.
-- [`ICTExpress_Final_Revised.tex`](final_submission/ICTExpress_Final_Revised.tex): LaTeX source.
-- [`ICTExpress_Final_Supplementary.zip`](final_submission/ICTExpress_Final_Supplementary.zip): source code, synthetic records, analysis outputs, figures, tables, and the URI-masking pilot records.
-- [`ICTExpress_Final_Validation_Report.docx`](final_submission/ICTExpress_Final_Validation_Report.docx): concise revision and evidence-scope record.
+- [`ICTExpress_Revised_Manuscript.pdf`](final_submission/ICTExpress_Revised_Manuscript.pdf): six-page revised manuscript.
+- [`ICTExpress_Revised_Manuscript.tex`](final_submission/ICTExpress_Revised_Manuscript.tex): LaTeX source.
+- [`ICTExpress_Revised_Supplementary.zip`](final_submission/ICTExpress_Revised_Supplementary.zip): scripts, synthetic data, retained analyses, prompts, completions, and run documentation.
+- [`ICTExpress_Revision_Log.docx`](final_submission/ICTExpress_Revision_Log.docx): concise revision and validation record.
 - [`reproducibility/README.md`](final_submission/reproducibility/README.md): rebuild instructions and evidence limits.
 
-The v2.6 manuscript removes the requested generative-AI declaration section and includes a metadata check of all 17 references. Bibliographic metadata corrections include a coauthor initial, RDFLib authorship/version, the arXiv survey year, the full title of a survey article, and the conclusion now states a three-step evaluation checklist for RAG/KG--LLM retrieval audits.
+## Findings and scope
 
-## Corrected findings
+The complete application-level prompt reconstruction includes candidate-anchor URIs. The exact answer-bearing URI occurs in **200/200 one-hop prompts** and **130/150 cross-lingual prompts**. The planner recorded 386/500 strict successes versus 350/500 for the fixed-$k$ no-aligner baseline; the net gain is confined to the cross-lingual family. These results characterize one truth-profiled pipeline and do not establish autonomous entity discovery.
 
-The application-level prompt reconstruction includes candidate-anchor URIs. The gold URI occurs in **200/200 one-hop prompts (100%)** and **130/150 cross-lingual prompts (86.67%)**. The synthetic result is 386/500 strict successes for the LLM planner and 350/500 for the fixed-$k$ no-aligner baseline; the planner's net gain is concentrated in the cross-lingual family. This is evidence about the evaluated candidate and prompt configuration, not autonomous identity discovery.
+A three-condition URI intervention used 60 stratified cross-lingual queries: 40 prompts contained the exact answer-bearing URI and 20 did not. The latter could still contain a counterpart URI or canonical key. Exact opposite-language label matches across full, URI-redacted, and semantic-only prompts were **36/40, 32/40, and 31/40** in the first stratum and **1/20, 0/20, and 0/20** in the second. The semantic-only condition retained truth-derived bilingual candidate labels, so it measures selection among supplied candidates. All 180 prompts and model completions are archived.
 
-A new exploratory intervention on 12 exposed cross-lingual queries yielded rank-1 gold-URI output of **9/12 with full profiles and 1/12 after profile URI lists were emptied**. Anchors, canonical keys, bilingual surface forms, query text, and schema remained available. The result is descriptive and does not isolate all identity cues.
+A separate deterministic ICT proof-of-concept contains a synthetic 540-triple bilingual graph and 60 device, alarm, and service queries. Exact target retrieval and gold-context retention were 60/60 with complete mappings and 30/60 after 15 mappings were removed and 15 redirected. This is not operational or operator data and does not estimate field error rates.
 
-Six paired Wikidata contrasts were recalculated with a single Holm family; none reached adjusted *p* < 0.05. This does not establish equivalence. The No explicit alignment table condition still receives Chinese query text and English candidates. Its 19/21 held-out result is exploratory, and held-out isolation from prompt development is unverified.
+Six archived Wikidata paired contrasts were non-significant after Holm correction. The held-out 19/21 result remains exploratory. Four Wikidata source inputs and successful historical prompts/completions are absent; those records support reanalysis, not a fresh benchmark run. Historical sensitivity runs are descriptive, with query overlaps 91, 0, and 1; one reuses the primary data seed.
 
-## Evidence and reproducibility scope
-
-| Materials | Scope |
-|---|---|
-| Synthetic generator, saved seeds, primary records/configuration/log, analysis code | Rebuild benchmark records and saved analyses; new model outputs require the Ollama/model environment and may differ. |
-| URI-masking pilot CSV and prompt/completion snapshots | Reanalyse the 12 retained paired cases. |
-| Three sensitivity result/configuration sets | Reanalyse saved runs; query-text overlaps with the primary sample are 91, 0, and 1, and one run reuses the primary data seed. Run logs are absent. |
-| Wikidata rows, configurations, manifest, and two LLM logs | Reanalyse retained outcomes only. The four original query, gold-answer, entity, and attribute inputs listed in the manifest are absent, so a fresh benchmark rerun is not supported. |
-| Historical prompts and successful outputs | Not retained. The exact prompt and completion snapshots in this release are for the new URI-masking pilot only. |
-
-The manuscript is an empirical audit of one LLM-guided bilingual RDF retrieval system, not a new retrieval or entity-alignment algorithm. No operator, subscriber, device, or IoT workload was measured. The ICT operations scenarios in the paper motivate the risk of confusing supplied identifiers with entity resolution; they are not measured operational outcomes.
+The manuscript is an empirical audit of one LLM-guided bilingual RDF retrieval system, not a new retrieval or entity-alignment algorithm. No operator, subscriber, device, or IoT workload was measured.
 
 ## Rebuild retained analyses
 
@@ -43,8 +33,4 @@ XDG_CACHE_HOME=./final_submission/reproducibility/.cache \
 MPLBACKEND=Agg python3 final_submission/reproducibility/build_assets.py
 ```
 
-This rebuilds retained-result tables and figures and reconstructs application-level prompt exposure from source code and saved seeds. It does not reproduce archived model completions byte-for-byte. The URI-masking pilot runner is `final_submission/reproducibility/run_uri_masking_pilot.py`; rerunning it requires Ollama with Qwen2.5-7B and is not expected to guarantee identical completions.
-
-## License
-
-Code and data are released under the MIT License; see [`LICENSE`](LICENSE).
+The URI intervention is rerunnable with Ollama and Qwen2.5-7B; completions may vary across environments. The synthetic ICT graph and mapping outcomes are deterministic from their retained generator and seed. Code and data use the MIT License; see [`LICENSE`](LICENSE).

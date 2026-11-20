@@ -1,0 +1,64 @@
+{
+  "n": 60,
+  "exposed_n": 40,
+  "unexposed_n": 20,
+  "conditions": {
+    "full": {
+      "exact_opposite_language_label": 37,
+      "exact_canonical_key": 2,
+      "identity_either_key_or_label": 39
+    },
+    "uri_redacted": {
+      "exact_opposite_language_label": 32,
+      "exact_canonical_key": 0,
+      "identity_either_key_or_label": 32
+    },
+    "semantic_only": {
+      "exact_opposite_language_label": 31,
+      "exact_canonical_key": 0,
+      "identity_either_key_or_label": 31
+    }
+  },
+  "stratified": {
+    "exact_answer_uri_present": {
+      "n": 40,
+      "conditions": {
+        "full": {
+          "exact_opposite_language_label": 36,
+          "exact_canonical_key": 2,
+          "identity_either_key_or_label": 38
+        },
+        "uri_redacted": {
+          "exact_opposite_language_label": 32,
+          "exact_canonical_key": 0,
+          "identity_either_key_or_label": 32
+        },
+        "semantic_only": {
+          "exact_opposite_language_label": 31,
+          "exact_canonical_key": 0,
+          "identity_either_key_or_label": 31
+        }
+      }
+    },
+    "exact_answer_uri_absent_other_cues_may_remain": {
+      "n": 20,
+      "conditions": {
+        "full": {
+          "exact_opposite_language_label": 1,
+          "exact_canonical_key": 0,
+          "identity_either_key_or_label": 1
+        },
+        "uri_redacted": {
+          "exact_opposite_language_label": 0,
+          "exact_canonical_key": 0,
+          "identity_either_key_or_label": 0
+        },
+        "semantic_only": {
+          "exact_opposite_language_label": 0,
+          "exact_canonical_key": 0,
+          "identity_either_key_or_label": 0
+        }
+      }
+    }
+  }
+}

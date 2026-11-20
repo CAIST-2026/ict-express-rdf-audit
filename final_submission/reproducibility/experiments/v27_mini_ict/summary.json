@@ -1,0 +1,24 @@
+{
+  "complete_mapping": {
+    "n": 60,
+    "exact_target_n": 60,
+    "exact_target_rate": 1.0,
+    "context_lost_n": 0,
+    "context_loss_rate": 0.0,
+    "mean_gold_context_triples": 6.0,
+    "mean_retrieved_context_triples": 6.0
+  },
+  "missing_stale_mapping": {
+    "n": 60,
+    "exact_target_n": 30,
+    "exact_target_rate": 0.5,
+    "context_lost_n": 30,
+    "context_loss_rate": 0.5,
+    "mean_gold_context_triples": 6.0,
+    "mean_retrieved_context_triples": 4.5
+  },
+  "queries": 60,
+  "triples": 540,
+  "seed": 20261120,
+  "synthetic": true
+}
